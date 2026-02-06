@@ -1,0 +1,89 @@
+// Import variables first
+@use 'variables' as *;
+
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $background-color;
+  min-height: 100vh;
+}
+
+// Container
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+}
+
+// Buttons
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-2 $spacing-4;
+  border: none;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: $transition-default;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  &-primary {
+    background-color: $primary-color;
+    color: $white;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &-secondary {
+    background-color: $secondary-color;
+    color: $white;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+// Utility classes
+.text-center {
+  text-align: center;
+}
+
+// Responsive mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) { @content; }
+  } @else {
+    @media (min-width: $breakpoint) { @content; }
+  }
+}
