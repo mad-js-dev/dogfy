@@ -2,15 +2,18 @@
   <div class="">
     <div>
       <ul>
-        <li><NuxtLink to="room/1">Room 1</NuxtLink></li>
-        <li><NuxtLink to="room/2">Room 2</NuxtLink></li>
+        <li v-for="room in rooms.getRooms" :key="room.roomId">
+            <NuxtLink :to="`room/${room.roomId}`">{{ room.roomName }}</NuxtLink>
+        </li>
       </ul>
     </div>
   </div>
 </template>
 
 <script setup>
+import { useRoomsStore } from '../../stores/rooms'
 
+const rooms = useRoomsStore()
 </script>
 
 <style scoped>

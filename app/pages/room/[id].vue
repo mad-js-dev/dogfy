@@ -1,15 +1,31 @@
 <template>
     <div>
-        <h1>Room {{ $route.params.id }}</h1>
+      <div>
+        <h1>{{ room.roomName }}</h1>
+        <button @click="this.$router.go(-1)">Back to rooms</button>
+      </div>
         <div>
+          <h3>Devices in this room:</h3>
           <ul>
-            <li><NuxtLink to="device/1">Device 1</NuxtLink></li>
-            <li><NuxtLink to="device/2">Device 2</NuxtLink></li>
+            <li v-for="device in roomDevices" :key="device.deviceId">
+              {{ device.deviceName }} - {{ device.deviceStatus ? 'ON' : 'OFF' }}
+              <NuxtLink :to="`/device/${device.deviceId}`">View Device settings</NuxtLink>
+            </li>
           </ul>
+          <div v-if="roomDevices.length === 0">
+            <p>No devices found for this room.</p>
+          </div>
         </div>
     </div>
 </template>
 
 <script setup>
+import { useRoomsStore } from '../../../stores/rooms'
 
+const rooms = useRoomsStore()
+const route = useRoute()
+
+// Get devices for the specific room using the route parameter
+const room = computed(() => rooms.getRoomById(route.params.id))
+const roomDevices = computed(() => rooms.getDevicesByRoomId(route.params.id))
 </script>
