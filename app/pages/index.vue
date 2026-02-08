@@ -1,37 +1,16 @@
 <template>
-  <div class="container">
-    <header class="header">
-      <h1>Nuxt 3 + Pinia + SASS</h1>
-      <p>A modern web application with state management and styling</p>
-    </header>
-
-    <main class="main-content">
-      <div class="counter-card">
-        <h2>{{ counter.name }}</h2>
-        <div class="counter-display">
-          <span class="counter-value">{{ counter.count }}</span>
-          <p v-if="counter.doubleCount > 0" class="counter-double">
-            Double: {{ counter.doubleCount }}
-          </p>
-        </div>
-        <div class="button-group">
-          <button @click="counter.decrement()" class="btn btn-secondary">-</button>
-          <button @click="counter.increment()" class="btn btn-primary">+</button>
-          <button @click="counter.reset()" class="btn btn-secondary">Reset</button>
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <p>© 2024 Dogfy App. All rights reserved.</p>
-    </footer>
+  <div class="">
+    <div>
+      <ul>
+        <li><NuxtLink to="room/1">Room 1</NuxtLink></li>
+        <li><NuxtLink to="room/2">Room 2</NuxtLink></li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { useCounterStore } from '../../stores/counter'
 
-const counter = useCounterStore()
 </script>
 
 <style scoped>
