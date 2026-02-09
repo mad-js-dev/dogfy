@@ -2,7 +2,7 @@
     <div>
         <div>
             <h1>Device {{ $route.params.id }}</h1>
-            <button @click="this.$router.go(-1)">Back to rooms</button>
+            <button @click="this.$router.go(-1)"><Icon name="material-symbols:arrow-back" style="color: black" /></button>
         </div>
         
         <div>
