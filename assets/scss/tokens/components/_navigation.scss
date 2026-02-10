@@ -186,15 +186,15 @@ $md-comp-top-app-bar-large-container-height: 152px;
 
 // Top App Bar Typography
 $md-comp-top-app-bar-headline-text-type: 'Roboto';
-$md-comp-top-app-bar-headline-text-weight: 400;
-$md-comp-top-app-bar-headline-text-size: 22px;
-$md-comp-top-app-bar-headline-text-line-height: 28px;
+$md-comp-top-app-bar-headline-text-weight: 500;
+$md-comp-top-app-bar-headline-text-size: 24px;
+$md-comp-top-app-bar-headline-text-line-height: 32px;
 $md-comp-top-app-bar-headline-text-tracking: 0px;
 
 $md-comp-top-app-bar-title-text-type: 'Roboto';
 $md-comp-top-app-bar-title-text-weight: 400;
-$md-comp-top-app-bar-title-text-size: 16px;
-$md-comp-top-app-bar-title-text-line-height: 24px;
+$md-comp-top-app-bar-title-text-size: 14px;
+$md-comp-top-app-bar-title-text-line-height: 20px;
 $md-comp-top-app-bar-title-text-tracking: 0.1px;
 
 // Top App Bar Colors
@@ -427,6 +427,19 @@ $md-comp-top-app-bar-disabled-icon-color: rgba(0, 0, 0, 0.38);
       color: $md-comp-top-app-bar-disabled-icon-color;
     }
   }
+}
+
+// Top App Bar Size Variants
+@mixin md-comp-top-app-bar-small {
+  height: $md-comp-top-app-bar-small-container-height;
+}
+
+@mixin md-comp-top-app-bar-medium {
+  height: $md-comp-top-app-bar-medium-container-height;
+}
+
+@mixin md-comp-top-app-bar-large {
+  height: $md-comp-top-app-bar-large-container-height;
 }
 
 // =============================================================================

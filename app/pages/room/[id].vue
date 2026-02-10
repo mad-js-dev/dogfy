@@ -1,31 +1,24 @@
 <template>
-    <div>
-      <div>
-        <h1>{{ room.roomName }}</h1>
-        <button @click="this.$router.go(-1)"><Icon name="material-symbols:arrow-back" style="color: black" /></button>
-      </div>
-        <div>
-          <h3>Devices in this room:</h3>
-          <M3List :items="roomDevices.map(device => ({
-            text: `${device.deviceName} - ${device.deviceStatus ? 'ON' : 'OFF'}`,
-            to: `/device/${device.deviceId}`,
-            slots: {
-              content: (props) => h(M3Link, { 
-                leadingIcon: 'wrench', 
-                text: props.text,
-                to: props.to 
-              }),
-              trailing: () => h(M3Switch, {
-                modelValue: device.deviceStatus === 1,
-                'onUpdate:modelValue': (value) => rooms.updateDeviceStatus(device.deviceId, value)
-              })
-            }
-          }))" />
-          <div v-if="roomDevices.length === 0">
-            <p>No devices found for this room.</p>
-          </div>
-        </div>
+  <div>
+    <M3List :items="roomDevices.map(device => ({
+      text: `${device.deviceName} - ${device.deviceStatus ? 'ON' : 'OFF'}`,
+      to: `/device/${device.deviceId}`,
+      slots: {
+        content: (props) => h(M3Link, { 
+          leadingIcon: 'wrench', 
+          text: props.text,
+          to: props.to 
+        }),
+        trailing: () => h(M3Switch, {
+          modelValue: device.deviceStatus === 1,
+          'onUpdate:modelValue': (value) => rooms.updateDeviceStatus(device.deviceId, value)
+        })
+      }
+    }))" />
+    <div v-if="roomDevices.length === 0">
+      <p>No devices found for this room.</p>
     </div>
+  </div>
 </template>
 
 <script setup>
