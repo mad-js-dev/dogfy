@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Home, User, Settings, Star, ChevronRight, Wrench } from 'lucide-vue-next'
+import { Home, User, Settings, Star, ChevronRight, Wrench, ChevronLeft, Menu } from 'lucide-vue-next'
 
 interface Props {
   leadingIcon?: string
@@ -17,10 +17,12 @@ const props = withDefaults(defineProps<Props>(), {
 
 const iconComponents = {
   'home': Home,
+  'menu': Menu,
   'user': User,
   'settings': Settings,
   'star': Star,
   'chevron-right': ChevronRight,
+  'chevron-left': ChevronLeft,
   'wrench': Wrench,
 }
 

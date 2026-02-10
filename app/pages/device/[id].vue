@@ -1,15 +1,8 @@
 <template>
-    <div>
-        <div>
-            <h1>Device {{ $route.params.id }}</h1>
-            <button @click="this.$router.go(-1)"><Icon name="material-symbols:arrow-back" style="color: black" /></button>
-        </div>
-        
-        <div>
-            <p>Device name: {{ device.deviceName }}</p>
-            <p>Device type: {{ device.deviceType }}</p>
-            <p>Device status: {{ device.deviceStatus }}</p>
-        </div>
+    <div>        
+        <p>Device name: {{ device.deviceName }}</p>
+        <p>Device type: {{ device.deviceType }}</p>
+        <p>Device status: {{ device.deviceStatus }}</p>
     </div>
 </template>
 
