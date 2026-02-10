@@ -1,0 +1,532 @@
+// Material Design 3 Semantic Color Tokens
+// Derived from core color system tokens for specific use cases
+
+@use '../color-system' as color;
+
+// =============================================================================
+// SEMANTIC COLOR TOKENS
+// =============================================================================
+
+// Surface Colors
+$md-semantic-color-surface-primary: color.$md-sys-color-surface;
+$md-semantic-color-surface-secondary: color.$md-sys-color-surface-variant;
+$md-semantic-color-surface-tertiary: color.$md-sys-color-surface-container;
+$md-semantic-color-surface-quaternary: color.$md-sys-color-surface-container-high;
+$md-semantic-color-surface-quinary: color.$md-sys-color-surface-container-highest;
+
+// Background Colors
+$md-semantic-color-background-primary: color.$md-sys-color-background;
+$md-semantic-color-background-secondary: color.$md-sys-color-surface;
+$md-semantic-color-background-tertiary: color.$md-sys-color-surface-variant;
+
+// Content Colors
+$md-semantic-color-content-primary: color.$md-sys-color-on-surface;
+$md-semantic-color-content-secondary: color.$md-sys-color-on-surface-variant;
+$md-semantic-color-content-tertiary: rgba(color.$md-sys-color-on-surface, 0.6);
+$md-semantic-color-content-disabled: color.$md-sys-color-disabled-content;
+
+// Interactive Colors
+$md-semantic-color-interactive-primary: color.$md-sys-color-primary;
+$md-semantic-color-interactive-secondary: color.$md-sys-color-secondary;
+$md-semantic-color-interactive-tertiary: color.$md-sys-color-tertiary;
+$md-semantic-color-interactive-error: color.$md-sys-color-error;
+
+// Interactive Content Colors
+$md-semantic-color-interactive-content-primary: color.$md-sys-color-on-primary;
+$md-semantic-color-interactive-content-secondary: color.$md-sys-color-on-secondary;
+$md-semantic-color-interactive-content-tertiary: color.$md-sys-color-on-tertiary;
+$md-semantic-color-interactive-content-error: color.$md-sys-color-on-error;
+
+// Border Colors
+$md-semantic-color-border-primary: color.$md-sys-color-outline;
+$md-semantic-color-border-secondary: color.$md-sys-color-outline-variant;
+$md-semantic-color-border-disabled: color.$md-sys-color-disabled-container;
+
+// =============================================================================
+// COMPONENT SEMANTIC COLORS
+// =============================================================================
+
+// Button Semantic Colors
+$md-semantic-color-button-primary-bg: color.$md-sys-color-primary;
+$md-semantic-color-button-primary-content: color.$md-sys-color-on-primary;
+$md-semantic-color-button-secondary-bg: color.$md-sys-color-secondary-container;
+$md-semantic-color-button-secondary-content: color.$md-sys-color-on-secondary-container;
+$md-semantic-color-button-tertiary-bg: color.$md-sys-color-tertiary-container;
+$md-semantic-color-button-tertiary-content: color.$md-sys-color-on-tertiary-container;
+$md-semantic-color-button-error-bg: color.$md-sys-color-error;
+$md-semantic-color-button-error-content: color.$md-sys-color-on-error;
+$md-semantic-color-button-outline-bg: transparent;
+$md-semantic-color-button-outline-content: color.$md-sys-color-primary;
+$md-semantic-color-button-outline-border: color.$md-sys-color-outline;
+$md-semantic-color-button-text-bg: transparent;
+$md-semantic-color-button-text-content: color.$md-sys-color-primary;
+$md-semantic-color-button-elevated-bg: color.$md-sys-color-surface-container;
+$md-semantic-color-button-elevated-content: color.$md-sys-color-primary;
+
+// Chip Semantic Colors
+$md-semantic-color-chip-assist-bg: color.$md-sys-color-surface-container;
+$md-semantic-color-chip-assist-content: color.$md-sys-color-primary;
+$md-semantic-color-chip-filter-bg: color.$md-sys-color-surface-container;
+$md-semantic-color-chip-filter-content: color.$md-sys-color-on-surface;
+$md-semantic-color-chip-filter-selected-bg: color.$md-sys-color-secondary-container;
+$md-semantic-color-chip-filter-selected-content: color.$md-sys-color-on-secondary-container;
+$md-semantic-color-chip-input-bg: color.$md-sys-color-surface-container;
+$md-semantic-color-chip-input-content: color.$md-sys-color-on-surface;
+$md-semantic-color-chip-suggestion-bg: color.$md-sys-color-surface-container;
+$md-semantic-color-chip-suggestion-content: color.$md-sys-color-primary;
+
+// Text Field Semantic Colors
+$md-semantic-color-text-field-filled-bg: color.$md-sys-color-surface-variant;
+$md-semantic-color-text-field-filled-content: color.$md-sys-color-on-surface;
+$md-semantic-color-text-field-filled-label: color.$md-sys-color-on-surface-variant;
+$md-semantic-color-text-field-filled-indicator: color.$md-sys-color-on-surface-variant;
+$md-semantic-color-text-field-outlined-bg: transparent;
+$md-semantic-color-text-field-outlined-content: color.$md-sys-color-on-surface;
+$md-semantic-color-text-field-outlined-label: color.$md-sys-color-on-surface-variant;
+$md-semantic-color-text-field-outlined-border: color.$md-sys-color-outline;
+$md-semantic-color-text-field-supporting: color.$md-sys-color-on-surface-variant;
+$md-semantic-color-text-field-error: color.$md-sys-color-error;
+
+// Navigation Semantic Colors
+$md-semantic-color-navigation-bar-bg: color.$md-sys-color-surface-container;
+$md-semantic-color-navigation-item-content: color.$md-sys-color-on-surface-variant;
+$md-semantic-color-navigation-item-selected: color.$md-sys-color-primary;
+$md-semantic-color-navigation-drawer-bg: color.$md-sys-color-surface-container;
+$md-semantic-color-navigation-drawer-item-content: color.$md-sys-color-on-surface-variant;
+$md-semantic-color-navigation-drawer-item-selected: rgba(color.$md-sys-color-primary, 0.12);
+$md-semantic-color-top-app-bar-bg: color.$md-sys-color-surface-container;
+$md-semantic-color-top-app-bar-content: color.$md-sys-color-on-surface;
+
+// =============================================================================
+// STATE SEMANTIC COLORS
+// =============================================================================
+
+// Hover States
+$md-semantic-color-hover-primary: rgba(color.$md-sys-color-primary, 0.08);
+$md-semantic-color-hover-secondary: rgba(color.$md-sys-color-secondary, 0.08);
+$md-semantic-color-hover-tertiary: rgba(color.$md-sys-color-tertiary, 0.08);
+$md-semantic-color-hover-error: rgba(color.$md-sys-color-error, 0.08);
+$md-semantic-color-hover-surface: rgba(color.$md-sys-color-on-surface, 0.08);
+
+// Focus States
+$md-semantic-color-focus-primary: rgba(color.$md-sys-color-primary, 0.12);
+$md-semantic-color-focus-secondary: rgba(color.$md-sys-color-secondary, 0.12);
+$md-semantic-color-focus-tertiary: rgba(color.$md-sys-color-tertiary, 0.12);
+$md-semantic-color-focus-error: rgba(color.$md-sys-color-error, 0.12);
+$md-semantic-color-focus-surface: rgba(color.$md-sys-color-on-surface, 0.12);
+
+// Pressed States
+$md-semantic-color-pressed-primary: rgba(color.$md-sys-color-primary, 0.16);
+$md-semantic-color-pressed-secondary: rgba(color.$md-sys-color-secondary, 0.16);
+$md-semantic-color-pressed-tertiary: rgba(color.$md-sys-color-tertiary, 0.16);
+$md-semantic-color-pressed-error: rgba(color.$md-sys-color-error, 0.16);
+$md-semantic-color-pressed-surface: rgba(color.$md-sys-color-on-surface, 0.16);
+
+// Disabled States
+$md-semantic-color-disabled-bg: rgba(0, 0, 0, 0.12);
+$md-semantic-color-disabled-content: rgba(0, 0, 0, 0.38);
+$md-semantic-color-disabled-border: rgba(0, 0, 0, 0.12);
+
+// =============================================================================
+// OVERLAY SEMANTIC COLORS
+// =============================================================================
+
+// Scrim Colors
+$md-semantic-color-scrim-light: rgba(0, 0, 0, 0.32);
+$md-semantic-color-scrim-medium: rgba(0, 0, 0, 0.5);
+$md-semantic-color-scrim-dark: rgba(0, 0, 0, 0.6);
+
+// Ripple Colors
+$md-semantic-color-ripple-primary: rgba(color.$md-sys-color-primary, 0.12);
+$md-semantic-color-ripple-secondary: rgba(color.$md-sys-color-secondary, 0.12);
+$md-semantic-color-ripple-tertiary: rgba(color.$md-sys-color-tertiary, 0.12);
+$md-semantic-color-ripple-error: rgba(color.$md-sys-color-error, 0.12);
+$md-semantic-color-ripple-surface: rgba(color.$md-sys-color-on-surface, 0.12);
+
+// =============================================================================
+// MIXINS FOR SEMANTIC COLORS
+// =============================================================================
+
+@mixin md-semantic-surface-primary {
+  background-color: $md-semantic-color-surface-primary;
+  color: $md-semantic-color-content-primary;
+}
+
+@mixin md-semantic-surface-secondary {
+  background-color: $md-semantic-color-surface-secondary;
+  color: $md-semantic-color-content-secondary;
+}
+
+@mixin md-semantic-surface-tertiary {
+  background-color: $md-semantic-color-surface-tertiary;
+  color: $md-semantic-color-content-primary;
+}
+
+@mixin md-semantic-button-primary {
+  background-color: $md-semantic-color-button-primary-bg;
+  color: $md-semantic-color-button-primary-content;
+  
+  &:hover {
+    background-color: $md-semantic-color-hover-primary;
+  }
+  
+  &:focus {
+    background-color: $md-semantic-color-focus-primary;
+  }
+  
+  &:active {
+    background-color: $md-semantic-color-pressed-primary;
+  }
+  
+  &:disabled {
+    background-color: $md-semantic-color-disabled-bg;
+    color: $md-semantic-color-disabled-content;
+  }
+}
+
+@mixin md-semantic-button-secondary {
+  background-color: $md-semantic-color-button-secondary-bg;
+  color: $md-semantic-color-button-secondary-content;
+  
+  &:hover {
+    background-color: $md-semantic-color-hover-secondary;
+  }
+  
+  &:focus {
+    background-color: $md-semantic-color-focus-secondary;
+  }
+  
+  &:active {
+    background-color: $md-semantic-color-pressed-secondary;
+  }
+  
+  &:disabled {
+    background-color: $md-semantic-color-disabled-bg;
+    color: $md-semantic-color-disabled-content;
+  }
+}
+
+@mixin md-semantic-button-tertiary {
+  background-color: $md-semantic-color-button-tertiary-bg;
+  color: $md-semantic-color-button-tertiary-content;
+  
+  &:hover {
+    background-color: $md-semantic-color-hover-tertiary;
+  }
+  
+  &:focus {
+    background-color: $md-semantic-color-focus-tertiary;
+  }
+  
+  &:active {
+    background-color: $md-semantic-color-pressed-tertiary;
+  }
+  
+  &:disabled {
+    background-color: $md-semantic-color-disabled-bg;
+    color: $md-semantic-color-disabled-content;
+  }
+}
+
+@mixin md-semantic-button-outline {
+  background-color: $md-semantic-color-button-outline-bg;
+  color: $md-semantic-color-button-outline-content;
+  border: 1px solid $md-semantic-color-button-outline-border;
+  
+  &:hover {
+    background-color: $md-semantic-color-hover-primary;
+    border-color: color.$md-sys-color-primary;
+  }
+  
+  &:focus {
+    background-color: $md-semantic-color-focus-primary;
+    border-color: color.$md-sys-color-primary;
+  }
+  
+  &:active {
+    background-color: $md-semantic-color-pressed-primary;
+    border-color: color.$md-sys-color-primary;
+  }
+  
+  &:disabled {
+    background-color: $md-semantic-color-disabled-bg;
+    color: $md-semantic-color-disabled-content;
+    border-color: $md-semantic-color-disabled-border;
+  }
+}
+
+@mixin md-semantic-chip-assist {
+  background-color: $md-semantic-color-chip-assist-bg;
+  color: $md-semantic-color-chip-assist-content;
+  border: 1px solid $md-semantic-color-border-primary;
+  
+  &:hover {
+    background-color: $md-semantic-color-hover-primary;
+  }
+  
+  &:focus {
+    background-color: $md-semantic-color-focus-primary;
+  }
+  
+  &:active {
+    background-color: $md-semantic-color-pressed-primary;
+  }
+  
+  &:disabled {
+    background-color: $md-semantic-color-disabled-bg;
+    color: $md-semantic-color-disabled-content;
+    border-color: $md-semantic-color-disabled-border;
+  }
+}
+
+@mixin md-semantic-chip-filter {
+  background-color: $md-semantic-color-chip-filter-bg;
+  color: $md-semantic-color-chip-filter-content;
+  border: 1px solid $md-semantic-color-border-primary;
+  
+  &:hover {
+    background-color: $md-semantic-color-hover-surface;
+  }
+  
+  &:focus {
+    background-color: $md-semantic-color-focus-surface;
+  }
+  
+  &:active {
+    background-color: $md-semantic-color-pressed-surface;
+  }
+  
+  &:disabled {
+    background-color: $md-semantic-color-disabled-bg;
+    color: $md-semantic-color-disabled-content;
+    border-color: $md-semantic-color-disabled-border;
+  }
+  
+  &.selected {
+    background-color: $md-semantic-color-chip-filter-selected-bg;
+    color: $md-semantic-color-chip-filter-selected-content;
+    border-color: transparent;
+    
+    &:hover {
+      background-color: $md-semantic-color-hover-secondary;
+    }
+    
+    &:focus {
+      background-color: $md-semantic-color-focus-secondary;
+    }
+    
+    &:active {
+      background-color: $md-semantic-color-pressed-secondary;
+    }
+  }
+}
+
+@mixin md-semantic-text-field-filled {
+  background-color: $md-semantic-color-text-field-filled-bg;
+  color: $md-semantic-color-text-field-filled-content;
+  border-bottom: 2px solid $md-semantic-color-text-field-filled-indicator;
+  
+  &:focus-within {
+    border-bottom-color: $md-semantic-color-interactive-primary;
+    border-bottom-width: 3px;
+  }
+  
+  &:hover:not(:focus-within) {
+    border-bottom-color: $md-semantic-color-content-primary;
+  }
+  
+  &.error {
+    border-bottom-color: $md-semantic-color-text-field-error;
+    color: $md-semantic-color-text-field-error;
+  }
+  
+  &:disabled {
+    background-color: $md-semantic-color-disabled-bg;
+    color: $md-semantic-color-disabled-content;
+    border-bottom-color: $md-semantic-color-disabled-border;
+  }
+}
+
+@mixin md-semantic-text-field-outlined {
+  background-color: $md-semantic-color-text-field-outlined-bg;
+  color: $md-semantic-color-text-field-outlined-content;
+  border: 1px solid $md-semantic-color-text-field-outlined-border;
+  
+  &:focus-within {
+    border-color: $md-semantic-color-interactive-primary;
+    border-width: 2px;
+  }
+  
+  &:hover:not(:focus-within) {
+    border-color: $md-semantic-color-content-primary;
+  }
+  
+  &.error {
+    border-color: $md-semantic-color-text-field-error;
+    color: $md-semantic-color-text-field-error;
+  }
+  
+  &:disabled {
+    background-color: $md-semantic-color-disabled-bg;
+    color: $md-semantic-color-disabled-content;
+    border-color: $md-semantic-color-disabled-border;
+  }
+}
+
+// =============================================================================
+// MIXIN FOR EXPORTING SEMANTIC COLOR TOKENS
+// =============================================================================
+
+@mixin export-semantic-color-tokens {
+  // Surface colors
+  --md-semantic-color-surface-primary: #{$md-semantic-color-surface-primary};
+  --md-semantic-color-surface-secondary: #{$md-semantic-color-surface-secondary};
+  --md-semantic-color-surface-tertiary: #{$md-semantic-color-surface-tertiary};
+  --md-semantic-color-surface-quaternary: #{$md-semantic-color-surface-quaternary};
+  --md-semantic-color-surface-quinary: #{$md-semantic-color-surface-quinary};
+  
+  // Background colors
+  --md-semantic-color-background-primary: #{$md-semantic-color-background-primary};
+  --md-semantic-color-background-secondary: #{$md-semantic-color-background-secondary};
+  --md-semantic-color-background-tertiary: #{$md-semantic-color-background-tertiary};
+  
+  // Content colors
+  --md-semantic-color-content-primary: #{$md-semantic-color-content-primary};
+  --md-semantic-color-content-secondary: #{$md-semantic-color-content-secondary};
+  --md-semantic-color-content-tertiary: #{$md-semantic-color-content-tertiary};
+  --md-semantic-color-content-disabled: #{$md-semantic-color-content-disabled};
+  
+  // Interactive colors
+  --md-semantic-color-interactive-primary: #{$md-semantic-color-interactive-primary};
+  --md-semantic-color-interactive-secondary: #{$md-semantic-color-interactive-secondary};
+  --md-semantic-color-interactive-tertiary: #{$md-semantic-color-interactive-tertiary};
+  --md-semantic-color-interactive-error: #{$md-semantic-color-interactive-error};
+  
+  // Interactive content colors
+  --md-semantic-color-interactive-content-primary: #{$md-semantic-color-interactive-content-primary};
+  --md-semantic-color-interactive-content-secondary: #{$md-semantic-color-interactive-content-secondary};
+  --md-semantic-color-interactive-content-tertiary: #{$md-semantic-color-interactive-content-tertiary};
+  --md-semantic-color-interactive-content-error: #{$md-semantic-color-interactive-content-error};
+  
+  // Border colors
+  --md-semantic-color-border-primary: #{$md-semantic-color-border-primary};
+  --md-semantic-color-border-secondary: #{$md-semantic-color-border-secondary};
+  --md-semantic-color-border-disabled: #{$md-semantic-color-border-disabled};
+  
+  // Component semantic colors
+  --md-semantic-color-button-primary-bg: #{$md-semantic-color-button-primary-bg};
+  --md-semantic-color-button-primary-content: #{$md-semantic-color-button-primary-content};
+  --md-semantic-color-button-secondary-bg: #{$md-semantic-color-button-secondary-bg};
+  --md-semantic-color-button-secondary-content: #{$md-semantic-color-button-secondary-content};
+  --md-semantic-color-button-tertiary-bg: #{$md-semantic-color-button-tertiary-bg};
+  --md-semantic-color-button-tertiary-content: #{$md-semantic-color-button-tertiary-content};
+  --md-semantic-color-button-error-bg: #{$md-semantic-color-button-error-bg};
+  --md-semantic-color-button-error-content: #{$md-semantic-color-button-error-content};
+  --md-semantic-color-button-outline-bg: #{$md-semantic-color-button-outline-bg};
+  --md-semantic-color-button-outline-content: #{$md-semantic-color-button-outline-content};
+  --md-semantic-color-button-outline-border: #{$md-semantic-color-button-outline-border};
+  --md-semantic-color-button-text-bg: #{$md-semantic-color-button-text-bg};
+  --md-semantic-color-button-text-content: #{$md-semantic-color-button-text-content};
+  --md-semantic-color-button-elevated-bg: #{$md-semantic-color-button-elevated-bg};
+  --md-semantic-color-button-elevated-content: #{$md-semantic-color-button-elevated-content};
+  
+  --md-semantic-color-chip-assist-bg: #{$md-semantic-color-chip-assist-bg};
+  --md-semantic-color-chip-assist-content: #{$md-semantic-color-chip-assist-content};
+  --md-semantic-color-chip-filter-bg: #{$md-semantic-color-chip-filter-bg};
+  --md-semantic-color-chip-filter-content: #{$md-semantic-color-chip-filter-content};
+  --md-semantic-color-chip-filter-selected-bg: #{$md-semantic-color-chip-filter-selected-bg};
+  --md-semantic-color-chip-filter-selected-content: #{$md-semantic-color-chip-filter-selected-content};
+  --md-semantic-color-chip-input-bg: #{$md-semantic-color-chip-input-bg};
+  --md-semantic-color-chip-input-content: #{$md-semantic-color-chip-input-content};
+  --md-semantic-color-chip-suggestion-bg: #{$md-semantic-color-chip-suggestion-bg};
+  --md-semantic-color-chip-suggestion-content: #{$md-semantic-color-chip-suggestion-content};
+  
+  --md-semantic-color-text-field-filled-bg: #{$md-semantic-color-text-field-filled-bg};
+  --md-semantic-color-text-field-filled-content: #{$md-semantic-color-text-field-filled-content};
+  --md-semantic-color-text-field-filled-label: #{$md-semantic-color-text-field-filled-label};
+  --md-semantic-color-text-field-filled-indicator: #{$md-semantic-color-text-field-filled-indicator};
+  --md-semantic-color-text-field-outlined-bg: #{$md-semantic-color-text-field-outlined-bg};
+  --md-semantic-color-text-field-outlined-content: #{$md-semantic-color-text-field-outlined-content};
+  --md-semantic-color-text-field-outlined-label: #{$md-semantic-color-text-field-outlined-label};
+  --md-semantic-color-text-field-outlined-border: #{$md-semantic-color-text-field-outlined-border};
+  --md-semantic-color-text-field-supporting: #{$md-semantic-color-text-field-supporting};
+  --md-semantic-color-text-field-error: #{$md-semantic-color-text-field-error};
+  
+  --md-semantic-color-navigation-bar-bg: #{$md-semantic-color-navigation-bar-bg};
+  --md-semantic-color-navigation-item-content: #{$md-semantic-color-navigation-item-content};
+  --md-semantic-color-navigation-item-selected: #{$md-semantic-color-navigation-item-selected};
+  --md-semantic-color-navigation-drawer-bg: #{$md-semantic-color-navigation-drawer-bg};
+  --md-semantic-color-navigation-drawer-item-content: #{$md-semantic-color-navigation-drawer-item-content};
+  --md-semantic-color-navigation-drawer-item-selected: #{$md-semantic-color-navigation-drawer-item-selected};
+  --md-semantic-color-top-app-bar-bg: #{$md-semantic-color-top-app-bar-bg};
+  --md-semantic-color-top-app-bar-content: #{$md-semantic-color-top-app-bar-content};
+  
+  // State semantic colors
+  --md-semantic-color-hover-primary: #{$md-semantic-color-hover-primary};
+  --md-semantic-color-hover-secondary: #{$md-semantic-color-hover-secondary};
+  --md-semantic-color-hover-tertiary: #{$md-semantic-color-hover-tertiary};
+  --md-semantic-color-hover-error: #{$md-semantic-color-hover-error};
+  --md-semantic-color-hover-surface: #{$md-semantic-color-hover-surface};
+  
+  --md-semantic-color-focus-primary: #{$md-semantic-color-focus-primary};
+  --md-semantic-color-focus-secondary: #{$md-semantic-color-focus-secondary};
+  --md-semantic-color-focus-tertiary: #{$md-semantic-color-focus-tertiary};
+  --md-semantic-color-focus-error: #{$md-semantic-color-focus-error};
+  --md-semantic-color-focus-surface: #{$md-semantic-color-focus-surface};
+  
+  --md-semantic-color-pressed-primary: #{$md-semantic-color-pressed-primary};
+  --md-semantic-color-pressed-secondary: #{$md-semantic-color-pressed-secondary};
+  --md-semantic-color-pressed-tertiary: #{$md-semantic-color-pressed-tertiary};
+  --md-semantic-color-pressed-error: #{$md-semantic-color-pressed-error};
+  --md-semantic-color-pressed-surface: #{$md-semantic-color-pressed-surface};
+  
+  --md-semantic-color-disabled-bg: #{$md-semantic-color-disabled-bg};
+  --md-semantic-color-disabled-content: #{$md-semantic-color-disabled-content};
+  --md-semantic-color-disabled-border: #{$md-semantic-color-disabled-border};
+  
+  // Overlay semantic colors
+  --md-semantic-color-scrim-light: #{$md-semantic-color-scrim-light};
+  --md-semantic-color-scrim-medium: #{$md-semantic-color-scrim-medium};
+  --md-semantic-color-scrim-dark: #{$md-semantic-color-scrim-dark};
+  
+  --md-semantic-color-ripple-primary: #{$md-semantic-color-ripple-primary};
+  --md-semantic-color-ripple-secondary: #{$md-semantic-color-ripple-secondary};
+  --md-semantic-color-ripple-tertiary: #{$md-semantic-color-ripple-tertiary};
+  --md-semantic-color-ripple-error: #{$md-semantic-color-ripple-error};
+  --md-semantic-color-ripple-surface: #{$md-semantic-color-ripple-surface};
+}
+
+// =============================================================================
+// HELPER FUNCTIONS
+// =============================================================================
+
+@function get-semantic-color($color-name) {
+  @return map-get((
+    'surface-primary': $md-semantic-color-surface-primary,
+    'surface-secondary': $md-semantic-color-surface-secondary,
+    'surface-tertiary': $md-semantic-color-surface-tertiary,
+    'content-primary': $md-semantic-color-content-primary,
+    'content-secondary': $md-semantic-color-content-secondary,
+    'content-tertiary': $md-semantic-color-content-tertiary,
+    'content-disabled': $md-semantic-color-content-disabled,
+    'interactive-primary': $md-semantic-color-interactive-primary,
+    'interactive-secondary': $md-semantic-color-interactive-secondary,
+    'interactive-tertiary': $md-semantic-color-interactive-tertiary,
+    'interactive-error': $md-semantic-color-interactive-error,
+    'border-primary': $md-semantic-color-border-primary,
+    'border-secondary': $md-semantic-color-border-secondary,
+    'border-disabled': $md-semantic-color-border-disabled,
+    'button-primary-bg': $md-semantic-color-button-primary-bg,
+    'button-primary-content': $md-semantic-color-button-primary-content,
+    'chip-assist-bg': $md-semantic-color-chip-assist-bg,
+    'chip-assist-content': $md-semantic-color-chip-assist-content,
+    'text-field-filled-bg': $md-semantic-color-text-field-filled-bg,
+    'text-field-outlined-bg': $md-semantic-color-text-field-outlined-bg,
+    'navigation-bar-bg': $md-semantic-color-navigation-bar-bg,
+    'hover-primary': $md-semantic-color-hover-primary,
+    'focus-primary': $md-semantic-color-focus-primary,
+    'pressed-primary': $md-semantic-color-pressed-primary,
+    'disabled-bg': $md-semantic-color-disabled-bg,
+    'disabled-content': $md-semantic-color-disabled-content
+  ), $color-name);
+}

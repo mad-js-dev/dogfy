@@ -1,0 +1,332 @@
+// Material Design 3 Spacing Tokens
+// https://m3.material.io/styles/spacing/overview
+
+// =============================================================================
+// BASE SPACING TOKENS
+// =============================================================================
+
+// Grid Units (based on 8dp grid system)
+$md-sys-spacing-grid-unit: 8px;
+
+// Spacing Scale
+$md-sys-spacing-0: 0px;
+$md-sys-spacing-1: 4px;      // 0.5 * grid-unit
+$md-sys-spacing-2: 8px;      // 1 * grid-unit
+$md-sys-spacing-3: 12px;     // 1.5 * grid-unit
+$md-sys-spacing-4: 16px;     // 2 * grid-unit
+$md-sys-spacing-5: 20px;     // 2.5 * grid-unit
+$md-sys-spacing-6: 24px;     // 3 * grid-unit
+$md-sys-spacing-7: 28px;     // 3.5 * grid-unit
+$md-sys-spacing-8: 32px;     // 4 * grid-unit
+$md-sys-spacing-9: 36px;     // 4.5 * grid-unit
+$md-sys-spacing-10: 40px;    // 5 * grid-unit
+$md-sys-spacing-11: 44px;    // 5.5 * grid-unit
+$md-sys-spacing-12: 48px;    // 6 * grid-unit
+$md-sys-spacing-14: 56px;    // 7 * grid-unit
+$md-sys-spacing-16: 64px;    // 8 * grid-unit
+$md-sys-spacing-20: 80px;    // 10 * grid-unit
+$md-sys-spacing-24: 96px;    // 12 * grid-unit
+$md-sys-spacing-28: 112px;   // 14 * grid-unit
+$md-sys-spacing-32: 128px;   // 16 * grid-unit
+$md-sys-spacing-36: 144px;   // 18 * grid-unit
+$md-sys-spacing-40: 160px;   // 20 * grid-unit
+$md-sys-spacing-44: 176px;   // 22 * grid-unit
+$md-sys-spacing-48: 192px;   // 24 * grid-unit
+$md-sys-spacing-56: 224px;   // 28 * grid-unit
+$md-sys-spacing-64: 256px;   // 32 * grid-unit
+$md-sys-spacing-72: 288px;   // 36 * grid-unit
+$md-sys-spacing-80: 320px;   // 40 * grid-unit
+$md-sys-spacing-96: 384px;   // 48 * grid-unit
+
+// =============================================================================
+// SEMANTIC SPACING TOKENS
+// =============================================================================
+
+// Micro spacing (for tight spaces)
+$md-sys-spacing-micro-1: 2px;
+$md-sys-spacing-micro-2: 4px;
+
+// Component spacing
+$md-sys-spacing-component-padding-xsmall: 4px;
+$md-sys-spacing-component-padding-small: 8px;
+$md-sys-spacing-component-padding-medium: 16px;
+$md-sys-spacing-component-padding-large: 24px;
+$md-sys-spacing-component-padding-xlarge: 32px;
+
+$md-sys-spacing-component-margin-xsmall: 4px;
+$md-sys-spacing-component-margin-small: 8px;
+$md-sys-spacing-component-margin-medium: 16px;
+$md-sys-spacing-component-margin-large: 24px;
+$md-sys-spacing-component-margin-xlarge: 32px;
+
+// Layout spacing
+$md-sys-spacing-layout-gutter: 16px;
+$md-sys-spacing-layout-margin: 24px;
+$md-sys-spacing-layout-section: 64px;
+$md-sys-spacing-layout-container: 120px;
+
+// =============================================================================
+// COMPONENT-SPECIFIC SPACING TOKENS
+// =============================================================================
+
+// Button spacing
+$md-sys-spacing-button-padding-horizontal-small: 12px;
+$md-sys-spacing-button-padding-horizontal-medium: 16px;
+$md-sys-spacing-button-padding-horizontal-large: 24px;
+
+$md-sys-spacing-button-padding-vertical-small: 8px;
+$md-sys-spacing-button-padding-vertical-medium: 10px;
+$md-sys-spacing-button-padding-vertical-large: 12px;
+
+$md-sys-spacing-button-gap: 8px;
+
+// Card spacing
+$md-sys-spacing-card-padding: 16px;
+$md-sys-spacing-card-gap: 8px;
+$md-sys-spacing-card-margin: 8px;
+
+// Chip spacing
+$md-sys-spacing-chip-padding-horizontal: 16px;
+$md-sys-spacing-chip-padding-vertical: 6px;
+$md-sys-spacing-chip-gap: 8px;
+$md-sys-spacing-chip-margin: 4px;
+
+// Dialog spacing
+$md-sys-spacing-dialog-padding: 24px;
+$md-sys-spacing-dialog-gap: 16px;
+$md-sys-spacing-dialog-margin: 24px;
+
+// List spacing
+$md-sys-spacing-list-padding: 8px;
+$md-sys-spacing-list-item-height: 56px;
+$md-sys-spacing-list-item-padding: 16px;
+$md-sys-spacing-list-item-gap: 8px;
+
+// Navigation spacing
+$md-sys-spacing-navigation-padding: 12px;
+$md-sys-spacing-navigation-item-height: 56px;
+$md-sys-spacing-navigation-item-padding: 12px;
+$md-sys-spacing-navigation-gap: 8px;
+
+// Text field spacing
+$md-sys-spacing-text-field-padding-horizontal: 16px;
+$md-sys-spacing-text-field-padding-vertical: 16px;
+$md-sys-spacing-text-field-gap: 8px;
+$md-sys-spacing-text-field-label-gap: 4px;
+
+// =============================================================================
+// SPACING MIXINS
+// =============================================================================
+
+// Margin mixins
+@mixin md-spacing-margin-0 { margin: $md-sys-spacing-0; }
+@mixin md-spacing-margin-1 { margin: $md-sys-spacing-1; }
+@mixin md-spacing-margin-2 { margin: $md-sys-spacing-2; }
+@mixin md-spacing-margin-3 { margin: $md-sys-spacing-3; }
+@mixin md-spacing-margin-4 { margin: $md-sys-spacing-4; }
+@mixin md-spacing-margin-5 { margin: $md-sys-spacing-5; }
+@mixin md-spacing-margin-6 { margin: $md-sys-spacing-6; }
+@mixin md-spacing-margin-8 { margin: $md-sys-spacing-8; }
+@mixin md-spacing-margin-10 { margin: $md-sys-spacing-10; }
+@mixin md-spacing-margin-12 { margin: $md-sys-spacing-12; }
+@mixin md-spacing-margin-16 { margin: $md-sys-spacing-16; }
+@mixin md-spacing-margin-20 { margin: $md-sys-spacing-20; }
+@mixin md-spacing-margin-24 { margin: $md-sys-spacing-24; }
+
+// Padding mixins
+@mixin md-spacing-padding-0 { padding: $md-sys-spacing-0; }
+@mixin md-spacing-padding-1 { padding: $md-sys-spacing-1; }
+@mixin md-spacing-padding-2 { padding: $md-sys-spacing-2; }
+@mixin md-spacing-padding-3 { padding: $md-sys-spacing-3; }
+@mixin md-spacing-padding-4 { padding: $md-sys-spacing-4; }
+@mixin md-spacing-padding-5 { padding: $md-sys-spacing-5; }
+@mixin md-spacing-padding-6 { padding: $md-sys-spacing-6; }
+@mixin md-spacing-padding-8 { padding: $md-sys-spacing-8; }
+@mixin md-spacing-padding-10 { padding: $md-sys-spacing-10; }
+@mixin md-spacing-padding-12 { padding: $md-sys-spacing-12; }
+@mixin md-spacing-padding-16 { padding: $md-sys-spacing-16; }
+@mixin md-spacing-padding-20 { padding: $md-sys-spacing-20; }
+@mixin md-spacing-padding-24 { padding: $md-sys-spacing-24; }
+
+// Gap mixins
+@mixin md-spacing-gap-0 { gap: $md-sys-spacing-0; }
+@mixin md-spacing-gap-1 { gap: $md-sys-spacing-1; }
+@mixin md-spacing-gap-2 { gap: $md-sys-spacing-2; }
+@mixin md-spacing-gap-3 { gap: $md-sys-spacing-3; }
+@mixin md-spacing-gap-4 { gap: $md-sys-spacing-4; }
+@mixin md-spacing-gap-5 { gap: $md-sys-spacing-5; }
+@mixin md-spacing-gap-6 { gap: $md-sys-spacing-6; }
+@mixin md-spacing-gap-8 { gap: $md-sys-spacing-8; }
+@mixin md-spacing-gap-10 { gap: $md-sys-spacing-10; }
+@mixin md-spacing-gap-12 { gap: $md-sys-spacing-12; }
+@mixin md-spacing-gap-16 { gap: $md-sys-spacing-16; }
+@mixin md-spacing-gap-20 { gap: $md-sys-spacing-20; }
+@mixin md-spacing-gap-24 { gap: $md-sys-spacing-24; }
+
+// Directional spacing mixins
+@mixin md-spacing-margin-top($size) { margin-top: $size; }
+@mixin md-spacing-margin-right($size) { margin-right: $size; }
+@mixin md-spacing-margin-bottom($size) { margin-bottom: $size; }
+@mixin md-spacing-margin-left($size) { margin-left: $size; }
+
+@mixin md-spacing-padding-top($size) { padding-top: $size; }
+@mixin md-spacing-padding-right($size) { padding-right: $size; }
+@mixin md-spacing-padding-bottom($size) { padding-bottom: $size; }
+@mixin md-spacing-padding-left($size) { padding-left: $size; }
+
+// Component spacing mixins
+@mixin md-spacing-button-small {
+  padding: $md-sys-spacing-button-padding-vertical-small $md-sys-spacing-button-padding-horizontal-small;
+  gap: $md-sys-spacing-button-gap;
+}
+
+@mixin md-spacing-button-medium {
+  padding: $md-sys-spacing-button-padding-vertical-medium $md-sys-spacing-button-padding-horizontal-medium;
+  gap: $md-sys-spacing-button-gap;
+}
+
+@mixin md-spacing-button-large {
+  padding: $md-sys-spacing-button-padding-vertical-large $md-sys-spacing-button-padding-horizontal-large;
+  gap: $md-sys-spacing-button-gap;
+}
+
+@mixin md-spacing-chip {
+  padding: $md-sys-spacing-chip-padding-vertical $md-sys-spacing-chip-padding-horizontal;
+  gap: $md-sys-spacing-chip-gap;
+  margin: $md-sys-spacing-chip-margin;
+}
+
+@mixin md-spacing-card {
+  padding: $md-sys-spacing-card-padding;
+  gap: $md-sys-spacing-card-gap;
+  margin: $md-sys-spacing-card-margin;
+}
+
+@mixin md-spacing-text-field {
+  padding: $md-sys-spacing-text-field-padding-vertical $md-sys-spacing-text-field-padding-horizontal;
+  gap: $md-sys-spacing-text-field-gap;
+}
+
+// =============================================================================
+// MIXIN FOR EXPORTING SPACING TOKENS
+// =============================================================================
+
+@mixin export-spacing-tokens {
+  // Grid unit
+  --md-sys-spacing-grid-unit: #{$md-sys-spacing-grid-unit};
+  
+  // Spacing scale
+  --md-sys-spacing-0: #{$md-sys-spacing-0};
+  --md-sys-spacing-1: #{$md-sys-spacing-1};
+  --md-sys-spacing-2: #{$md-sys-spacing-2};
+  --md-sys-spacing-3: #{$md-sys-spacing-3};
+  --md-sys-spacing-4: #{$md-sys-spacing-4};
+  --md-sys-spacing-5: #{$md-sys-spacing-5};
+  --md-sys-spacing-6: #{$md-sys-spacing-6};
+  --md-sys-spacing-7: #{$md-sys-spacing-7};
+  --md-sys-spacing-8: #{$md-sys-spacing-8};
+  --md-sys-spacing-9: #{$md-sys-spacing-9};
+  --md-sys-spacing-10: #{$md-sys-spacing-10};
+  --md-sys-spacing-11: #{$md-sys-spacing-11};
+  --md-sys-spacing-12: #{$md-sys-spacing-12};
+  --md-sys-spacing-14: #{$md-sys-spacing-14};
+  --md-sys-spacing-16: #{$md-sys-spacing-16};
+  --md-sys-spacing-20: #{$md-sys-spacing-20};
+  --md-sys-spacing-24: #{$md-sys-spacing-24};
+  --md-sys-spacing-28: #{$md-sys-spacing-28};
+  --md-sys-spacing-32: #{$md-sys-spacing-32};
+  --md-sys-spacing-36: #{$md-sys-spacing-36};
+  --md-sys-spacing-40: #{$md-sys-spacing-40};
+  --md-sys-spacing-44: #{$md-sys-spacing-44};
+  --md-sys-spacing-48: #{$md-sys-spacing-48};
+  --md-sys-spacing-56: #{$md-sys-spacing-56};
+  --md-sys-spacing-64: #{$md-sys-spacing-64};
+  --md-sys-spacing-72: #{$md-sys-spacing-72};
+  --md-sys-spacing-80: #{$md-sys-spacing-80};
+  --md-sys-spacing-96: #{$md-sys-spacing-96};
+  
+  // Micro spacing
+  --md-sys-spacing-micro-1: #{$md-sys-spacing-micro-1};
+  --md-sys-spacing-micro-2: #{$md-sys-spacing-micro-2};
+  
+  // Component spacing
+  --md-sys-spacing-component-padding-xsmall: #{$md-sys-spacing-component-padding-xsmall};
+  --md-sys-spacing-component-padding-small: #{$md-sys-spacing-component-padding-small};
+  --md-sys-spacing-component-padding-medium: #{$md-sys-spacing-component-padding-medium};
+  --md-sys-spacing-component-padding-large: #{$md-sys-spacing-component-padding-large};
+  --md-sys-spacing-component-padding-xlarge: #{$md-sys-spacing-component-padding-xlarge};
+  
+  --md-sys-spacing-component-margin-xsmall: #{$md-sys-spacing-component-margin-xsmall};
+  --md-sys-spacing-component-margin-small: #{$md-sys-spacing-component-margin-small};
+  --md-sys-spacing-component-margin-medium: #{$md-sys-spacing-component-margin-medium};
+  --md-sys-spacing-component-margin-large: #{$md-sys-spacing-component-margin-large};
+  --md-sys-spacing-component-margin-xlarge: #{$md-sys-spacing-component-margin-xlarge};
+  
+  // Layout spacing
+  --md-sys-spacing-layout-gutter: #{$md-sys-spacing-layout-gutter};
+  --md-sys-spacing-layout-margin: #{$md-sys-spacing-layout-margin};
+  --md-sys-spacing-layout-section: #{$md-sys-spacing-layout-section};
+  --md-sys-spacing-layout-container: #{$md-sys-spacing-layout-container};
+  
+  // Component-specific spacing
+  --md-sys-spacing-button-padding-horizontal-small: #{$md-sys-spacing-button-padding-horizontal-small};
+  --md-sys-spacing-button-padding-horizontal-medium: #{$md-sys-spacing-button-padding-horizontal-medium};
+  --md-sys-spacing-button-padding-horizontal-large: #{$md-sys-spacing-button-padding-horizontal-large};
+  
+  --md-sys-spacing-button-padding-vertical-small: #{$md-sys-spacing-button-padding-vertical-small};
+  --md-sys-spacing-button-padding-vertical-medium: #{$md-sys-spacing-button-padding-vertical-medium};
+  --md-sys-spacing-button-padding-vertical-large: #{$md-sys-spacing-button-padding-vertical-large};
+  
+  --md-sys-spacing-button-gap: #{$md-sys-spacing-button-gap};
+  
+  --md-sys-spacing-card-padding: #{$md-sys-spacing-card-padding};
+  --md-sys-spacing-card-gap: #{$md-sys-spacing-card-gap};
+  --md-sys-spacing-card-margin: #{$md-sys-spacing-card-margin};
+  
+  --md-sys-spacing-chip-padding-horizontal: #{$md-sys-spacing-chip-padding-horizontal};
+  --md-sys-spacing-chip-padding-vertical: #{$md-sys-spacing-chip-padding-vertical};
+  --md-sys-spacing-chip-gap: #{$md-sys-spacing-chip-gap};
+  --md-sys-spacing-chip-margin: #{$md-sys-spacing-chip-margin};
+  
+  --md-sys-spacing-dialog-padding: #{$md-sys-spacing-dialog-padding};
+  --md-sys-spacing-dialog-gap: #{$md-sys-spacing-dialog-gap};
+  --md-sys-spacing-dialog-margin: #{$md-sys-spacing-dialog-margin};
+  
+  --md-sys-spacing-text-field-padding-horizontal: #{$md-sys-spacing-text-field-padding-horizontal};
+  --md-sys-spacing-text-field-padding-vertical: #{$md-sys-spacing-text-field-padding-vertical};
+  --md-sys-spacing-text-field-gap: #{$md-sys-spacing-text-field-gap};
+  --md-sys-spacing-text-field-label-gap: #{$md-sys-spacing-text-field-label-gap};
+}
+
+// =============================================================================
+// HELPER FUNCTIONS
+// =============================================================================
+
+@function get-spacing-token($spacing-name) {
+  @return map-get((
+    '0': $md-sys-spacing-0,
+    '1': $md-sys-spacing-1,
+    '2': $md-sys-spacing-2,
+    '3': $md-sys-spacing-3,
+    '4': $md-sys-spacing-4,
+    '5': $md-sys-spacing-5,
+    '6': $md-sys-spacing-6,
+    '8': $md-sys-spacing-8,
+    '10': $md-sys-spacing-10,
+    '12': $md-sys-spacing-12,
+    '16': $md-sys-spacing-16,
+    '20': $md-sys-spacing-20,
+    '24': $md-sys-spacing-24,
+    '28': $md-sys-spacing-28,
+    '32': $md-sys-spacing-32,
+    '36': $md-sys-spacing-36,
+    '40': $md-sys-spacing-40,
+    '48': $md-sys-spacing-48,
+    '64': $md-sys-spacing-64,
+    '80': $md-sys-spacing-80,
+    '96': $md-sys-spacing-96,
+    'micro-1': $md-sys-spacing-micro-1,
+    'micro-2': $md-sys-spacing-micro-2,
+    'grid-unit': $md-sys-spacing-grid-unit
+  ), $spacing-name);
+}

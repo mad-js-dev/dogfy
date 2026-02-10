@@ -1,0 +1,349 @@
+// Material Design 3 Elevation Tokens
+// https://m3.material.io/styles/elevation/overview
+
+// =============================================================================
+// ELEVATION LEVEL TOKENS (in dp)
+// =============================================================================
+
+$md-sys-elevation-level0: 0px;      // No elevation
+$md-sys-elevation-level1: 1px;      // Button, Switch, Chip
+$md-sys-elevation-level2: 2px;      // FAB, Card resting
+$md-sys-elevation-level3: 3px;      // FAB pressed
+$md-sys-elevation-level4: 4px;      // Bottom navigation bar
+$md-sys-elevation-level5: 5px;      // Search bar, Menu
+
+// =============================================================================
+// SHADOW TOKENS
+// =============================================================================
+
+// Shadow definitions for each elevation level
+$md-sys-elevation-shadow-0: none;
+
+$md-sys-elevation-shadow-1: 
+  0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+  0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+
+$md-sys-elevation-shadow-2: 
+  0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+  0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+
+$md-sys-elevation-shadow-3: 
+  0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+
+$md-sys-elevation-shadow-4: 
+  0px 6px 10px 4px rgba(0, 0, 0, 0.15),
+  0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+
+$md-sys-elevation-shadow-5: 
+  0px 8px 12px 6px rgba(0, 0, 0, 0.15),
+  0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+
+// =============================================================================
+// COMPONENT-SPECIFIC ELEVATION TOKENS
+// =============================================================================
+
+// Button elevation states
+$md-sys-elevation-button-resting: $md-sys-elevation-level0;
+$md-sys-elevation-button-hover: $md-sys-elevation-level1;
+$md-sys-elevation-button-focus: $md-sys-elevation-level1;
+$md-sys-sys-elevation-button-pressed: $md-sys-elevation-level1;
+
+// FAB elevation states
+$md-sys-elevation-fab-resting: $md-sys-elevation-level2;
+$md-sys-elevation-fab-hover: $md-sys-elevation-level3;
+$md-sys-elevation-fab-focus: $md-sys-elevation-level3;
+$md-sys-elevation-fab-pressed: $md-sys-elevation-level3;
+$md-sys-elevation-fab-extended-resting: $md-sys-elevation-level1;
+$md-sys-elevation-fab-extended-hover: $md-sys-elevation-level2;
+$md-sys-elevation-fab-extended-focus: $md-sys-elevation-level2;
+$md-sys-elevation-fab-extended-pressed: $md-sys-elevation-level2;
+
+// Card elevation states
+$md-sys-elevation-card-resting: $md-sys-elevation-level1;
+$md-sys-elevation-card-hover: $md-sys-elevation-level2;
+$md-sys-elevation-card-focus: $md-sys-elevation-level2;
+$md-sys-elevation-card-pressed: $md-sys-elevation-level1;
+
+// Chip elevation states
+$md-sys-elevation-chip-resting: $md-sys-elevation-level0;
+$md-sys-elevation-chip-hover: $md-sys-elevation-level1;
+$md-sys-elevation-chip-focus: $md-sys-elevation-level1;
+$md-sys-elevation-chip-pressed: $md-sys-elevation-level1;
+
+// Dialog elevation
+$md-sys-elevation-dialog: $md-sys-elevation-level5;
+
+// Bottom sheet elevation
+$md-sys-elevation-bottom-sheet: $md-sys-elevation-level5;
+
+// Navigation drawer elevation
+$md-sys-elevation-navigation-drawer: $md-sys-elevation-level2;
+
+// Search bar elevation
+$md-sys-elevation-search-bar-resting: $md-sys-elevation-level2;
+$md-sys-elevation-search-bar-active: $md-sys-elevation-level3;
+
+// Snackbar elevation
+$md-sys-elevation-snackbar: $md-sys-elevation-level3;
+
+// Top app bar elevation
+$md-sys-elevation-top-app-bar: $md-sys-elevation-level4;
+
+// Bottom navigation bar elevation
+$md-sys-elevation-bottom-navigation: $md-sys-elevation-level3;
+
+// Switch elevation
+$md-sys-elevation-switch-resting: $md-sys-elevation-level1;
+$md-sys-elevation-switch-pressed: $md-sys-elevation-level2;
+
+// =============================================================================
+// OVERLAY TOKENS
+// =============================================================================
+
+// Overlay colors for elevation levels
+$md-sys-elevation-overlay-level0: transparent;
+$md-sys-elevation-overlay-level1: rgba(0, 0, 0, 0.05);
+$md-sys-elevation-overlay-level2: rgba(0, 0, 0, 0.08);
+$md-sys-elevation-overlay-level3: rgba(0, 0, 0, 0.11);
+$md-sys-elevation-overlay-level4: rgba(0, 0, 0, 0.14);
+$md-sys-elevation-overlay-level5: rgba(0, 0, 0, 0.16);
+
+// =============================================================================
+// ELEVATION MIXINS
+// =============================================================================
+
+// Base elevation mixins
+@mixin md-elevation-level0 {
+  box-shadow: $md-sys-elevation-shadow-0;
+}
+
+@mixin md-elevation-level1 {
+  box-shadow: $md-sys-elevation-shadow-1;
+}
+
+@mixin md-elevation-level2 {
+  box-shadow: $md-sys-elevation-shadow-2;
+}
+
+@mixin md-elevation-level3 {
+  box-shadow: $md-sys-elevation-shadow-3;
+}
+
+@mixin md-elevation-level4 {
+  box-shadow: $md-sys-elevation-shadow-4;
+}
+
+@mixin md-elevation-level5 {
+  box-shadow: $md-sys-elevation-shadow-5;
+}
+
+// Component elevation mixins
+@mixin md-elevation-button {
+  box-shadow: $md-sys-elevation-shadow-0;
+  &:hover {
+    box-shadow: $md-sys-elevation-shadow-1;
+  }
+  &:focus {
+    box-shadow: $md-sys-elevation-shadow-1;
+  }
+  &:active {
+    box-shadow: $md-sys-elevation-shadow-1;
+  }
+}
+
+@mixin md-elevation-fab {
+  box-shadow: $md-sys-elevation-shadow-2;
+  &:hover {
+    box-shadow: $md-sys-elevation-shadow-3;
+  }
+  &:focus {
+    box-shadow: $md-sys-elevation-shadow-3;
+  }
+  &:active {
+    box-shadow: $md-sys-elevation-shadow-3;
+  }
+}
+
+@mixin md-elevation-card {
+  box-shadow: $md-sys-elevation-shadow-1;
+  &:hover {
+    box-shadow: $md-sys-elevation-shadow-2;
+  }
+  &:focus {
+    box-shadow: $md-sys-elevation-shadow-2;
+  }
+  &:active {
+    box-shadow: $md-sys-elevation-shadow-1;
+  }
+}
+
+@mixin md-elevation-chip {
+  box-shadow: $md-sys-elevation-shadow-0;
+  &:hover {
+    box-shadow: $md-sys-elevation-shadow-1;
+  }
+  &:focus {
+    box-shadow: $md-sys-elevation-shadow-1;
+  }
+  &:active {
+    box-shadow: $md-sys-elevation-shadow-1;
+  }
+}
+
+@mixin md-elevation-dialog {
+  box-shadow: $md-sys-elevation-shadow-5;
+}
+
+@mixin md-elevation-bottom-sheet {
+  box-shadow: $md-sys-elevation-shadow-5;
+}
+
+@mixin md-elevation-navigation-drawer {
+  box-shadow: $md-sys-elevation-shadow-2;
+}
+
+@mixin md-elevation-search-bar {
+  box-shadow: $md-sys-elevation-shadow-2;
+  &:focus-within {
+    box-shadow: $md-sys-elevation-shadow-3;
+  }
+}
+
+@mixin md-elevation-snackbar {
+  box-shadow: $md-sys-elevation-shadow-3;
+}
+
+@mixin md-elevation-top-app-bar {
+  box-shadow: $md-sys-elevation-shadow-4;
+}
+
+@mixin md-elevation-bottom-navigation {
+  box-shadow: $md-sys-elevation-shadow-3;
+}
+
+@mixin md-elevation-switch {
+  box-shadow: $md-sys-elevation-shadow-1;
+  &:active {
+    box-shadow: $md-sys-elevation-shadow-2;
+  }
+}
+
+// Overlay mixins
+@mixin md-elevation-overlay-level0 {
+  background-color: $md-sys-elevation-overlay-level0;
+}
+
+@mixin md-elevation-overlay-level1 {
+  background-color: $md-sys-elevation-overlay-level1;
+}
+
+@mixin md-elevation-overlay-level2 {
+  background-color: $md-sys-elevation-overlay-level2;
+}
+
+@mixin md-elevation-overlay-level3 {
+  background-color: $md-sys-elevation-overlay-level3;
+}
+
+@mixin md-elevation-overlay-level4 {
+  background-color: $md-sys-elevation-overlay-level4;
+}
+
+@mixin md-elevation-overlay-level5 {
+  background-color: $md-sys-elevation-overlay-level5;
+}
+
+// =============================================================================
+// MIXIN FOR EXPORTING ELEVATION TOKENS
+// =============================================================================
+
+@mixin export-elevation-tokens {
+  // Elevation levels
+  --md-sys-elevation-level0: #{$md-sys-elevation-level0};
+  --md-sys-elevation-level1: #{$md-sys-elevation-level1};
+  --md-sys-elevation-level2: #{$md-sys-elevation-level2};
+  --md-sys-elevation-level3: #{$md-sys-elevation-level3};
+  --md-sys-elevation-level4: #{$md-sys-elevation-level4};
+  --md-sys-elevation-level5: #{$md-sys-elevation-level5};
+  
+  // Shadows
+  --md-sys-elevation-shadow-0: #{$md-sys-elevation-shadow-0};
+  --md-sys-elevation-shadow-1: #{$md-sys-elevation-shadow-1};
+  --md-sys-elevation-shadow-2: #{$md-sys-elevation-shadow-2};
+  --md-sys-elevation-shadow-3: #{$md-sys-elevation-shadow-3};
+  --md-sys-elevation-shadow-4: #{$md-sys-elevation-shadow-4};
+  --md-sys-elevation-shadow-5: #{$md-sys-elevation-shadow-5};
+  
+  // Component elevations
+  --md-sys-elevation-button-resting: #{$md-sys-elevation-button-resting};
+  --md-sys-elevation-button-hover: #{$md-sys-elevation-button-hover};
+  --md-sys-elevation-button-focus: #{$md-sys-elevation-button-focus};
+  --md-sys-elevation-button-pressed: #{$md-sys-sys-elevation-button-pressed};
+  
+  --md-sys-elevation-fab-resting: #{$md-sys-elevation-fab-resting};
+  --md-sys-elevation-fab-hover: #{$md-sys-elevation-fab-hover};
+  --md-sys-elevation-fab-focus: #{$md-sys-elevation-fab-focus};
+  --md-sys-elevation-fab-pressed: #{$md-sys-elevation-fab-pressed};
+  
+  --md-sys-elevation-card-resting: #{$md-sys-elevation-card-resting};
+  --md-sys-elevation-card-hover: #{$md-sys-elevation-card-hover};
+  --md-sys-elevation-card-focus: #{$md-sys-elevation-card-focus};
+  --md-sys-elevation-card-pressed: #{$md-sys-elevation-card-pressed};
+  
+  --md-sys-elevation-chip-resting: #{$md-sys-elevation-chip-resting};
+  --md-sys-elevation-chip-hover: #{$md-sys-elevation-chip-hover};
+  --md-sys-elevation-chip-focus: #{$md-sys-elevation-chip-focus};
+  --md-sys-elevation-chip-pressed: #{$md-sys-elevation-chip-pressed};
+  
+  --md-sys-elevation-dialog: #{$md-sys-elevation-dialog};
+  --md-sys-elevation-bottom-sheet: #{$md-sys-elevation-bottom-sheet};
+  --md-sys-elevation-navigation-drawer: #{$md-sys-elevation-navigation-drawer};
+  --md-sys-elevation-search-bar-resting: #{$md-sys-elevation-search-bar-resting};
+  --md-sys-elevation-search-bar-active: #{$md-sys-elevation-search-bar-active};
+  --md-sys-elevation-snackbar: #{$md-sys-elevation-snackbar};
+  --md-sys-elevation-top-app-bar: #{$md-sys-elevation-top-app-bar};
+  --md-sys-elevation-bottom-navigation: #{$md-sys-elevation-bottom-navigation};
+  --md-sys-elevation-switch-resting: #{$md-sys-elevation-switch-resting};
+  --md-sys-elevation-switch-pressed: #{$md-sys-elevation-switch-pressed};
+  
+  // Overlays
+  --md-sys-elevation-overlay-level0: #{$md-sys-elevation-overlay-level0};
+  --md-sys-elevation-overlay-level1: #{$md-sys-elevation-overlay-level1};
+  --md-sys-elevation-overlay-level2: #{$md-sys-elevation-overlay-level2};
+  --md-sys-elevation-overlay-level3: #{$md-sys-elevation-overlay-level3};
+  --md-sys-elevation-overlay-level4: #{$md-sys-elevation-overlay-level4};
+  --md-sys-elevation-overlay-level5: #{$md-sys-elevation-overlay-level5};
+}
+
+// =============================================================================
+// HELPER FUNCTIONS
+// =============================================================================
+
+@function get-elevation-token($elevation-name) {
+  @return map-get((
+    'level0': $md-sys-elevation-level0,
+    'level1': $md-sys-elevation-level1,
+    'level2': $md-sys-elevation-level2,
+    'level3': $md-sys-elevation-level3,
+    'level4': $md-sys-elevation-level4,
+    'level5': $md-sys-elevation-level5,
+    'button-resting': $md-sys-elevation-button-resting,
+    'button-hover': $md-sys-elevation-button-hover,
+    'fab-resting': $md-sys-elevation-fab-resting,
+    'card-resting': $md-sys-elevation-card-resting,
+    'chip-resting': $md-sys-elevation-chip-resting,
+    'dialog': $md-sys-elevation-dialog
+  ), $elevation-name);
+}
+
+@function get-shadow-token($shadow-name) {
+  @return map-get((
+    'level0': $md-sys-elevation-shadow-0,
+    'level1': $md-sys-elevation-shadow-1,
+    'level2': $md-sys-elevation-shadow-2,
+    'level3': $md-sys-elevation-shadow-3,
+    'level4': $md-sys-elevation-shadow-4,
+    'level5': $md-sys-elevation-shadow-5
+  ), $shadow-name);
+}

@@ -1,0 +1,437 @@
+// Material Design 3 Button Component Tokens
+// https://m3.material.io/components/buttons/overview
+
+@use '../color-system' as color;
+@use '../elevation' as elevation;
+@use '../motion' as motion;
+
+// =============================================================================
+// BUTTON CONTAINER TOKENS
+// =============================================================================
+
+// Button Heights
+$md-comp-button-container-height: 40px;
+$md-comp-button-large-container-height: 56px;
+
+// Button Shape
+$md-comp-button-container-shape: 20px;
+$md-comp-button-large-container-shape: 28px;
+
+// =============================================================================
+// BUTTON LABEL TEXT TOKENS
+// =============================================================================
+
+// Button Typography
+$md-comp-button-label-text-type: 'Roboto';
+$md-comp-button-label-text-weight: 500;
+$md-comp-button-label-text-size: 14px;
+$md-comp-button-label-text-line-height: 20px;
+$md-comp-button-label-text-tracking: 0.1px;
+
+$md-comp-button-large-label-text-type: 'Roboto';
+$md-comp-button-large-label-text-weight: 500;
+$md-comp-button-large-label-text-size: 16px;
+$md-comp-button-large-label-text-line-height: 24px;
+$md-comp-button-large-label-text-tracking: 0.1px;
+
+// =============================================================================
+// FILLED BUTTON TOKENS
+// =============================================================================
+
+// Filled Button Container
+$md-comp-filled-button-container-color: color.$md-sys-color-primary;
+$md-comp-filled-button-label-text-color: color.$md-sys-color-on-primary;
+$md-comp-filled-button-disabled-container-color: rgba(0, 0, 0, 0.12);
+$md-comp-filled-button-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-filled-button-focus-container-color: color.$md-sys-color-primary;
+$md-comp-filled-button-focus-label-text-color: color.$md-sys-color-on-primary;
+$md-comp-filled-button-hover-container-color: color.$md-sys-color-primary;
+$md-comp-filled-button-hover-label-text-color: color.$md-sys-color-on-primary;
+$md-comp-filled-button-pressed-container-color: color.$md-sys-color-primary;
+$md-comp-filled-button-pressed-label-text-color: color.$md-sys-color-on-primary;
+$md-comp-filled-button-state-layer-color: color.$md-sys-color-on-primary;
+$md-comp-filled-button-state-layer-opacity: 0.12;
+
+// =============================================================================
+// OUTLINED BUTTON TOKENS
+// =============================================================================
+
+// Outlined Button Container
+$md-comp-outlined-button-container-color: transparent;
+$md-comp-outlined-button-label-text-color: color.$md-sys-color-primary;
+$md-comp-outlined-button-outline-color: color.$md-sys-color-outline;
+$md-comp-outlined-button-disabled-container-color: transparent;
+$md-comp-outlined-button-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-outlined-button-disabled-outline-color: rgba(0, 0, 0, 0.12);
+$md-comp-outlined-button-focus-container-color: transparent;
+$md-comp-outlined-button-focus-label-text-color: color.$md-sys-color-primary;
+$md-comp-outlined-button-focus-outline-color: color.$md-sys-color-outline;
+$md-comp-outlined-button-hover-container-color: color.$md-sys-color-primary;
+$md-comp-outlined-button-hover-label-text-color: color.$md-sys-color-on-primary;
+$md-comp-outlined-button-hover-outline-color: color.$md-sys-color-primary;
+$md-comp-outlined-button-pressed-container-color: color.$md-sys-color-primary;
+$md-comp-outlined-button-pressed-label-text-color: color.$md-sys-color-on-primary;
+$md-comp-outlined-button-pressed-outline-color: color.$md-sys-color-primary;
+$md-comp-outlined-button-state-layer-color: color.$md-sys-color-primary;
+$md-comp-outlined-button-state-layer-opacity: 0.12;
+
+// =============================================================================
+// TEXT BUTTON TOKENS
+// =============================================================================
+
+// Text Button Container
+$md-comp-text-button-container-color: transparent;
+$md-comp-text-button-label-text-color: color.$md-sys-color-primary;
+$md-comp-text-button-disabled-container-color: transparent;
+$md-comp-text-button-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-text-button-focus-container-color: transparent;
+$md-comp-text-button-focus-label-text-color: color.$md-sys-color-primary;
+$md-comp-text-button-hover-container-color: rgba(color.$md-sys-color-primary, 0.08);
+$md-comp-text-button-hover-label-text-color: color.$md-sys-color-primary;
+$md-comp-text-button-pressed-container-color: rgba(color.$md-sys-color-primary, 0.12);
+$md-comp-text-button-pressed-label-text-color: color.$md-sys-color-primary;
+$md-comp-text-button-state-layer-color: color.$md-sys-color-primary;
+$md-comp-text-button-state-layer-opacity: 0.12;
+
+// =============================================================================
+// ELEVATED BUTTON TOKENS
+// =============================================================================
+
+// Elevated Button Container
+$md-comp-elevated-button-container-color: color.$md-sys-color-surface-container;
+$md-comp-elevated-button-label-text-color: color.$md-sys-color-primary;
+$md-comp-elevated-button-disabled-container-color: rgba(0, 0, 0, 0.12);
+$md-comp-elevated-button-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-elevated-button-focus-container-color: color.$md-sys-color-surface-container;
+$md-comp-elevated-button-focus-label-text-color: color.$md-sys-color-primary;
+$md-comp-elevated-button-hover-container-color: color.$md-sys-color-surface-container;
+$md-comp-elevated-button-hover-label-text-color: color.$md-sys-color-primary;
+$md-comp-elevated-button-pressed-container-color: color.$md-sys-color-surface-container;
+$md-comp-elevated-button-pressed-label-text-color: color.$md-sys-color-primary;
+$md-comp-elevated-button-state-layer-color: color.$md-sys-color-primary;
+$md-comp-elevated-button-state-layer-opacity: 0.12;
+$md-comp-elevated-button-container-elevation: elevation.$md-sys-elevation-level1;
+$md-comp-elevated-button-hover-elevation: elevation.$md-sys-elevation-level2;
+$md-comp-elevated-button-focus-elevation: elevation.$md-sys-elevation-level2;
+$md-comp-elevated-button-pressed-elevation: elevation.$md-sys-elevation-level1;
+
+// =============================================================================
+// TONAL BUTTON TOKENS
+// =============================================================================
+
+// Tonal Button Container
+$md-comp-tonal-button-container-color: color.$md-sys-color-secondary-container;
+$md-comp-tonal-button-label-text-color: color.$md-sys-color-on-secondary-container;
+$md-comp-tonal-button-disabled-container-color: rgba(0, 0, 0, 0.12);
+$md-comp-tonal-button-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-tonal-button-focus-container-color: color.$md-sys-color-secondary-container;
+$md-comp-tonal-button-focus-label-text-color: color.$md-sys-color-on-secondary-container;
+$md-comp-tonal-button-hover-container-color: color.$md-sys-color-secondary-container;
+$md-comp-tonal-button-hover-label-text-color: color.$md-sys-color-on-secondary-container;
+$md-comp-tonal-button-pressed-container-color: color.$md-sys-color-secondary-container;
+$md-comp-tonal-button-pressed-label-text-color: color.$md-sys-color-on-secondary-container;
+$md-comp-tonal-button-state-layer-color: color.$md-sys-color-on-secondary-container;
+$md-comp-tonal-button-state-layer-opacity: 0.12;
+
+// =============================================================================
+// BUTTON ICON TOKENS
+// =============================================================================
+
+// Icon Size
+$md-comp-button-icon-size: 18px;
+$md-comp-button-large-icon-size: 24px;
+
+// Icon Colors
+$md-comp-filled-button-icon-color: color.$md-sys-color-on-primary;
+$md-comp-outlined-button-icon-color: color.$md-sys-color-primary;
+$md-comp-text-button-icon-color: color.$md-sys-color-primary;
+$md-comp-elevated-button-icon-color: color.$md-sys-color-primary;
+$md-comp-tonal-button-icon-color: color.$md-sys-color-on-secondary-container;
+
+// =============================================================================
+// BUTTON SPACING TOKENS
+// =============================================================================
+
+// Padding
+$md-comp-button-leading-space: 16px;
+$md-comp-button-trailing-space: 16px;
+$md-comp-button-with-leading-icon-leading-space: 12px;
+$md-comp-button-with-leading-icon-trailing-space: 16px;
+$md-comp-button-with-trailing-icon-leading-space: 16px;
+$md-comp-button-with-trailing-icon-trailing-space: 12px;
+$md-comp-button-with-icon-leading-space: 12px;
+$md-comp-button-with-icon-trailing-space: 12px;
+
+$md-comp-button-large-leading-space: 24px;
+$md-comp-button-large-trailing-space: 24px;
+$md-comp-button-large-with-leading-icon-leading-space: 16px;
+$md-comp-button-large-with-leading-icon-trailing-space: 24px;
+$md-comp-button-large-with-trailing-icon-leading-space: 24px;
+$md-comp-button-large-with-trailing-icon-trailing-space: 16px;
+$md-comp-button-large-with-icon-leading-space: 16px;
+$md-comp-button-large-with-icon-trailing-space: 16px;
+
+// Icon Spacing
+$md-comp-button-icon-label-space: 8px;
+$md-comp-button-large-icon-label-space: 8px;
+
+// =============================================================================
+// BUTTON MIXINS
+// =============================================================================
+
+@mixin md-comp-button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-family: $md-comp-button-label-text-type;
+  font-weight: $md-comp-button-label-text-weight;
+  font-size: $md-comp-button-label-text-size;
+  line-height: $md-comp-button-label-text-line-height;
+  letter-spacing: $md-comp-button-label-text-tracking;
+  height: $md-comp-button-container-height;
+  border-radius: $md-comp-button-container-shape;
+  padding: 0 $md-comp-button-leading-space;
+  position: relative;
+  overflow: hidden;
+  transition: all motion.$md-sys-motion-duration-short-3 motion.$md-sys-motion-easing-emphasized;
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin md-comp-button-large {
+  height: $md-comp-button-large-container-height;
+  border-radius: $md-comp-button-large-container-shape;
+  padding: 0 $md-comp-button-large-leading-space;
+  font-size: $md-comp-button-large-label-text-size;
+  line-height: $md-comp-button-large-label-text-line-height;
+}
+
+@mixin md-comp-filled-button {
+  background-color: $md-comp-filled-button-container-color;
+  color: $md-comp-filled-button-label-text-color;
+  
+  &:hover {
+    background-color: $md-comp-filled-button-hover-container-color;
+    color: $md-comp-filled-button-hover-label-text-color;
+  }
+  
+  &:focus {
+    background-color: $md-comp-filled-button-focus-container-color;
+    color: $md-comp-filled-button-focus-label-text-color;
+  }
+  
+  &:active {
+    background-color: $md-comp-filled-button-pressed-container-color;
+    color: $md-comp-filled-button-pressed-label-text-color;
+  }
+  
+  &:disabled {
+    background-color: $md-comp-filled-button-disabled-container-color;
+    color: $md-comp-filled-button-disabled-label-text-color;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+@mixin md-comp-outlined-button {
+  background-color: $md-comp-outlined-button-container-color;
+  color: $md-comp-outlined-button-label-text-color;
+  border: 1px solid $md-comp-outlined-button-outline-color;
+  
+  &:hover {
+    background-color: $md-comp-outlined-button-hover-container-color;
+    color: $md-comp-outlined-button-hover-label-text-color;
+    border-color: $md-comp-outlined-button-hover-outline-color;
+  }
+  
+  &:focus {
+    background-color: $md-comp-outlined-button-focus-container-color;
+    color: $md-comp-outlined-button-focus-label-text-color;
+    border-color: $md-comp-outlined-button-focus-outline-color;
+  }
+  
+  &:active {
+    background-color: $md-comp-outlined-button-pressed-container-color;
+    color: $md-comp-outlined-button-pressed-label-text-color;
+    border-color: $md-comp-outlined-button-pressed-outline-color;
+  }
+  
+  &:disabled {
+    background-color: $md-comp-outlined-button-disabled-container-color;
+    color: $md-comp-outlined-button-disabled-label-text-color;
+    border-color: $md-comp-outlined-button-disabled-outline-color;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+@mixin md-comp-text-button {
+  background-color: $md-comp-text-button-container-color;
+  color: $md-comp-text-button-label-text-color;
+  
+  &:hover {
+    background-color: $md-comp-text-button-hover-container-color;
+    color: $md-comp-text-button-hover-label-text-color;
+  }
+  
+  &:focus {
+    background-color: $md-comp-text-button-focus-container-color;
+    color: $md-comp-text-button-focus-label-text-color;
+  }
+  
+  &:active {
+    background-color: $md-comp-text-button-pressed-container-color;
+    color: $md-comp-text-button-pressed-label-text-color;
+  }
+  
+  &:disabled {
+    background-color: $md-comp-text-button-disabled-container-color;
+    color: $md-comp-text-button-disabled-label-text-color;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+@mixin md-comp-elevated-button {
+  background-color: $md-comp-elevated-button-container-color;
+  color: $md-comp-elevated-button-label-text-color;
+  box-shadow: elevation.$md-sys-elevation-shadow-1;
+  
+  &:hover {
+    background-color: $md-comp-elevated-button-hover-container-color;
+    color: $md-comp-elevated-button-hover-label-text-color;
+    box-shadow: elevation.$md-sys-elevation-shadow-2;
+  }
+  
+  &:focus {
+    background-color: $md-comp-elevated-button-focus-container-color;
+    color: $md-comp-elevated-button-focus-label-text-color;
+    box-shadow: elevation.$md-sys-elevation-shadow-2;
+  }
+  
+  &:active {
+    background-color: $md-comp-elevated-button-pressed-container-color;
+    color: $md-comp-elevated-button-pressed-label-text-color;
+    box-shadow: elevation.$md-sys-elevation-shadow-1;
+  }
+  
+  &:disabled {
+    background-color: $md-comp-elevated-button-disabled-container-color;
+    color: $md-comp-elevated-button-disabled-label-text-color;
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+@mixin md-comp-tonal-button {
+  background-color: $md-comp-tonal-button-container-color;
+  color: $md-comp-tonal-button-label-text-color;
+  
+  &:hover {
+    background-color: $md-comp-tonal-button-hover-container-color;
+    color: $md-comp-tonal-button-hover-label-text-color;
+  }
+  
+  &:focus {
+    background-color: $md-comp-tonal-button-focus-container-color;
+    color: $md-comp-tonal-button-focus-label-text-color;
+  }
+  
+  &:active {
+    background-color: $md-comp-tonal-button-pressed-container-color;
+    color: $md-comp-tonal-button-pressed-label-text-color;
+  }
+  
+  &:disabled {
+    background-color: $md-comp-tonal-button-disabled-container-color;
+    color: $md-comp-tonal-button-disabled-label-text-color;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+// =============================================================================
+// MIXIN FOR EXPORTING BUTTON TOKENS
+// =============================================================================
+
+@mixin export-button-tokens {
+  // Container tokens
+  --md-comp-button-container-height: #{$md-comp-button-container-height};
+  --md-comp-button-large-container-height: #{$md-comp-button-large-container-height};
+  --md-comp-button-container-shape: #{$md-comp-button-container-shape};
+  --md-comp-button-large-container-shape: #{$md-comp-button-large-container-shape};
+  
+  // Label text tokens
+  --md-comp-button-label-text-type: #{$md-comp-button-label-text-type};
+  --md-comp-button-label-text-weight: #{$md-comp-button-label-text-weight};
+  --md-comp-button-label-text-size: #{$md-comp-button-label-text-size};
+  --md-comp-button-label-text-line-height: #{$md-comp-button-label-text-line-height};
+  --md-comp-button-label-text-tracking: #{$md-comp-button-label-text-tracking};
+  
+  --md-comp-button-large-label-text-type: #{$md-comp-button-large-label-text-type};
+  --md-comp-button-large-label-text-weight: #{$md-comp-button-large-label-text-weight};
+  --md-comp-button-large-label-text-size: #{$md-comp-button-large-label-text-size};
+  --md-comp-button-large-label-text-line-height: #{$md-comp-button-large-label-text-line-height};
+  --md-comp-button-large-label-text-tracking: #{$md-comp-button-large-label-text-tracking};
+  
+  // Filled button tokens
+  --md-comp-filled-button-container-color: #{$md-comp-filled-button-container-color};
+  --md-comp-filled-button-label-text-color: #{$md-comp-filled-button-label-text-color};
+  --md-comp-filled-button-disabled-container-color: #{$md-comp-filled-button-disabled-container-color};
+  --md-comp-filled-button-disabled-label-text-color: #{$md-comp-filled-button-disabled-label-text-color};
+  --md-comp-filled-button-state-layer-color: #{$md-comp-filled-button-state-layer-color};
+  --md-comp-filled-button-state-layer-opacity: #{$md-comp-filled-button-state-layer-opacity};
+  
+  // Outlined button tokens
+  --md-comp-outlined-button-container-color: #{$md-comp-outlined-button-container-color};
+  --md-comp-outlined-button-label-text-color: #{$md-comp-outlined-button-label-text-color};
+  --md-comp-outlined-button-outline-color: #{$md-comp-outlined-button-outline-color};
+  --md-comp-outlined-button-disabled-container-color: #{$md-comp-outlined-button-disabled-container-color};
+  --md-comp-outlined-button-disabled-label-text-color: #{$md-comp-outlined-button-disabled-label-text-color};
+  --md-comp-outlined-button-disabled-outline-color: #{$md-comp-outlined-button-disabled-outline-color};
+  --md-comp-outlined-button-state-layer-color: #{$md-comp-outlined-button-state-layer-color};
+  --md-comp-outlined-button-state-layer-opacity: #{$md-comp-outlined-button-state-layer-opacity};
+  
+  // Text button tokens
+  --md-comp-text-button-container-color: #{$md-comp-text-button-container-color};
+  --md-comp-text-button-label-text-color: #{$md-comp-text-button-label-text-color};
+  --md-comp-text-button-disabled-container-color: #{$md-comp-text-button-disabled-container-color};
+  --md-comp-text-button-disabled-label-text-color: #{$md-comp-text-button-disabled-label-text-color};
+  --md-comp-text-button-state-layer-color: #{$md-comp-text-button-state-layer-color};
+  --md-comp-text-button-state-layer-opacity: #{$md-comp-text-button-state-layer-opacity};
+  
+  // Elevated button tokens
+  --md-comp-elevated-button-container-color: #{$md-comp-elevated-button-container-color};
+  --md-comp-elevated-button-label-text-color: #{$md-comp-elevated-button-label-text-color};
+  --md-comp-elevated-button-disabled-container-color: #{$md-comp-elevated-button-disabled-container-color};
+  --md-comp-elevated-button-disabled-label-text-color: #{$md-comp-elevated-button-disabled-label-text-color};
+  --md-comp-elevated-button-state-layer-color: #{$md-comp-elevated-button-state-layer-color};
+  --md-comp-elevated-button-state-layer-opacity: #{$md-comp-elevated-button-state-layer-opacity};
+  --md-comp-elevated-button-container-elevation: #{$md-comp-elevated-button-container-elevation};
+  
+  // Tonal button tokens
+  --md-comp-tonal-button-container-color: #{$md-comp-tonal-button-container-color};
+  --md-comp-tonal-button-label-text-color: #{$md-comp-tonal-button-label-text-color};
+  --md-comp-tonal-button-disabled-container-color: #{$md-comp-tonal-button-disabled-container-color};
+  --md-comp-tonal-button-disabled-label-text-color: #{$md-comp-tonal-button-disabled-label-text-color};
+  --md-comp-tonal-button-state-layer-color: #{$md-comp-tonal-button-state-layer-color};
+  --md-comp-tonal-button-state-layer-opacity: #{$md-comp-tonal-button-state-layer-opacity};
+  
+  // Icon tokens
+  --md-comp-button-icon-size: #{$md-comp-button-icon-size};
+  --md-comp-button-large-icon-size: #{$md-comp-button-large-icon-size};
+  --md-comp-filled-button-icon-color: #{$md-comp-filled-button-icon-color};
+  --md-comp-outlined-button-icon-color: #{$md-comp-outlined-button-icon-color};
+  --md-comp-text-button-icon-color: #{$md-comp-text-button-icon-color};
+  --md-comp-elevated-button-icon-color: #{$md-comp-elevated-button-icon-color};
+  --md-comp-tonal-button-icon-color: #{$md-comp-tonal-button-icon-color};
+  
+  // Spacing tokens
+  --md-comp-button-leading-space: #{$md-comp-button-leading-space};
+  --md-comp-button-trailing-space: #{$md-comp-button-trailing-space};
+  --md-comp-button-icon-label-space: #{$md-comp-button-icon-label-space};
+}

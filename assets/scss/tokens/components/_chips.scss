@@ -1,0 +1,447 @@
+// Material Design 3 Chip Component Tokens
+// https://m3.material.io/components/chips/overview
+
+@use '../color-system' as color;
+@use '../elevation' as elevation;
+@use '../motion' as motion;
+
+// =============================================================================
+// CHIP CONTAINER TOKENS
+// =============================================================================
+
+// Chip Heights
+$md-comp-chip-container-height: 32px;
+$md-comp-chip-with-avatar-container-height: 40px;
+
+// Chip Shape
+$md-comp-chip-container-shape: 8px;
+
+// =============================================================================
+// CHIP LABEL TEXT TOKENS
+// =============================================================================
+
+// Chip Typography
+$md-comp-chip-label-text-type: 'Roboto';
+$md-comp-chip-label-text-weight: 500;
+$md-comp-chip-label-text-size: 12px;
+$md-comp-chip-label-text-line-height: 20px;
+$md-comp-chip-label-text-tracking: 0.1px;
+
+// =============================================================================
+// ASSIST CHIP TOKENS
+// =============================================================================
+
+// Assist Chip Container
+$md-comp-assist-chip-container-color: color.$md-sys-color-surface-container;
+$md-comp-assist-chip-label-text-color: color.$md-sys-color-primary;
+$md-comp-assist-chip-disabled-container-color: rgba(0, 0, 0, 0.08);
+$md-comp-assist-chip-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-assist-chip-focus-container-color: color.$md-sys-color-surface-container;
+$md-comp-assist-chip-focus-label-text-color: color.$md-sys-color-primary;
+$md-comp-assist-chip-hover-container-color: rgba(color.$md-sys-color-primary, 0.08);
+$md-comp-assist-chip-hover-label-text-color: color.$md-sys-color-primary;
+$md-comp-assist-chip-pressed-container-color: rgba(color.$md-sys-color-primary, 0.12);
+$md-comp-assist-chip-pressed-label-text-color: color.$md-sys-color-primary;
+$md-comp-assist-chip-state-layer-color: color.$md-sys-color-primary;
+$md-comp-assist-chip-state-layer-opacity: 0.12;
+$md-comp-assist-chip-elevated-container-color: color.$md-sys-color-surface-container-high;
+$md-comp-assist-chip-elevated-container-elevation: elevation.$md-sys-elevation-level1;
+$md-comp-assist-chip-elevated-hover-elevation: elevation.$md-sys-elevation-level2;
+$md-comp-assist-chip-elevated-focus-elevation: elevation.$md-sys-elevation-level2;
+$md-comp-assist-chip-elevated-pressed-elevation: elevation.$md-sys-elevation-level1;
+
+// =============================================================================
+// FILTER CHIP TOKENS
+// =============================================================================
+
+// Filter Chip Container
+$md-comp-filter-chip-container-color: color.$md-sys-color-surface-container;
+$md-comp-filter-chip-label-text-color: color.$md-sys-color-on-surface;
+$md-comp-filter-chip-disabled-container-color: rgba(0, 0, 0, 0.08);
+$md-comp-filter-chip-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-filter-chip-focus-container-color: color.$md-sys-color-surface-container;
+$md-comp-filter-chip-focus-label-text-color: color.$md-sys-color-on-surface;
+$md-comp-filter-chip-hover-container-color: rgba(color.$md-sys-color-on-surface, 0.08);
+$md-comp-filter-chip-hover-label-text-color: color.$md-sys-color-on-surface;
+$md-comp-filter-chip-pressed-container-color: rgba(color.$md-sys-color-on-surface, 0.12);
+$md-comp-filter-chip-pressed-label-text-color: color.$md-sys-color-on-surface;
+$md-comp-filter-chip-state-layer-color: color.$md-sys-color-on-surface;
+$md-comp-filter-chip-state-layer-opacity: 0.12;
+
+// Selected Filter Chip
+$md-comp-filter-chip-selected-container-color: color.$md-sys-color-secondary-container;
+$md-comp-filter-chip-selected-label-text-color: color.$md-sys-color-on-secondary-container;
+$md-comp-filter-chip-selected-focus-container-color: color.$md-sys-color-secondary-container;
+$md-comp-filter-chip-selected-focus-label-text-color: color.$md-sys-color-on-secondary-container;
+$md-comp-filter-chip-selected-hover-container-color: color.$md-sys-color-secondary-container;
+$md-comp-filter-chip-selected-hover-label-text-color: color.$md-sys-color-on-secondary-container;
+$md-comp-filter-chip-selected-pressed-container-color: color.$md-sys-color-secondary-container;
+$md-comp-filter-chip-selected-pressed-label-text-color: color.$md-sys-color-on-secondary-container;
+$md-comp-filter-chip-selected-state-layer-color: color.$md-sys-color-on-secondary-container;
+$md-comp-filter-chip-selected-state-layer-opacity: 0.12;
+$md-comp-filter-chip-elevated-container-color: color.$md-sys-color-surface-container-high;
+$md-comp-filter-chip-elevated-container-elevation: elevation.$md-sys-elevation-level1;
+$md-comp-filter-chip-elevated-hover-elevation: elevation.$md-sys-elevation-level2;
+$md-comp-filter-chip-elevated-focus-elevation: elevation.$md-sys-elevation-level2;
+$md-comp-filter-chip-elevated-pressed-elevation: elevation.$md-sys-elevation-level1;
+
+// =============================================================================
+// INPUT CHIP TOKENS
+// =============================================================================
+
+// Input Chip Container
+$md-comp-input-chip-container-color: color.$md-sys-color-surface-container;
+$md-comp-input-chip-label-text-color: color.$md-sys-color-on-surface;
+$md-comp-input-chip-disabled-container-color: rgba(0, 0, 0, 0.08);
+$md-comp-input-chip-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-input-chip-focus-container-color: color.$md-sys-color-surface-container;
+$md-comp-input-chip-focus-label-text-color: color.$md-sys-color-on-surface;
+$md-comp-input-chip-hover-container-color: rgba(color.$md-sys-color-on-surface, 0.08);
+$md-comp-input-chip-hover-label-text-color: color.$md-sys-color-on-surface;
+$md-comp-input-chip-pressed-container-color: rgba(color.$md-sys-color-on-surface, 0.12);
+$md-comp-input-chip-pressed-label-text-color: color.$md-sys-color-on-surface;
+$md-comp-input-chip-state-layer-color: color.$md-sys-color-on-surface;
+$md-comp-input-chip-state-layer-opacity: 0.12;
+$md-comp-input-chip-elevated-container-color: color.$md-sys-color-surface-container-high;
+$md-comp-input-chip-elevated-container-elevation: elevation.$md-sys-elevation-level1;
+$md-comp-input-chip-elevated-hover-elevation: elevation.$md-sys-elevation-level2;
+$md-comp-input-chip-elevated-focus-elevation: elevation.$md-sys-elevation-level2;
+$md-comp-input-chip-elevated-pressed-elevation: elevation.$md-sys-elevation-level1;
+
+// =============================================================================
+// SUGGESTION CHIP TOKENS
+// =============================================================================
+
+// Suggestion Chip Container
+$md-comp-suggestion-chip-container-color: color.$md-sys-color-surface-container;
+$md-comp-suggestion-chip-label-text-color: color.$md-sys-color-primary;
+$md-comp-suggestion-chip-disabled-container-color: rgba(0, 0, 0, 0.08);
+$md-comp-suggestion-chip-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-suggestion-chip-focus-container-color: color.$md-sys-color-surface-container;
+$md-comp-suggestion-chip-focus-label-text-color: color.$md-sys-color-primary;
+$md-comp-suggestion-chip-hover-container-color: rgba(color.$md-sys-color-primary, 0.08);
+$md-comp-suggestion-chip-hover-label-text-color: color.$md-sys-color-primary;
+$md-comp-suggestion-chip-pressed-container-color: rgba(color.$md-sys-color-primary, 0.12);
+$md-comp-suggestion-chip-pressed-label-text-color: color.$md-sys-color-primary;
+$md-comp-suggestion-chip-state-layer-color: color.$md-sys-color-primary;
+$md-comp-suggestion-chip-state-layer-opacity: 0.12;
+$md-comp-suggestion-chip-elevated-container-color: color.$md-sys-color-surface-container-high;
+$md-comp-suggestion-chip-elevated-container-elevation: elevation.$md-sys-elevation-level1;
+$md-comp-suggestion-chip-elevated-hover-elevation: elevation.$md-sys-elevation-level2;
+$md-comp-suggestion-chip-elevated-focus-elevation: elevation.$md-sys-elevation-level2;
+$md-comp-suggestion-chip-elevated-pressed-elevation: elevation.$md-sys-elevation-level1;
+
+// =============================================================================
+// CHIP ICON TOKENS
+// =============================================================================
+
+// Icon Size
+$md-comp-chip-icon-size: 18px;
+$md-comp-chip-avatar-size: 24px;
+
+// Icon Colors
+$md-comp-chip-icon-color: color.$md-sys-color-on-surface;
+$md-comp-chip-disabled-icon-color: rgba(0, 0, 0, 0.38);
+$md-comp-chip-selected-icon-color: color.$md-sys-color-on-secondary-container;
+$md-comp-chip-avatar-color: color.$md-sys-color-on-surface;
+$md-comp-chip-avatar-background-color: color.$md-sys-color-on-surface-variant;
+
+// =============================================================================
+// CHIP OUTLINE TOKENS
+// =============================================================================
+
+// Outline Colors
+$md-comp-chip-outline-color: color.$md-sys-color-outline;
+$md-comp-chip-disabled-outline-color: rgba(0, 0, 0, 0.12);
+$md-comp-chip-selected-outline-color: transparent;
+$md-comp-chip-elevated-outline-color: transparent;
+
+// =============================================================================
+// CHIP SPACING TOKENS
+// =============================================================================
+
+// Padding
+$md-comp-chip-leading-space: 16px;
+$md-comp-chip-trailing-space: 16px;
+$md-comp-chip-with-leading-icon-leading-space: 12px;
+$md-comp-chip-with-leading-icon-trailing-space: 16px;
+$md-comp-chip-with-trailing-icon-leading-space: 16px;
+$md-comp-chip-with-trailing-icon-trailing-space: 12px;
+$md-comp-chip-with-avatar-leading-space: 8px;
+$md-comp-chip-with-avatar-trailing-space: 16px;
+$md-comp-chip-with-icon-leading-space: 12px;
+$md-comp-chip-with-icon-trailing-space: 12px;
+
+$md-comp-chip-with-avatar-with-trailing-icon-leading-space: 8px;
+$md-comp-chip-with-avatar-with-trailing-icon-trailing-space: 12px;
+
+// Icon Spacing
+$md-comp-chip-icon-label-space: 8px;
+$md-comp-chip-avatar-label-space: 8px;
+
+// =============================================================================
+// CHIP MIXINS
+// =============================================================================
+
+@mixin md-comp-chip-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  cursor: pointer;
+  font-family: $md-comp-chip-label-text-type;
+  font-weight: $md-comp-chip-label-text-weight;
+  font-size: $md-comp-chip-label-text-size;
+  line-height: $md-comp-chip-label-text-line-height;
+  letter-spacing: $md-comp-chip-label-text-tracking;
+  height: $md-comp-chip-container-height;
+  border-radius: $md-comp-chip-container-shape;
+  padding: 0 $md-comp-chip-leading-space;
+  position: relative;
+  overflow: hidden;
+  transition: all motion.$md-sys-motion-duration-short-3 motion.$md-sys-motion-easing-emphasized;
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+}
+
+@mixin md-comp-chip-with-avatar {
+  height: $md-comp-chip-with-avatar-container-height;
+  padding: 0 $md-comp-chip-with-avatar-leading-space;
+}
+
+@mixin md-comp-chip-elevated {
+  border: none;
+  box-shadow: elevation.$md-sys-elevation-shadow-1;
+  
+  &:hover {
+    box-shadow: elevation.$md-sys-elevation-shadow-2;
+  }
+  
+  &:focus {
+    box-shadow: elevation.$md-sys-elevation-shadow-2;
+  }
+  
+  &:active {
+    box-shadow: elevation.$md-sys-elevation-shadow-1;
+  }
+}
+
+@mixin md-comp-assist-chip {
+  background-color: $md-comp-assist-chip-container-color;
+  color: $md-comp-assist-chip-label-text-color;
+  border-color: $md-comp-chip-outline-color;
+  
+  &:hover {
+    background-color: $md-comp-assist-chip-hover-container-color;
+    color: $md-comp-assist-chip-hover-label-text-color;
+  }
+  
+  &:focus {
+    background-color: $md-comp-assist-chip-focus-container-color;
+    color: $md-comp-assist-chip-focus-label-text-color;
+  }
+  
+  &:active {
+    background-color: $md-comp-assist-chip-pressed-container-color;
+    color: $md-comp-assist-chip-pressed-label-text-color;
+  }
+  
+  &:disabled {
+    background-color: $md-comp-assist-chip-disabled-container-color;
+    color: $md-comp-assist-chip-disabled-label-text-color;
+    border-color: $md-comp-chip-disabled-outline-color;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+@mixin md-comp-filter-chip {
+  background-color: $md-comp-filter-chip-container-color;
+  color: $md-comp-filter-chip-label-text-color;
+  border-color: $md-comp-chip-outline-color;
+  
+  &:hover {
+    background-color: $md-comp-filter-chip-hover-container-color;
+    color: $md-comp-filter-chip-hover-label-text-color;
+  }
+  
+  &:focus {
+    background-color: $md-comp-filter-chip-focus-container-color;
+    color: $md-comp-filter-chip-focus-label-text-color;
+  }
+  
+  &:active {
+    background-color: $md-comp-filter-chip-pressed-container-color;
+    color: $md-comp-filter-chip-pressed-label-text-color;
+  }
+  
+  &:disabled {
+    background-color: $md-comp-filter-chip-disabled-container-color;
+    color: $md-comp-filter-chip-disabled-label-text-color;
+    border-color: $md-comp-chip-disabled-outline-color;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  &.selected {
+    background-color: $md-comp-filter-chip-selected-container-color;
+    color: $md-comp-filter-chip-selected-label-text-color;
+    border-color: $md-comp-chip-selected-outline-color;
+    
+    &:hover {
+      background-color: $md-comp-filter-chip-selected-hover-container-color;
+      color: $md-comp-filter-chip-selected-hover-label-text-color;
+    }
+    
+    &:focus {
+      background-color: $md-comp-filter-chip-selected-focus-container-color;
+      color: $md-comp-filter-chip-selected-focus-label-text-color;
+    }
+    
+    &:active {
+      background-color: $md-comp-filter-chip-selected-pressed-container-color;
+      color: $md-comp-filter-chip-selected-pressed-label-text-color;
+    }
+  }
+}
+
+@mixin md-comp-input-chip {
+  background-color: $md-comp-input-chip-container-color;
+  color: $md-comp-input-chip-label-text-color;
+  border-color: $md-comp-chip-outline-color;
+  
+  &:hover {
+    background-color: $md-comp-input-chip-hover-container-color;
+    color: $md-comp-input-chip-hover-label-text-color;
+  }
+  
+  &:focus {
+    background-color: $md-comp-input-chip-focus-container-color;
+    color: $md-comp-input-chip-focus-label-text-color;
+  }
+  
+  &:active {
+    background-color: $md-comp-input-chip-pressed-container-color;
+    color: $md-comp-input-chip-pressed-label-text-color;
+  }
+  
+  &:disabled {
+    background-color: $md-comp-input-chip-disabled-container-color;
+    color: $md-comp-input-chip-disabled-label-text-color;
+    border-color: $md-comp-chip-disabled-outline-color;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+@mixin md-comp-suggestion-chip {
+  background-color: $md-comp-suggestion-chip-container-color;
+  color: $md-comp-suggestion-chip-label-text-color;
+  border-color: $md-comp-chip-outline-color;
+  
+  &:hover {
+    background-color: $md-comp-suggestion-chip-hover-container-color;
+    color: $md-comp-suggestion-chip-hover-label-text-color;
+  }
+  
+  &:focus {
+    background-color: $md-comp-suggestion-chip-focus-container-color;
+    color: $md-comp-suggestion-chip-focus-label-text-color;
+  }
+  
+  &:active {
+    background-color: $md-comp-suggestion-chip-pressed-container-color;
+    color: $md-comp-suggestion-chip-pressed-label-text-color;
+  }
+  
+  &:disabled {
+    background-color: $md-comp-suggestion-chip-disabled-container-color;
+    color: $md-comp-suggestion-chip-disabled-label-text-color;
+    border-color: $md-comp-chip-disabled-outline-color;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+// =============================================================================
+// MIXIN FOR EXPORTING CHIP TOKENS
+// =============================================================================
+
+@mixin export-chip-tokens {
+  // Container tokens
+  --md-comp-chip-container-height: #{$md-comp-chip-container-height};
+  --md-comp-chip-with-avatar-container-height: #{$md-comp-chip-with-avatar-container-height};
+  --md-comp-chip-container-shape: #{$md-comp-chip-container-shape};
+  
+  // Label text tokens
+  --md-comp-chip-label-text-type: #{$md-comp-chip-label-text-type};
+  --md-comp-chip-label-text-weight: #{$md-comp-chip-label-text-weight};
+  --md-comp-chip-label-text-size: #{$md-comp-chip-label-text-size};
+  --md-comp-chip-label-text-line-height: #{$md-comp-chip-label-text-line-height};
+  --md-comp-chip-label-text-tracking: #{$md-comp-chip-label-text-tracking};
+  
+  // Assist chip tokens
+  --md-comp-assist-chip-container-color: #{$md-comp-assist-chip-container-color};
+  --md-comp-assist-chip-label-text-color: #{$md-comp-assist-chip-label-text-color};
+  --md-comp-assist-chip-disabled-container-color: #{$md-comp-assist-chip-disabled-container-color};
+  --md-comp-assist-chip-disabled-label-text-color: #{$md-comp-assist-chip-disabled-label-text-color};
+  --md-comp-assist-chip-state-layer-color: #{$md-comp-assist-chip-state-layer-color};
+  --md-comp-assist-chip-state-layer-opacity: #{$md-comp-assist-chip-state-layer-opacity};
+  --md-comp-assist-chip-elevated-container-color: #{$md-comp-assist-chip-elevated-container-color};
+  --md-comp-assist-chip-elevated-container-elevation: #{$md-comp-assist-chip-elevated-container-elevation};
+  
+  // Filter chip tokens
+  --md-comp-filter-chip-container-color: #{$md-comp-filter-chip-container-color};
+  --md-comp-filter-chip-label-text-color: #{$md-comp-filter-chip-label-text-color};
+  --md-comp-filter-chip-disabled-container-color: #{$md-comp-filter-chip-disabled-container-color};
+  --md-comp-filter-chip-disabled-label-text-color: #{$md-comp-filter-chip-disabled-label-text-color};
+  --md-comp-filter-chip-state-layer-color: #{$md-comp-filter-chip-state-layer-color};
+  --md-comp-filter-chip-state-layer-opacity: #{$md-comp-filter-chip-state-layer-opacity};
+  --md-comp-filter-chip-selected-container-color: #{$md-comp-filter-chip-selected-container-color};
+  --md-comp-filter-chip-selected-label-text-color: #{$md-comp-filter-chip-selected-label-text-color};
+  --md-comp-filter-chip-elevated-container-color: #{$md-comp-filter-chip-elevated-container-color};
+  --md-comp-filter-chip-elevated-container-elevation: #{$md-comp-filter-chip-elevated-container-elevation};
+  
+  // Input chip tokens
+  --md-comp-input-chip-container-color: #{$md-comp-input-chip-container-color};
+  --md-comp-input-chip-label-text-color: #{$md-comp-input-chip-label-text-color};
+  --md-comp-input-chip-disabled-container-color: #{$md-comp-input-chip-disabled-container-color};
+  --md-comp-input-chip-disabled-label-text-color: #{$md-comp-input-chip-disabled-label-text-color};
+  --md-comp-input-chip-state-layer-color: #{$md-comp-input-chip-state-layer-color};
+  --md-comp-input-chip-state-layer-opacity: #{$md-comp-input-chip-state-layer-opacity};
+  --md-comp-input-chip-elevated-container-color: #{$md-comp-input-chip-elevated-container-color};
+  --md-comp-input-chip-elevated-container-elevation: #{$md-comp-input-chip-elevated-container-elevation};
+  
+  // Suggestion chip tokens
+  --md-comp-suggestion-chip-container-color: #{$md-comp-suggestion-chip-container-color};
+  --md-comp-suggestion-chip-label-text-color: #{$md-comp-suggestion-chip-label-text-color};
+  --md-comp-suggestion-chip-disabled-container-color: #{$md-comp-suggestion-chip-disabled-container-color};
+  --md-comp-suggestion-chip-disabled-label-text-color: #{$md-comp-suggestion-chip-disabled-label-text-color};
+  --md-comp-suggestion-chip-state-layer-color: #{$md-comp-suggestion-chip-state-layer-color};
+  --md-comp-suggestion-chip-state-layer-opacity: #{$md-comp-suggestion-chip-state-layer-opacity};
+  --md-comp-suggestion-chip-elevated-container-color: #{$md-comp-suggestion-chip-elevated-container-color};
+  --md-comp-suggestion-chip-elevated-container-elevation: #{$md-comp-suggestion-chip-elevated-container-elevation};
+  
+  // Icon tokens
+  --md-comp-chip-icon-size: #{$md-comp-chip-icon-size};
+  --md-comp-chip-avatar-size: #{$md-comp-chip-avatar-size};
+  --md-comp-chip-icon-color: #{$md-comp-chip-icon-color};
+  --md-comp-chip-disabled-icon-color: #{$md-comp-chip-disabled-icon-color};
+  --md-comp-chip-selected-icon-color: #{$md-comp-chip-selected-icon-color};
+  --md-comp-chip-avatar-color: #{$md-comp-chip-avatar-color};
+  --md-comp-chip-avatar-background-color: #{$md-comp-chip-avatar-background-color};
+  
+  // Outline tokens
+  --md-comp-chip-outline-color: #{$md-comp-chip-outline-color};
+  --md-comp-chip-disabled-outline-color: #{$md-comp-chip-disabled-outline-color};
+  --md-comp-chip-selected-outline-color: #{$md-comp-chip-selected-outline-color};
+  --md-comp-chip-elevated-outline-color: #{$md-comp-chip-elevated-outline-color};
+  
+  // Spacing tokens
+  --md-comp-chip-leading-space: #{$md-comp-chip-leading-space};
+  --md-comp-chip-trailing-space: #{$md-comp-chip-trailing-space};
+  --md-comp-chip-icon-label-space: #{$md-comp-chip-icon-label-space};
+  --md-comp-chip-avatar-label-space: #{$md-comp-chip-avatar-label-space};
+}

@@ -1,0 +1,559 @@
+// Material Design 3 Navigation Component Tokens
+// https://m3.material.io/components/navigation-bar/overview
+
+@use '../color-system' as color;
+@use '../elevation' as elevation;
+@use '../motion' as motion;
+
+// =============================================================================
+// NAVIGATION BAR CONTAINER TOKENS
+// =============================================================================
+
+// Navigation Bar Heights
+$md-comp-navigation-bar-container-height: 80px;
+$md-comp-navigation-bar-small-container-height: 56px;
+
+// Navigation Bar Shape
+$md-comp-navigation-bar-container-shape: 0px;
+
+// =============================================================================
+// NAVIGATION ITEM TOKENS
+// =============================================================================
+
+// Navigation Item Heights
+$md-comp-navigation-item-container-height: 56px;
+$md-comp-navigation-item-small-container-height: 48px;
+
+// Navigation Item Shape
+$md-comp-navigation-item-container-shape: 0px;
+
+// =============================================================================
+// NAVIGATION LABEL TOKENS
+// =============================================================================
+
+// Navigation Label Typography
+$md-comp-navigation-label-text-type: 'Roboto';
+$md-comp-navigation-label-text-weight: 500;
+$md-comp-navigation-label-text-size: 12px;
+$md-comp-navigation-label-text-line-height: 16px;
+$md-comp-navigation-label-text-tracking: 0.5px;
+
+$md-comp-navigation-small-label-text-size: 10px;
+$md-comp-navigation-small-label-text-line-height: 14px;
+
+// =============================================================================
+// NAVIGATION BAR TOKENS
+// =============================================================================
+
+// Navigation Bar Container
+$md-comp-navigation-bar-container-color: color.$md-sys-color-surface-container;
+$md-comp-navigation-bar-container-elevation: elevation.$md-sys-elevation-level3;
+$md-comp-navigation-bar-disabled-container-color: rgba(0, 0, 0, 0.04);
+$md-comp-navigation-bar-focus-container-color: color.$md-sys-color-surface-container;
+$md-comp-navigation-bar-hover-container-color: color.$md-sys-color-surface-container;
+$md-comp-navigation-bar-pressed-container-color: color.$md-sys-color-surface-container;
+
+// =============================================================================
+// NAVIGATION ITEM TOKENS
+// =============================================================================
+
+// Navigation Item Container
+$md-comp-navigation-item-container-color: transparent;
+$md-comp-navigation-item-label-text-color: color.$md-sys-color-on-surface-variant;
+$md-comp-navigation-item-icon-color: color.$md-sys-color-on-surface-variant;
+$md-comp-navigation-item-disabled-container-color: transparent;
+$md-comp-navigation-item-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-navigation-item-disabled-icon-color: rgba(0, 0, 0, 0.38);
+$md-comp-navigation-item-focus-container-color: rgba(color.$md-sys-color-primary, 0.08);
+$md-comp-navigation-item-focus-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-focus-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-hover-container-color: rgba(color.$md-sys-color-primary, 0.08);
+$md-comp-navigation-item-hover-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-hover-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-pressed-container-color: rgba(color.$md-sys-color-primary, 0.12);
+$md-comp-navigation-item-pressed-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-pressed-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-state-layer-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-state-layer-opacity: 0.12;
+
+// Selected Navigation Item
+$md-comp-navigation-item-selected-container-color: transparent;
+$md-comp-navigation-item-selected-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-selected-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-selected-focus-container-color: rgba(color.$md-sys-color-primary, 0.08);
+$md-comp-navigation-item-selected-focus-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-selected-focus-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-selected-hover-container-color: rgba(color.$md-sys-color-primary, 0.08);
+$md-comp-navigation-item-selected-hover-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-selected-hover-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-selected-pressed-container-color: rgba(color.$md-sys-color-primary, 0.12);
+$md-comp-navigation-item-selected-pressed-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-selected-pressed-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-selected-state-layer-color: color.$md-sys-color-primary;
+$md-comp-navigation-item-selected-state-layer-opacity: 0.12;
+
+// =============================================================================
+// NAVIGATION ICON TOKENS
+// =============================================================================
+
+// Icon Size
+$md-comp-navigation-icon-size: 24px;
+$md-comp-navigation-small-icon-size: 20px;
+
+// =============================================================================
+// NAVIGATION SPACING TOKENS
+// =============================================================================
+
+// Navigation Bar Spacing
+$md-comp-navigation-bar-padding-horizontal: 8px;
+$md-comp-navigation-bar-padding-vertical: 12px;
+$md-comp-navigation-bar-small-padding-horizontal: 8px;
+$md-comp-navigation-bar-small-padding-vertical: 8px;
+
+// Navigation Item Spacing
+$md-comp-navigation-item-padding-horizontal: 12px;
+$md-comp-navigation-item-padding-vertical: 12px;
+$md-comp-navigation-item-small-padding-horizontal: 8px;
+$md-comp-navigation-item-small-padding-vertical: 8px;
+
+// Icon Spacing
+$md-comp-navigation-icon-label-space: 4px;
+$md-comp-navigation-small-icon-label-space: 2px;
+
+// =============================================================================
+// NAVIGATION DRAWER TOKENS
+// =============================================================================
+
+// Navigation Drawer Container
+$md-comp-navigation-drawer-container-color: color.$md-sys-color-surface-container;
+$md-comp-navigation-drawer-container-elevation: elevation.$md-sys-elevation-level2;
+$md-comp-navigation-drawer-container-shape: 16px;
+$md-comp-navigation-drawer-container-width: 360px;
+$md-comp-navigation-drawer-container-height: 100%;
+
+// Navigation Drawer Header
+$md-comp-navigation-drawer-header-height: 64px;
+$md-comp-navigation-drawer-header-padding-horizontal: 16px;
+$md-comp-navigation-drawer-header-padding-vertical: 16px;
+
+// Navigation Drawer Items
+$md-comp-navigation-drawer-item-container-height: 56px;
+$md-comp-navigation-drawer-item-container-color: transparent;
+$md-comp-navigation-drawer-item-label-text-color: color.$md-sys-color-on-surface-variant;
+$md-comp-navigation-drawer-item-icon-color: color.$md-sys-color-on-surface-variant;
+$md-comp-navigation-drawer-item-disabled-container-color: transparent;
+$md-comp-navigation-drawer-item-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-navigation-drawer-item-disabled-icon-color: rgba(0, 0, 0, 0.38);
+$md-comp-navigation-drawer-item-focus-container-color: rgba(color.$md-sys-color-primary, 0.08);
+$md-comp-navigation-drawer-item-focus-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-focus-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-hover-container-color: rgba(color.$md-sys-color-primary, 0.08);
+$md-comp-navigation-drawer-item-hover-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-hover-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-pressed-container-color: rgba(color.$md-sys-color-primary, 0.12);
+$md-comp-navigation-drawer-item-pressed-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-pressed-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-state-layer-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-state-layer-opacity: 0.12;
+
+// Selected Navigation Drawer Item
+$md-comp-navigation-drawer-item-selected-container-color: rgba(color.$md-sys-color-primary, 0.12);
+$md-comp-navigation-drawer-item-selected-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-selected-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-selected-focus-container-color: rgba(color.$md-sys-color-primary, 0.12);
+$md-comp-navigation-drawer-item-selected-focus-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-selected-focus-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-selected-hover-container-color: rgba(color.$md-sys-color-primary, 0.16);
+$md-comp-navigation-drawer-item-selected-hover-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-selected-hover-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-selected-pressed-container-color: rgba(color.$md-sys-color-primary, 0.20);
+$md-comp-navigation-drawer-item-selected-pressed-label-text-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-selected-pressed-icon-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-selected-state-layer-color: color.$md-sys-color-primary;
+$md-comp-navigation-drawer-item-selected-state-layer-opacity: 0.12;
+
+// =============================================================================
+// TOP APP BAR TOKENS
+// =============================================================================
+
+// Top App Bar Container
+$md-comp-top-app-bar-container-color: color.$md-sys-color-surface-container;
+$md-comp-top-app-bar-container-elevation: elevation.$md-sys-elevation-level4;
+$md-comp-top-app-bar-container-height: 64px;
+$md-comp-top-app-bar-small-container-height: 56px;
+$md-comp-top-app-bar-medium-container-height: 112px;
+$md-comp-top-app-bar-large-container-height: 152px;
+
+// Top App Bar Typography
+$md-comp-top-app-bar-headline-text-type: 'Roboto';
+$md-comp-top-app-bar-headline-text-weight: 400;
+$md-comp-top-app-bar-headline-text-size: 22px;
+$md-comp-top-app-bar-headline-text-line-height: 28px;
+$md-comp-top-app-bar-headline-text-tracking: 0px;
+
+$md-comp-top-app-bar-title-text-type: 'Roboto';
+$md-comp-top-app-bar-title-text-weight: 400;
+$md-comp-top-app-bar-title-text-size: 16px;
+$md-comp-top-app-bar-title-text-line-height: 24px;
+$md-comp-top-app-bar-title-text-tracking: 0.1px;
+
+// Top App Bar Colors
+$md-comp-top-app-bar-headline-text-color: color.$md-sys-color-on-surface;
+$md-comp-top-app-bar-title-text-color: color.$md-sys-color-on-surface;
+$md-comp-top-app-bar-icon-color: color.$md-sys-color-on-surface;
+$md-comp-top-app-bar-disabled-icon-color: rgba(0, 0, 0, 0.38);
+
+// =============================================================================
+// NAVIGATION MIXINS
+// =============================================================================
+
+@mixin md-comp-navigation-bar {
+  background-color: $md-comp-navigation-bar-container-color;
+  box-shadow: elevation.$md-sys-elevation-shadow-3;
+  height: $md-comp-navigation-bar-container-height;
+  border-radius: $md-comp-navigation-bar-container-shape;
+  padding: $md-comp-navigation-bar-padding-vertical $md-comp-navigation-bar-padding-horizontal;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+@mixin md-comp-navigation-bar-small {
+  height: $md-comp-navigation-bar-small-container-height;
+  padding: $md-comp-navigation-bar-small-padding-vertical $md-comp-navigation-bar-small-padding-horizontal;
+}
+
+@mixin md-comp-navigation-item {
+  background-color: $md-comp-navigation-item-container-color;
+  color: $md-comp-navigation-item-label-text-color;
+  border: none;
+  border-radius: $md-comp-navigation-item-container-shape;
+  padding: $md-comp-navigation-item-padding-vertical $md-comp-navigation-item-padding-horizontal;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  height: $md-comp-navigation-item-container-height;
+  font-family: $md-comp-navigation-label-text-type;
+  font-weight: $md-comp-navigation-label-text-weight;
+  font-size: $md-comp-navigation-label-text-size;
+  line-height: $md-comp-navigation-label-text-line-height;
+  letter-spacing: $md-comp-navigation-label-text-tracking;
+  position: relative;
+  overflow: hidden;
+  transition: all motion.$md-sys-motion-duration-short-3 motion.$md-sys-motion-easing-emphasized;
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  
+  &:hover {
+    background-color: $md-comp-navigation-item-hover-container-color;
+    color: $md-comp-navigation-item-hover-label-text-color;
+  }
+  
+  &:focus {
+    background-color: $md-comp-navigation-item-focus-container-color;
+    color: $md-comp-navigation-item-focus-label-text-color;
+  }
+  
+  &:active {
+    background-color: $md-comp-navigation-item-pressed-container-color;
+    color: $md-comp-navigation-item-pressed-label-text-color;
+  }
+  
+  &:disabled {
+    color: $md-comp-navigation-item-disabled-label-text-color;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  &.selected {
+    color: $md-comp-navigation-item-selected-label-text-color;
+    
+    &:hover {
+      background-color: $md-comp-navigation-item-selected-hover-container-color;
+      color: $md-comp-navigation-item-selected-hover-label-text-color;
+    }
+    
+    &:focus {
+      background-color: $md-comp-navigation-item-selected-focus-container-color;
+      color: $md-comp-navigation-item-selected-focus-label-text-color;
+    }
+    
+    &:active {
+      background-color: $md-comp-navigation-item-selected-pressed-container-color;
+      color: $md-comp-navigation-item-selected-pressed-label-text-color;
+    }
+  }
+  
+  .md3-navigation-item__icon {
+    color: inherit;
+    width: $md-comp-navigation-icon-size;
+    height: $md-comp-navigation-icon-size;
+    margin-bottom: $md-comp-navigation-icon-label-space;
+  }
+}
+
+@mixin md-comp-navigation-item-small {
+  padding: $md-comp-navigation-item-small-padding-vertical $md-comp-navigation-item-small-padding-horizontal;
+  height: $md-comp-navigation-item-small-container-height;
+  font-size: $md-comp-navigation-small-label-text-size;
+  line-height: $md-comp-navigation-small-label-text-line-height;
+  
+  .md3-navigation-item__icon {
+    width: $md-comp-navigation-small-icon-size;
+    height: $md-comp-navigation-small-icon-size;
+    margin-bottom: $md-comp-navigation-small-icon-label-space;
+  }
+}
+
+@mixin md-comp-navigation-drawer {
+  background-color: $md-comp-navigation-drawer-container-color;
+  box-shadow: elevation.$md-sys-elevation-shadow-2;
+  width: $md-comp-navigation-drawer-container-width;
+  height: $md-comp-navigation-drawer-container-height;
+  border-radius: $md-comp-navigation-drawer-container-shape;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@mixin md-comp-navigation-drawer-item {
+  background-color: $md-comp-navigation-drawer-item-container-color;
+  color: $md-comp-navigation-drawer-item-label-text-color;
+  border: none;
+  padding: 0 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: $md-comp-navigation-drawer-item-container-height;
+  font-family: $md-comp-navigation-label-text-type;
+  font-weight: $md-comp-navigation-label-text-weight;
+  font-size: $md-comp-navigation-label-text-size;
+  line-height: $md-comp-navigation-label-text-line-height;
+  letter-spacing: $md-comp-navigation-label-text-tracking;
+  position: relative;
+  overflow: hidden;
+  transition: all motion.$md-sys-motion-duration-short-3 motion.$md-sys-motion-easing-emphasized;
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  
+  &:hover {
+    background-color: $md-comp-navigation-drawer-item-hover-container-color;
+    color: $md-comp-navigation-drawer-item-hover-label-text-color;
+  }
+  
+  &:focus {
+    background-color: $md-comp-navigation-drawer-item-focus-container-color;
+    color: $md-comp-navigation-drawer-item-focus-label-text-color;
+  }
+  
+  &:active {
+    background-color: $md-comp-navigation-drawer-item-pressed-container-color;
+    color: $md-comp-navigation-drawer-item-pressed-label-text-color;
+  }
+  
+  &:disabled {
+    color: $md-comp-navigation-drawer-item-disabled-label-text-color;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  &.selected {
+    background-color: $md-comp-navigation-drawer-item-selected-container-color;
+    color: $md-comp-navigation-drawer-item-selected-label-text-color;
+    
+    &:hover {
+      background-color: $md-comp-navigation-drawer-item-selected-hover-container-color;
+      color: $md-comp-navigation-drawer-item-selected-hover-label-text-color;
+    }
+    
+    &:focus {
+      background-color: $md-comp-navigation-drawer-item-selected-focus-container-color;
+      color: $md-comp-navigation-drawer-item-selected-focus-label-text-color;
+    }
+    
+    &:active {
+      background-color: $md-comp-navigation-drawer-item-selected-pressed-container-color;
+      color: $md-comp-navigation-drawer-item-selected-pressed-label-text-color;
+    }
+  }
+  
+  .md3-navigation-drawer-item__icon {
+    color: inherit;
+    width: $md-comp-navigation-icon-size;
+    height: $md-comp-navigation-icon-size;
+    margin-right: 12px;
+  }
+}
+
+@mixin md-comp-top-app-bar {
+  background-color: $md-comp-top-app-bar-container-color;
+  box-shadow: elevation.$md-sys-elevation-shadow-4;
+  height: $md-comp-top-app-bar-container-height;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  position: relative;
+  
+  .md3-top-app-bar__headline {
+    font-family: $md-comp-top-app-bar-headline-text-type;
+    font-weight: $md-comp-top-app-bar-headline-text-weight;
+    font-size: $md-comp-top-app-bar-headline-text-size;
+    line-height: $md-comp-top-app-bar-headline-text-line-height;
+    letter-spacing: $md-comp-top-app-bar-headline-text-tracking;
+    color: $md-comp-top-app-bar-headline-text-color;
+  }
+  
+  .md3-top-app-bar__title {
+    font-family: $md-comp-top-app-bar-title-text-type;
+    font-weight: $md-comp-top-app-bar-title-text-weight;
+    font-size: $md-comp-top-app-bar-title-text-size;
+    line-height: $md-comp-top-app-bar-title-text-line-height;
+    letter-spacing: $md-comp-top-app-bar-title-text-tracking;
+    color: $md-comp-top-app-bar-title-text-color;
+  }
+  
+  .md3-top-app-bar__icon {
+    color: $md-comp-top-app-bar-icon-color;
+    width: 24px;
+    height: 24px;
+    
+    &:disabled {
+      color: $md-comp-top-app-bar-disabled-icon-color;
+    }
+  }
+}
+
+// =============================================================================
+// MIXIN FOR EXPORTING NAVIGATION TOKENS
+// =============================================================================
+
+@mixin export-navigation-tokens {
+  // Navigation bar tokens
+  --md-comp-navigation-bar-container-height: #{$md-comp-navigation-bar-container-height};
+  --md-comp-navigation-bar-small-container-height: #{$md-comp-navigation-bar-small-container-height};
+  --md-comp-navigation-bar-container-shape: #{$md-comp-navigation-bar-container-shape};
+  --md-comp-navigation-bar-container-color: #{$md-comp-navigation-bar-container-color};
+  --md-comp-navigation-bar-container-elevation: #{$md-comp-navigation-bar-container-elevation};
+  
+  // Navigation item tokens
+  --md-comp-navigation-item-container-height: #{$md-comp-navigation-item-container-height};
+  --md-comp-navigation-item-small-container-height: #{$md-comp-navigation-item-small-container-height};
+  --md-comp-navigation-item-container-shape: #{$md-comp-navigation-item-container-shape};
+  --md-comp-navigation-item-container-color: #{$md-comp-navigation-item-container-color};
+  --md-comp-navigation-item-label-text-color: #{$md-comp-navigation-item-label-text-color};
+  --md-comp-navigation-item-icon-color: #{$md-comp-navigation-item-icon-color};
+  --md-comp-navigation-item-disabled-container-color: #{$md-comp-navigation-item-disabled-container-color};
+  --md-comp-navigation-item-disabled-label-text-color: #{$md-comp-navigation-item-disabled-label-text-color};
+  --md-comp-navigation-item-disabled-icon-color: #{$md-comp-navigation-item-disabled-icon-color};
+  --md-comp-navigation-item-focus-container-color: #{$md-comp-navigation-item-focus-container-color};
+  --md-comp-navigation-item-focus-label-text-color: #{$md-comp-navigation-item-focus-label-text-color};
+  --md-comp-navigation-item-focus-icon-color: #{$md-comp-navigation-item-focus-icon-color};
+  --md-comp-navigation-item-hover-container-color: #{$md-comp-navigation-item-hover-container-color};
+  --md-comp-navigation-item-hover-label-text-color: #{$md-comp-navigation-item-hover-label-text-color};
+  --md-comp-navigation-item-hover-icon-color: #{$md-comp-navigation-item-hover-icon-color};
+  --md-comp-navigation-item-pressed-container-color: #{$md-comp-navigation-item-pressed-container-color};
+  --md-comp-navigation-item-pressed-label-text-color: #{$md-comp-navigation-item-pressed-label-text-color};
+  --md-comp-navigation-item-pressed-icon-color: #{$md-comp-navigation-item-pressed-icon-color};
+  --md-comp-navigation-item-state-layer-color: #{$md-comp-navigation-item-state-layer-color};
+  --md-comp-navigation-item-state-layer-opacity: #{$md-comp-navigation-item-state-layer-opacity};
+  
+  // Selected navigation item tokens
+  --md-comp-navigation-item-selected-container-color: #{$md-comp-navigation-item-selected-container-color};
+  --md-comp-navigation-item-selected-label-text-color: #{$md-comp-navigation-item-selected-label-text-color};
+  --md-comp-navigation-item-selected-icon-color: #{$md-comp-navigation-item-selected-icon-color};
+  --md-comp-navigation-item-selected-focus-container-color: #{$md-comp-navigation-item-selected-focus-container-color};
+  --md-comp-navigation-item-selected-focus-label-text-color: #{$md-comp-navigation-item-selected-focus-label-text-color};
+  --md-comp-navigation-item-selected-focus-icon-color: #{$md-comp-navigation-item-selected-focus-icon-color};
+  --md-comp-navigation-item-selected-hover-container-color: #{$md-comp-navigation-item-selected-hover-container-color};
+  --md-comp-navigation-item-selected-hover-label-text-color: #{$md-comp-navigation-item-selected-hover-label-text-color};
+  --md-comp-navigation-item-selected-hover-icon-color: #{$md-comp-navigation-item-selected-hover-icon-color};
+  --md-comp-navigation-item-selected-pressed-container-color: #{$md-comp-navigation-item-selected-pressed-container-color};
+  --md-comp-navigation-item-selected-pressed-label-text-color: #{$md-comp-navigation-item-selected-pressed-label-text-color};
+  --md-comp-navigation-item-selected-pressed-icon-color: #{$md-comp-navigation-item-selected-pressed-icon-color};
+  --md-comp-navigation-item-selected-state-layer-color: #{$md-comp-navigation-item-selected-state-layer-color};
+  --md-comp-navigation-item-selected-state-layer-opacity: #{$md-comp-navigation-item-selected-state-layer-opacity};
+  
+  // Navigation label tokens
+  --md-comp-navigation-label-text-type: #{$md-comp-navigation-label-text-type};
+  --md-comp-navigation-label-text-weight: #{$md-comp-navigation-label-text-weight};
+  --md-comp-navigation-label-text-size: #{$md-comp-navigation-label-text-size};
+  --md-comp-navigation-label-text-line-height: #{$md-comp-navigation-label-text-line-height};
+  --md-comp-navigation-label-text-tracking: #{$md-comp-navigation-label-text-tracking};
+  --md-comp-navigation-small-label-text-size: #{$md-comp-navigation-small-label-text-size};
+  --md-comp-navigation-small-label-text-line-height: #{$md-comp-navigation-small-label-text-line-height};
+  
+  // Icon tokens
+  --md-comp-navigation-icon-size: #{$md-comp-navigation-icon-size};
+  --md-comp-navigation-small-icon-size: #{$md-comp-navigation-small-icon-size};
+  
+  // Spacing tokens
+  --md-comp-navigation-bar-padding-horizontal: #{$md-comp-navigation-bar-padding-horizontal};
+  --md-comp-navigation-bar-padding-vertical: #{$md-comp-navigation-bar-padding-vertical};
+  --md-comp-navigation-bar-small-padding-horizontal: #{$md-comp-navigation-bar-small-padding-horizontal};
+  --md-comp-navigation-bar-small-padding-vertical: #{$md-comp-navigation-bar-small-padding-vertical};
+  --md-comp-navigation-item-padding-horizontal: #{$md-comp-navigation-item-padding-horizontal};
+  --md-comp-navigation-item-padding-vertical: #{$md-comp-navigation-item-padding-vertical};
+  --md-comp-navigation-item-small-padding-horizontal: #{$md-comp-navigation-item-small-padding-horizontal};
+  --md-comp-navigation-item-small-padding-vertical: #{$md-comp-navigation-item-small-padding-vertical};
+  --md-comp-navigation-icon-label-space: #{$md-comp-navigation-icon-label-space};
+  --md-comp-navigation-small-icon-label-space: #{$md-comp-navigation-small-icon-label-space};
+  
+  // Navigation drawer tokens
+  --md-comp-navigation-drawer-container-color: #{$md-comp-navigation-drawer-container-color};
+  --md-comp-navigation-drawer-container-elevation: #{$md-comp-navigation-drawer-container-elevation};
+  --md-comp-navigation-drawer-container-shape: #{$md-comp-navigation-drawer-container-shape};
+  --md-comp-navigation-drawer-container-width: #{$md-comp-navigation-drawer-container-width};
+  --md-comp-navigation-drawer-container-height: #{$md-comp-navigation-drawer-container-height};
+  --md-comp-navigation-drawer-header-height: #{$md-comp-navigation-drawer-header-height};
+  --md-comp-navigation-drawer-header-padding-horizontal: #{$md-comp-navigation-drawer-header-padding-horizontal};
+  --md-comp-navigation-drawer-header-padding-vertical: #{$md-comp-navigation-drawer-header-padding-vertical};
+  --md-comp-navigation-drawer-item-container-height: #{$md-comp-navigation-drawer-item-container-height};
+  --md-comp-navigation-drawer-item-container-color: #{$md-comp-navigation-drawer-item-container-color};
+  --md-comp-navigation-drawer-item-label-text-color: #{$md-comp-navigation-drawer-item-label-text-color};
+  --md-comp-navigation-drawer-item-icon-color: #{$md-comp-navigation-drawer-item-icon-color};
+  --md-comp-navigation-drawer-item-disabled-container-color: #{$md-comp-navigation-drawer-item-disabled-container-color};
+  --md-comp-navigation-drawer-item-disabled-label-text-color: #{$md-comp-navigation-drawer-item-disabled-label-text-color};
+  --md-comp-navigation-drawer-item-disabled-icon-color: #{$md-comp-navigation-drawer-item-disabled-icon-color};
+  --md-comp-navigation-drawer-item-focus-container-color: #{$md-comp-navigation-drawer-item-focus-container-color};
+  --md-comp-navigation-drawer-item-focus-label-text-color: #{$md-comp-navigation-drawer-item-focus-label-text-color};
+  --md-comp-navigation-drawer-item-focus-icon-color: #{$md-comp-navigation-drawer-item-focus-icon-color};
+  --md-comp-navigation-drawer-item-hover-container-color: #{$md-comp-navigation-drawer-item-hover-container-color};
+  --md-comp-navigation-drawer-item-hover-label-text-color: #{$md-comp-navigation-drawer-item-hover-label-text-color};
+  --md-comp-navigation-drawer-item-hover-icon-color: #{$md-comp-navigation-drawer-item-hover-icon-color};
+  --md-comp-navigation-drawer-item-pressed-container-color: #{$md-comp-navigation-drawer-item-pressed-container-color};
+  --md-comp-navigation-drawer-item-pressed-label-text-color: #{$md-comp-navigation-drawer-item-pressed-label-text-color};
+  --md-comp-navigation-drawer-item-pressed-icon-color: #{$md-comp-navigation-drawer-item-pressed-icon-color};
+  --md-comp-navigation-drawer-item-state-layer-color: #{$md-comp-navigation-drawer-item-state-layer-color};
+  --md-comp-navigation-drawer-item-state-layer-opacity: #{$md-comp-navigation-drawer-item-state-layer-opacity};
+  --md-comp-navigation-drawer-item-selected-container-color: #{$md-comp-navigation-drawer-item-selected-container-color};
+  --md-comp-navigation-drawer-item-selected-label-text-color: #{$md-comp-navigation-drawer-item-selected-label-text-color};
+  --md-comp-navigation-drawer-item-selected-icon-color: #{$md-comp-navigation-drawer-item-selected-icon-color};
+  
+  // Top app bar tokens
+  --md-comp-top-app-bar-container-color: #{$md-comp-top-app-bar-container-color};
+  --md-comp-top-app-bar-container-elevation: #{$md-comp-top-app-bar-container-elevation};
+  --md-comp-top-app-bar-container-height: #{$md-comp-top-app-bar-container-height};
+  --md-comp-top-app-bar-small-container-height: #{$md-comp-top-app-bar-small-container-height};
+  --md-comp-top-app-bar-medium-container-height: #{$md-comp-top-app-bar-medium-container-height};
+  --md-comp-top-app-bar-large-container-height: #{$md-comp-top-app-bar-large-container-height};
+  --md-comp-top-app-bar-headline-text-type: #{$md-comp-top-app-bar-headline-text-type};
+  --md-comp-top-app-bar-headline-text-weight: #{$md-comp-top-app-bar-headline-text-weight};
+  --md-comp-top-app-bar-headline-text-size: #{$md-comp-top-app-bar-headline-text-size};
+  --md-comp-top-app-bar-headline-text-line-height: #{$md-comp-top-app-bar-headline-text-line-height};
+  --md-comp-top-app-bar-headline-text-tracking: #{$md-comp-top-app-bar-headline-text-tracking};
+  --md-comp-top-app-bar-title-text-type: #{$md-comp-top-app-bar-title-text-type};
+  --md-comp-top-app-bar-title-text-weight: #{$md-comp-top-app-bar-title-text-weight};
+  --md-comp-top-app-bar-title-text-size: #{$md-comp-top-app-bar-title-text-size};
+  --md-comp-top-app-bar-title-text-line-height: #{$md-comp-top-app-bar-title-text-line-height};
+  --md-comp-top-app-bar-title-text-tracking: #{$md-comp-top-app-bar-title-text-tracking};
+  --md-comp-top-app-bar-headline-text-color: #{$md-comp-top-app-bar-headline-text-color};
+  --md-comp-top-app-bar-title-text-color: #{$md-comp-top-app-bar-title-text-color};
+  --md-comp-top-app-bar-icon-color: #{$md-comp-top-app-bar-icon-color};
+  --md-comp-top-app-bar-disabled-icon-color: #{$md-comp-top-app-bar-disabled-icon-color};
+}

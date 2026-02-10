@@ -61,6 +61,12 @@ export const useRoomsStore = defineStore('rooms', {
   },
   
   actions: {
+    updateDeviceStatus(deviceId: string, status: boolean) {
+      const device = this.devices.find(d => d.deviceId === deviceId);
+      if (device) {
+        device.deviceStatus = status ? 1 : 0;
+      }
+    },
     increment() {
       //this.count++
     },

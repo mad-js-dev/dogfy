@@ -1,0 +1,613 @@
+// Material Design 3 Semantic Spacing Tokens
+// Derived from core spacing system tokens for specific use cases
+
+@use '../spacing' as spacing;
+
+// =============================================================================
+// SEMANTIC SPACING TOKENS
+// =============================================================================
+
+// Layout Spacing
+$md-semantic-spacing-layout-tight: spacing.$md-sys-spacing-2;      // 8px
+$md-semantic-spacing-layout-compact: spacing.$md-sys-spacing-3;    // 12px
+$md-semantic-spacing-layout-comfortable: spacing.$md-sys-spacing-4;  // 16px
+$md-semantic-spacing-layout-spacious: spacing.$md-sys-spacing-6;     // 24px
+$md-semantic-spacing-layout-loose: spacing.$md-sys-spacing-8;       // 32px
+
+// Component Spacing
+$md-semantic-spacing-component-tight: spacing.$md-sys-spacing-1;    // 4px
+$md-semantic-spacing-component-compact: spacing.$md-sys-spacing-2;  // 8px
+$md-semantic-spacing-component-comfortable: spacing.$md-sys-spacing-3; // 12px
+$md-semantic-spacing-component-spacious: spacing.$md-sys-spacing-4;  // 16px
+$md-semantic-spacing-component-loose: spacing.$md-sys-spacing-6;      // 24px
+
+// Content Spacing
+$md-semantic-spacing-content-tight: spacing.$md-sys-spacing-1;       // 4px
+$md-semantic-spacing-content-compact: spacing.$md-sys-spacing-2;     // 8px
+$md-semantic-spacing-content-comfortable: spacing.$md-sys-spacing-3; // 12px
+$md-semantic-spacing-content-spacious: spacing.$md-sys-spacing-4;    // 16px
+$md-semantic-spacing-content-loose: spacing.$md-sys-spacing-6;       // 24px
+
+// Icon Spacing
+$md-semantic-spacing-icon-tight: spacing.$md-sys-spacing-1;         // 4px
+$md-semantic-spacing-icon-compact: spacing.$md-sys-spacing-2;       // 8px
+$md-semantic-spacing-icon-comfortable: spacing.$md-sys-spacing-3;    // 12px
+$md-semantic-spacing-icon-spacious: spacing.$md-sys-spacing-4;       // 16px
+
+// =============================================================================
+// COMPONENT SEMANTIC SPACING
+// =============================================================================
+
+// Button Spacing
+$md-semantic-spacing-button-padding-horizontal: spacing.$md-sys-spacing-4;  // 16px
+$md-semantic-spacing-button-padding-vertical: spacing.$md-sys-spacing-2;    // 8px
+$md-semantic-spacing-button-gap: spacing.$md-sys-spacing-2;                   // 8px
+$md-semantic-spacing-button-margin: spacing.$md-sys-spacing-2;                // 8px
+
+$md-semantic-spacing-button-large-padding-horizontal: spacing.$md-sys-spacing-6; // 24px
+$md-semantic-spacing-button-large-padding-vertical: spacing.$md-sys-spacing-3;   // 12px
+$md-semantic-spacing-button-large-gap: spacing.$md-sys-spacing-2;                 // 8px
+$md-semantic-spacing-button-large-margin: spacing.$md-sys-spacing-2;              // 8px
+
+// Chip Spacing
+$md-semantic-spacing-chip-padding-horizontal: spacing.$md-sys-spacing-4;  // 16px
+$md-semantic-spacing-chip-padding-vertical: spacing.$md-sys-spacing-1;    // 4px
+$md-semantic-spacing-chip-gap: spacing.$md-sys-spacing-2;                   // 8px
+$md-semantic-spacing-chip-margin: spacing.$md-sys-spacing-1;                // 4px
+
+$md-semantic-spacing-chip-with-avatar-padding-horizontal: spacing.$md-sys-spacing-2; // 8px
+$md-semantic-spacing-chip-with-avatar-padding-vertical: spacing.$md-sys-spacing-1;   // 4px
+
+// Text Field Spacing
+$md-semantic-spacing-text-field-padding-horizontal: spacing.$md-sys-spacing-4;  // 16px
+$md-semantic-spacing-text-field-padding-vertical: spacing.$md-sys-spacing-4;    // 16px
+$md-semantic-spacing-text-field-gap: spacing.$md-sys-spacing-2;                   // 8px
+$md-semantic-spacing-text-field-margin: spacing.$md-sys-spacing-2;                // 8px
+$md-semantic-spacing-text-field-label-gap: spacing.$md-sys-spacing-1;            // 4px
+
+$md-semantic-spacing-text-field-small-padding-horizontal: spacing.$md-sys-spacing-3; // 12px
+$md-semantic-spacing-text-field-small-padding-vertical: spacing.$md-sys-spacing-2;   // 8px
+
+// Card Spacing
+$md-semantic-spacing-card-padding: spacing.$md-sys-spacing-4;           // 16px
+$md-semantic-spacing-card-gap: spacing.$md-sys-spacing-2;               // 8px
+$md-semantic-spacing-card-margin: spacing.$md-sys-spacing-2;            // 8px
+$md-semantic-spacing-card-header-gap: spacing.$md-sys-spacing-3;        // 12px
+$md-semantic-spacing-card-content-gap: spacing.$md-sys-spacing-4;       // 16px
+
+// Dialog Spacing
+$md-semantic-spacing-dialog-padding: spacing.$md-sys-spacing-6;         // 24px
+$md-semantic-spacing-dialog-gap: spacing.$md-sys-spacing-4;             // 16px
+$md-semantic-spacing-dialog-margin: spacing.$md-sys-spacing-2;          // 8px
+$md-semantic-spacing-dialog-header-gap: spacing.$md-sys-spacing-4;      // 16px
+$md-semantic-spacing-dialog-content-gap: spacing.$md-sys-spacing-4;    // 16px
+$md-semantic-spacing-dialog-actions-gap: spacing.$md-sys-spacing-2;     // 8px
+
+// List Spacing
+$md-semantic-spacing-list-padding: spacing.$md-sys-spacing-2;           // 8px
+$md-semantic-spacing-list-item-height: spacing.$md-sys-spacing-7;       // 28px
+$md-semantic-spacing-list-item-padding: spacing.$md-sys-spacing-4;      // 16px
+$md-semantic-spacing-list-item-gap: spacing.$md-sys-spacing-1;          // 4px
+$md-semantic-spacing-list-section-gap: spacing.$md-sys-spacing-4;       // 16px
+
+// Navigation Spacing
+$md-semantic-spacing-navigation-bar-padding: spacing.$md-sys-spacing-2;  // 8px
+$md-semantic-spacing-navigation-item-padding: spacing.$md-sys-spacing-3; // 12px
+$md-semantic-spacing-navigation-item-gap: spacing.$md-sys-spacing-1;     // 4px
+$md-semantic-spacing-navigation-drawer-padding: spacing.$md-sys-spacing-2; // 8px
+$md-semantic-spacing-navigation-drawer-item-padding: spacing.$md-sys-spacing-4; // 16px
+$md-semantic-spacing-navigation-drawer-item-gap: spacing.$md-sys-spacing-2;    // 8px
+
+// Top App Bar Spacing
+$md-semantic-spacing-top-app-bar-padding: spacing.$md-sys-spacing-4;     // 16px
+$md-semantic-spacing-top-app-bar-gap: spacing.$md-sys-spacing-2;         // 8px
+$md-semantic-spacing-top-app-bar-title-gap: spacing.$md-sys-spacing-2;  // 8px
+
+// =============================================================================
+// LAYOUT SEMANTIC SPACING
+// =============================================================================
+
+// Container Spacing
+$md-semantic-spacing-container-padding: spacing.$md-sys-spacing-4;       // 16px
+$md-semantic-spacing-container-margin: spacing.$md-sys-spacing-4;        // 16px
+$md-semantic-spacing-container-gap: spacing.$md-sys-spacing-4;           // 16px
+
+$md-semantic-spacing-container-large-padding: spacing.$md-sys-spacing-6; // 24px
+$md-semantic-spacing-container-large-margin: spacing.$md-sys-spacing-6;  // 24px
+$md-semantic-spacing-container-large-gap: spacing.$md-sys-spacing-6;     // 24px
+
+// Section Spacing
+$md-semantic-spacing-section-padding: spacing.$md-sys-spacing-8;        // 32px
+$md-semantic-spacing-section-margin: spacing.$md-sys-spacing-8;         // 32px
+$md-semantic-spacing-section-gap: spacing.$md-sys-spacing-6;            // 24px
+
+$md-semantic-spacing-section-large-padding: spacing.$md-sys-spacing-12;  // 48px
+$md-semantic-spacing-section-large-margin: spacing.$md-sys-spacing-12;   // 48px
+$md-semantic-spacing-section-large-gap: spacing.$md-sys-spacing-8;       // 32px
+
+// Grid Spacing
+$md-semantic-spacing-grid-gap: spacing.$md-sys-spacing-2;                // 8px
+$md-semantic-spacing-grid-gap-compact: spacing.$md-sys-spacing-1;        // 4px
+$md-semantic-spacing-grid-gap-spacious: spacing.$md-sys-spacing-4;       // 16px
+
+// =============================================================================
+// RESPONSIVE SEMANTIC SPACING
+// =============================================================================
+
+// Mobile Spacing
+$md-semantic-spacing-mobile-compact: spacing.$md-sys-spacing-2;        // 8px
+$md-semantic-spacing-mobile-comfortable: spacing.$md-sys-spacing-3;     // 12px
+$md-semantic-spacing-mobile-spacious: spacing.$md-sys-spacing-4;        // 16px
+
+// Tablet Spacing
+$md-semantic-spacing-tablet-compact: spacing.$md-sys-spacing-3;        // 12px
+$md-semantic-spacing-tablet-comfortable: spacing.$md-sys-spacing-4;      // 16px
+$md-semantic-spacing-tablet-spacious: spacing.$md-sys-spacing-6;        // 24px
+
+// Desktop Spacing
+$md-semantic-spacing-desktop-compact: spacing.$md-sys-spacing-4;        // 16px
+$md-semantic-spacing-desktop-comfortable: spacing.$md-sys-spacing-6;      // 24px
+$md-semantic-spacing-desktop-spacious: spacing.$md-sys-spacing-8;        // 32px
+
+// =============================================================================
+// MIXINS FOR SEMANTIC SPACING
+// =============================================================================
+
+// Layout spacing mixins
+@mixin md-semantic-spacing-layout-tight {
+  padding: $md-semantic-spacing-layout-tight;
+  gap: $md-semantic-spacing-layout-tight;
+}
+
+@mixin md-semantic-spacing-layout-compact {
+  padding: $md-semantic-spacing-layout-compact;
+  gap: $md-semantic-spacing-layout-compact;
+}
+
+@mixin md-semantic-spacing-layout-comfortable {
+  padding: $md-semantic-spacing-layout-comfortable;
+  gap: $md-semantic-spacing-layout-comfortable;
+}
+
+@mixin md-semantic-spacing-layout-spacious {
+  padding: $md-semantic-spacing-layout-spacious;
+  gap: $md-semantic-spacing-layout-spacious;
+}
+
+@mixin md-semantic-spacing-layout-loose {
+  padding: $md-semantic-spacing-layout-loose;
+  gap: $md-semantic-spacing-layout-loose;
+}
+
+// Component spacing mixins
+@mixin md-semantic-spacing-component-tight {
+  padding: $md-semantic-spacing-component-tight;
+  gap: $md-semantic-spacing-component-tight;
+}
+
+@mixin md-semantic-spacing-component-compact {
+  padding: $md-semantic-spacing-component-compact;
+  gap: $md-semantic-spacing-component-compact;
+}
+
+@mixin md-semantic-spacing-component-comfortable {
+  padding: $md-semantic-spacing-component-comfortable;
+  gap: $md-semantic-spacing-component-comfortable;
+}
+
+@mixin md-semantic-spacing-component-spacious {
+  padding: $md-semantic-spacing-component-spacious;
+  gap: $md-semantic-spacing-component-spacious;
+}
+
+@mixin md-semantic-spacing-component-loose {
+  padding: $md-semantic-spacing-component-loose;
+  gap: $md-semantic-spacing-component-loose;
+}
+
+// Content spacing mixins
+@mixin md-semantic-spacing-content-tight {
+  margin: $md-semantic-spacing-content-tight 0;
+  gap: $md-semantic-spacing-content-tight;
+}
+
+@mixin md-semantic-spacing-content-compact {
+  margin: $md-semantic-spacing-content-compact 0;
+  gap: $md-semantic-spacing-content-compact;
+}
+
+@mixin md-semantic-spacing-content-comfortable {
+  margin: $md-semantic-spacing-content-comfortable 0;
+  gap: $md-semantic-spacing-content-comfortable;
+}
+
+@mixin md-semantic-spacing-content-spacious {
+  margin: $md-semantic-spacing-content-spacious 0;
+  gap: $md-semantic-spacing-content-spacious;
+}
+
+@mixin md-semantic-spacing-content-loose {
+  margin: $md-semantic-spacing-content-loose 0;
+  gap: $md-semantic-spacing-content-loose;
+}
+
+// Icon spacing mixins
+@mixin md-semantic-spacing-icon-tight {
+  margin: $md-semantic-spacing-icon-tight;
+}
+
+@mixin md-semantic-spacing-icon-compact {
+  margin: $md-semantic-spacing-icon-compact;
+}
+
+@mixin md-semantic-spacing-icon-comfortable {
+  margin: $md-semantic-spacing-icon-comfortable;
+}
+
+@mixin md-semantic-spacing-icon-spacious {
+  margin: $md-semantic-spacing-icon-spacious;
+}
+
+// Component-specific spacing mixins
+@mixin md-semantic-spacing-button {
+  padding: $md-semantic-spacing-button-padding-vertical $md-semantic-spacing-button-padding-horizontal;
+  gap: $md-semantic-spacing-button-gap;
+  margin: $md-semantic-spacing-button-margin;
+}
+
+@mixin md-semantic-spacing-button-large {
+  padding: $md-semantic-spacing-button-large-padding-vertical $md-semantic-spacing-button-large-padding-horizontal;
+  gap: $md-semantic-spacing-button-large-gap;
+  margin: $md-semantic-spacing-button-large-margin;
+}
+
+@mixin md-semantic-spacing-chip {
+  padding: $md-semantic-spacing-chip-padding-vertical $md-semantic-spacing-chip-padding-horizontal;
+  gap: $md-semantic-spacing-chip-gap;
+  margin: $md-semantic-spacing-chip-margin;
+}
+
+@mixin md-semantic-spacing-chip-with-avatar {
+  padding: $md-semantic-spacing-chip-with-avatar-padding-vertical $md-semantic-spacing-chip-with-avatar-padding-horizontal;
+  gap: $md-semantic-spacing-chip-gap;
+  margin: $md-semantic-spacing-chip-margin;
+}
+
+@mixin md-semantic-spacing-text-field {
+  padding: $md-semantic-spacing-text-field-padding-vertical $md-semantic-spacing-text-field-padding-horizontal;
+  gap: $md-semantic-spacing-text-field-gap;
+  margin: $md-semantic-spacing-text-field-margin;
+}
+
+@mixin md-semantic-spacing-text-field-small {
+  padding: $md-semantic-spacing-text-field-small-padding-vertical $md-semantic-spacing-text-field-small-padding-horizontal;
+  gap: $md-semantic-spacing-text-field-gap;
+  margin: $md-semantic-spacing-text-field-margin;
+}
+
+@mixin md-semantic-spacing-card {
+  padding: $md-semantic-spacing-card-padding;
+  gap: $md-semantic-spacing-card-gap;
+  margin: $md-semantic-spacing-card-margin;
+}
+
+@mixin md-semantic-spacing-dialog {
+  padding: $md-semantic-spacing-dialog-padding;
+  gap: $md-semantic-spacing-dialog-gap;
+  margin: $md-semantic-spacing-dialog-margin;
+}
+
+@mixin md-semantic-spacing-list {
+  padding: $md-semantic-spacing-list-padding;
+  gap: $md-semantic-spacing-list-item-gap;
+}
+
+@mixin md-semantic-spacing-list-item {
+  padding: $md-semantic-spacing-list-item-padding;
+  gap: $md-semantic-spacing-list-item-gap;
+  height: $md-semantic-spacing-list-item-height;
+}
+
+@mixin md-semantic-spacing-navigation-bar {
+  padding: $md-semantic-spacing-navigation-bar-padding;
+  gap: $md-semantic-spacing-navigation-item-gap;
+}
+
+@mixin md-semantic-spacing-navigation-item {
+  padding: $md-semantic-spacing-navigation-item-padding;
+  gap: $md-semantic-spacing-navigation-item-gap;
+}
+
+@mixin md-semantic-spacing-navigation-drawer {
+  padding: $md-semantic-spacing-navigation-drawer-padding;
+  gap: $md-semantic-spacing-navigation-drawer-item-gap;
+}
+
+@mixin md-semantic-spacing-navigation-drawer-item {
+  padding: $md-semantic-spacing-navigation-drawer-item-padding;
+  gap: $md-semantic-spacing-navigation-drawer-item-gap;
+}
+
+@mixin md-semantic-spacing-top-app-bar {
+  padding: $md-semantic-spacing-top-app-bar-padding;
+  gap: $md-semantic-spacing-top-app-bar-gap;
+}
+
+// Container spacing mixins
+@mixin md-semantic-spacing-container {
+  padding: $md-semantic-spacing-container-padding;
+  gap: $md-semantic-spacing-container-gap;
+  margin: $md-semantic-spacing-container-margin;
+}
+
+@mixin md-semantic-spacing-container-large {
+  padding: $md-semantic-spacing-container-large-padding;
+  gap: $md-semantic-spacing-container-large-gap;
+  margin: $md-semantic-spacing-container-large-margin;
+}
+
+@mixin md-semantic-spacing-section {
+  padding: $md-semantic-spacing-section-padding;
+  gap: $md-semantic-spacing-section-gap;
+  margin: $md-semantic-spacing-section-margin;
+}
+
+@mixin md-semantic-spacing-section-large {
+  padding: $md-semantic-spacing-section-large-padding;
+  gap: $md-semantic-spacing-section-large-gap;
+  margin: $md-semantic-spacing-section-large-margin;
+}
+
+// Grid spacing mixins
+@mixin md-semantic-spacing-grid {
+  gap: $md-semantic-spacing-grid-gap;
+}
+
+@mixin md-semantic-spacing-grid-compact {
+  gap: $md-semantic-spacing-grid-gap-compact;
+}
+
+@mixin md-semantic-spacing-grid-spacious {
+  gap: $md-semantic-spacing-grid-gap-spacious;
+}
+
+// Responsive spacing mixins
+@mixin md-semantic-spacing-mobile-compact {
+  padding: $md-semantic-spacing-mobile-compact;
+  gap: $md-semantic-spacing-mobile-compact;
+}
+
+@mixin md-semantic-spacing-mobile-comfortable {
+  padding: $md-semantic-spacing-mobile-comfortable;
+  gap: $md-semantic-spacing-mobile-comfortable;
+}
+
+@mixin md-semantic-spacing-mobile-spacious {
+  padding: $md-semantic-spacing-mobile-spacious;
+  gap: $md-semantic-spacing-mobile-spacious;
+}
+
+@mixin md-semantic-spacing-tablet-compact {
+  padding: $md-semantic-spacing-tablet-compact;
+  gap: $md-semantic-spacing-tablet-compact;
+}
+
+@mixin md-semantic-spacing-tablet-comfortable {
+  padding: $md-semantic-spacing-tablet-comfortable;
+  gap: $md-semantic-spacing-tablet-comfortable;
+}
+
+@mixin md-semantic-spacing-tablet-spacious {
+  padding: $md-semantic-spacing-tablet-spacious;
+  gap: $md-semantic-spacing-tablet-spacious;
+}
+
+@mixin md-semantic-spacing-desktop-compact {
+  padding: $md-semantic-spacing-desktop-compact;
+  gap: $md-semantic-spacing-desktop-compact;
+}
+
+@mixin md-semantic-spacing-desktop-comfortable {
+  padding: $md-semantic-spacing-desktop-comfortable;
+  gap: $md-semantic-spacing-desktop-comfortable;
+}
+
+@mixin md-semantic-spacing-desktop-spacious {
+  padding: $md-semantic-spacing-desktop-spacious;
+  gap: $md-semantic-spacing-desktop-spacious;
+}
+
+// =============================================================================
+// MIXIN FOR EXPORTING SEMANTIC SPACING TOKENS
+// =============================================================================
+
+@mixin export-semantic-spacing-tokens {
+  // Layout spacing
+  --md-semantic-spacing-layout-tight: #{$md-semantic-spacing-layout-tight};
+  --md-semantic-spacing-layout-compact: #{$md-semantic-spacing-layout-compact};
+  --md-semantic-spacing-layout-comfortable: #{$md-semantic-spacing-layout-comfortable};
+  --md-semantic-spacing-layout-spacious: #{$md-semantic-spacing-layout-spacious};
+  --md-semantic-spacing-layout-loose: #{$md-semantic-spacing-layout-loose};
+  
+  // Component spacing
+  --md-semantic-spacing-component-tight: #{$md-semantic-spacing-component-tight};
+  --md-semantic-spacing-component-compact: #{$md-semantic-spacing-component-compact};
+  --md-semantic-spacing-component-comfortable: #{$md-semantic-spacing-component-comfortable};
+  --md-semantic-spacing-component-spacious: #{$md-semantic-spacing-component-spacious};
+  --md-semantic-spacing-component-loose: #{$md-semantic-spacing-component-loose};
+  
+  // Content spacing
+  --md-semantic-spacing-content-tight: #{$md-semantic-spacing-content-tight};
+  --md-semantic-spacing-content-compact: #{$md-semantic-spacing-content-compact};
+  --md-semantic-spacing-content-comfortable: #{$md-semantic-spacing-content-comfortable};
+  --md-semantic-spacing-content-spacious: #{$md-semantic-spacing-content-spacious};
+  --md-semantic-spacing-content-loose: #{$md-semantic-spacing-content-loose};
+  
+  // Icon spacing
+  --md-semantic-spacing-icon-tight: #{$md-semantic-spacing-icon-tight};
+  --md-semantic-spacing-icon-compact: #{$md-semantic-spacing-icon-compact};
+  --md-semantic-spacing-icon-comfortable: #{$md-semantic-spacing-icon-comfortable};
+  --md-semantic-spacing-icon-spacious: #{$md-semantic-spacing-icon-spacious};
+  
+  // Component semantic spacing
+  --md-semantic-spacing-button-padding-horizontal: #{$md-semantic-spacing-button-padding-horizontal};
+  --md-semantic-spacing-button-padding-vertical: #{$md-semantic-spacing-button-padding-vertical};
+  --md-semantic-spacing-button-gap: #{$md-semantic-spacing-button-gap};
+  --md-semantic-spacing-button-margin: #{$md-semantic-spacing-button-margin};
+  
+  --md-semantic-spacing-button-large-padding-horizontal: #{$md-semantic-spacing-button-large-padding-horizontal};
+  --md-semantic-spacing-button-large-padding-vertical: #{$md-semantic-spacing-button-large-padding-vertical};
+  --md-semantic-spacing-button-large-gap: #{$md-semantic-spacing-button-large-gap};
+  --md-semantic-spacing-button-large-margin: #{$md-semantic-spacing-button-large-margin};
+  
+  --md-semantic-spacing-chip-padding-horizontal: #{$md-semantic-spacing-chip-padding-horizontal};
+  --md-semantic-spacing-chip-padding-vertical: #{$md-semantic-spacing-chip-padding-vertical};
+  --md-semantic-spacing-chip-gap: #{$md-semantic-spacing-chip-gap};
+  --md-semantic-spacing-chip-margin: #{$md-semantic-spacing-chip-margin};
+  
+  --md-semantic-spacing-chip-with-avatar-padding-horizontal: #{$md-semantic-spacing-chip-with-avatar-padding-horizontal};
+  --md-semantic-spacing-chip-with-avatar-padding-vertical: #{$md-semantic-spacing-chip-with-avatar-padding-vertical};
+  
+  --md-semantic-spacing-text-field-padding-horizontal: #{$md-semantic-spacing-text-field-padding-horizontal};
+  --md-semantic-spacing-text-field-padding-vertical: #{$md-semantic-spacing-text-field-padding-vertical};
+  --md-semantic-spacing-text-field-gap: #{$md-semantic-spacing-text-field-gap};
+  --md-semantic-spacing-text-field-margin: #{$md-semantic-spacing-text-field-margin};
+  --md-semantic-spacing-text-field-label-gap: #{$md-semantic-spacing-text-field-label-gap};
+  
+  --md-semantic-spacing-text-field-small-padding-horizontal: #{$md-semantic-spacing-text-field-small-padding-horizontal};
+  --md-semantic-spacing-text-field-small-padding-vertical: #{$md-semantic-spacing-text-field-small-padding-vertical};
+  
+  --md-semantic-spacing-card-padding: #{$md-semantic-spacing-card-padding};
+  --md-semantic-spacing-card-gap: #{$md-semantic-spacing-card-gap};
+  --md-semantic-spacing-card-margin: #{$md-semantic-spacing-card-margin};
+  --md-semantic-spacing-card-header-gap: #{$md-semantic-spacing-card-header-gap};
+  --md-semantic-spacing-card-content-gap: #{$md-semantic-spacing-card-content-gap};
+  
+  --md-semantic-spacing-dialog-padding: #{$md-semantic-spacing-dialog-padding};
+  --md-semantic-spacing-dialog-gap: #{$md-semantic-spacing-dialog-gap};
+  --md-semantic-spacing-dialog-margin: #{$md-semantic-spacing-dialog-margin};
+  --md-semantic-spacing-dialog-header-gap: #{$md-semantic-spacing-dialog-header-gap};
+  --md-semantic-spacing-dialog-content-gap: #{$md-semantic-spacing-dialog-content-gap};
+  --md-semantic-spacing-dialog-actions-gap: #{$md-semantic-spacing-dialog-actions-gap};
+  
+  --md-semantic-spacing-list-padding: #{$md-semantic-spacing-list-padding};
+  --md-semantic-spacing-list-item-height: #{$md-semantic-spacing-list-item-height};
+  --md-semantic-spacing-list-item-padding: #{$md-semantic-spacing-list-item-padding};
+  --md-semantic-spacing-list-item-gap: #{$md-semantic-spacing-list-item-gap};
+  --md-semantic-spacing-list-section-gap: #{$md-semantic-spacing-list-section-gap};
+  
+  --md-semantic-spacing-navigation-bar-padding: #{$md-semantic-spacing-navigation-bar-padding};
+  --md-semantic-spacing-navigation-item-padding: #{$md-semantic-spacing-navigation-item-padding};
+  --md-semantic-spacing-navigation-item-gap: #{$md-semantic-spacing-navigation-item-gap};
+  --md-semantic-spacing-navigation-drawer-padding: #{$md-semantic-spacing-navigation-drawer-padding};
+  --md-semantic-spacing-navigation-drawer-item-padding: #{$md-semantic-spacing-navigation-drawer-item-padding};
+  --md-semantic-spacing-navigation-drawer-item-gap: #{$md-semantic-spacing-navigation-drawer-item-gap};
+  
+  --md-semantic-spacing-top-app-bar-padding: #{$md-semantic-spacing-top-app-bar-padding};
+  --md-semantic-spacing-top-app-bar-gap: #{$md-semantic-spacing-top-app-bar-gap};
+  --md-semantic-spacing-top-app-bar-title-gap: #{$md-semantic-spacing-top-app-bar-title-gap};
+  
+  // Layout semantic spacing
+  --md-semantic-spacing-container-padding: #{$md-semantic-spacing-container-padding};
+  --md-semantic-spacing-container-margin: #{$md-semantic-spacing-container-margin};
+  --md-semantic-spacing-container-gap: #{$md-semantic-spacing-container-gap};
+  
+  --md-semantic-spacing-container-large-padding: #{$md-semantic-spacing-container-large-padding};
+  --md-semantic-spacing-container-large-margin: #{$md-semantic-spacing-container-large-margin};
+  --md-semantic-spacing-container-large-gap: #{$md-semantic-spacing-container-large-gap};
+  
+  --md-semantic-spacing-section-padding: #{$md-semantic-spacing-section-padding};
+  --md-semantic-spacing-section-margin: #{$md-semantic-spacing-section-margin};
+  --md-semantic-spacing-section-gap: #{$md-semantic-spacing-section-gap};
+  
+  --md-semantic-spacing-section-large-padding: #{$md-semantic-spacing-section-large-padding};
+  --md-semantic-spacing-section-large-margin: #{$md-semantic-spacing-section-large-margin};
+  --md-semantic-spacing-section-large-gap: #{$md-semantic-spacing-section-large-gap};
+  
+  --md-semantic-spacing-grid-gap: #{$md-semantic-spacing-grid-gap};
+  --md-semantic-spacing-grid-gap-compact: #{$md-semantic-spacing-grid-gap-compact};
+  --md-semantic-spacing-grid-gap-spacious: #{$md-semantic-spacing-grid-gap-spacious};
+  
+  // Responsive semantic spacing
+  --md-semantic-spacing-mobile-compact: #{$md-semantic-spacing-mobile-compact};
+  --md-semantic-spacing-mobile-comfortable: #{$md-semantic-spacing-mobile-comfortable};
+  --md-semantic-spacing-mobile-spacious: #{$md-semantic-spacing-mobile-spacious};
+  
+  --md-semantic-spacing-tablet-compact: #{$md-semantic-spacing-tablet-compact};
+  --md-semantic-spacing-tablet-comfortable: #{$md-semantic-spacing-tablet-comfortable};
+  --md-semantic-spacing-tablet-spacious: #{$md-semantic-spacing-tablet-spacious};
+  
+  --md-semantic-spacing-desktop-compact: #{$md-semantic-spacing-desktop-compact};
+  --md-semantic-spacing-desktop-comfortable: #{$md-semantic-spacing-desktop-comfortable};
+  --md-semantic-spacing-desktop-spacious: #{$md-semantic-spacing-desktop-spacious};
+}
+
+// =============================================================================
+// HELPER FUNCTIONS
+// =============================================================================
+
+@function get-semantic-spacing($spacing-name) {
+  @return map-get((
+    'layout-tight': $md-semantic-spacing-layout-tight,
+    'layout-compact': $md-semantic-spacing-layout-compact,
+    'layout-comfortable': $md-semantic-spacing-layout-comfortable,
+    'layout-spacious': $md-semantic-spacing-layout-spacious,
+    'layout-loose': $md-semantic-spacing-layout-loose,
+    'component-tight': $md-semantic-spacing-component-tight,
+    'component-compact': $md-semantic-spacing-component-compact,
+    'component-comfortable': $md-semantic-spacing-component-comfortable,
+    'component-spacious': $md-semantic-spacing-component-spacious,
+    'component-loose': $md-semantic-spacing-component-loose,
+    'content-tight': $md-semantic-spacing-content-tight,
+    'content-compact': $md-semantic-spacing-content-compact,
+    'content-comfortable': $md-semantic-spacing-content-comfortable,
+    'content-spacious': $md-semantic-spacing-content-spacious,
+    'content-loose': $md-semantic-spacing-content-loose,
+    'icon-tight': $md-semantic-spacing-icon-tight,
+    'icon-compact': $md-semantic-spacing-icon-compact,
+    'icon-comfortable': $md-semantic-spacing-icon-comfortable,
+    'icon-spacious': $md-semantic-spacing-icon-spacious,
+    'button-padding-horizontal': $md-semantic-spacing-button-padding-horizontal,
+    'button-padding-vertical': $md-semantic-spacing-button-padding-vertical,
+    'button-gap': $md-semantic-spacing-button-gap,
+    'button-margin': $md-semantic-spacing-button-margin,
+    'chip-padding-horizontal': $md-semantic-spacing-chip-padding-horizontal,
+    'chip-padding-vertical': $md-semantic-spacing-chip-padding-vertical,
+    'chip-gap': $md-semantic-spacing-chip-gap,
+    'chip-margin': $md-semantic-spacing-chip-margin,
+    'text-field-padding-horizontal': $md-semantic-spacing-text-field-padding-horizontal,
+    'text-field-padding-vertical': $md-semantic-spacing-text-field-padding-vertical,
+    'text-field-gap': $md-semantic-spacing-text-field-gap,
+    'text-field-margin': $md-semantic-spacing-text-field-margin,
+    'card-padding': $md-semantic-spacing-card-padding,
+    'card-gap': $md-semantic-spacing-card-gap,
+    'card-margin': $md-semantic-spacing-card-margin,
+    'dialog-padding': $md-semantic-spacing-dialog-padding,
+    'dialog-gap': $md-semantic-spacing-dialog-gap,
+    'dialog-margin': $md-semantic-spacing-dialog-margin,
+    'list-padding': $md-semantic-spacing-list-padding,
+    'list-item-padding': $md-semantic-spacing-list-item-padding,
+    'list-item-gap': $md-semantic-spacing-list-item-gap,
+    'navigation-bar-padding': $md-semantic-spacing-navigation-bar-padding,
+    'navigation-item-padding': $md-semantic-spacing-navigation-item-padding,
+    'navigation-item-gap': $md-semantic-spacing-navigation-item-gap,
+    'container-padding': $md-semantic-spacing-container-padding,
+    'container-gap': $md-semantic-spacing-container-gap,
+    'container-margin': $md-semantic-spacing-container-margin,
+    'section-padding': $md-semantic-spacing-section-padding,
+    'section-gap': $md-semantic-spacing-section-gap,
+    'section-margin': $md-semantic-spacing-section-margin,
+    'grid-gap': $md-semantic-spacing-grid-gap,
+    'grid-gap-compact': $md-semantic-spacing-grid-gap-compact,
+    'grid-gap-spacious': $md-semantic-spacing-grid-gap-spacious,
+    'mobile-compact': $md-semantic-spacing-mobile-compact,
+    'mobile-comfortable': $md-semantic-spacing-mobile-comfortable,
+    'mobile-spacious': $md-semantic-spacing-mobile-spacious,
+    'tablet-compact': $md-semantic-spacing-tablet-compact,
+    'tablet-comfortable': $md-semantic-spacing-tablet-comfortable,
+    'tablet-spacious': $md-semantic-spacing-tablet-spacious,
+    'desktop-compact': $md-semantic-spacing-desktop-compact,
+    'desktop-comfortable': $md-semantic-spacing-desktop-comfortable,
+    'desktop-spacious': $md-semantic-spacing-desktop-spacious
+  ), $spacing-name);
+}

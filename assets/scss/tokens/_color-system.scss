@@ -1,0 +1,223 @@
+// Material Design 3 Color System Tokens
+// https://m3.material.io/styles/color/the-color-system/overview
+
+// =============================================================================
+// BASE PALETTE TONES
+// =============================================================================
+
+// Primary Palette
+$md-sys-color-primary: #6750A4;
+$md-sys-color-on-primary: #FFFFFF;
+$md-sys-color-primary-container: #EADDFF;
+$md-sys-color-on-primary-container: #21005D;
+
+// Secondary Palette
+$md-sys-color-secondary: #625B71;
+$md-sys-color-on-secondary: #FFFFFF;
+$md-sys-color-secondary-container: #E8DEF8;
+$md-sys-color-on-secondary-container: #1D192B;
+
+// Tertiary Palette
+$md-sys-color-tertiary: #7D5260;
+$md-sys-color-on-tertiary: #FFFFFF;
+$md-sys-color-tertiary-container: #FFD8E4;
+$md-sys-color-on-tertiary-container: #31111D;
+
+// Error Palette
+$md-sys-color-error: #BA1A1A;
+$md-sys-color-on-error: #FFFFFF;
+$md-sys-color-error-container: #FFDAD6;
+$md-sys-color-on-error-container: #410002;
+
+// Surface Colors
+$md-sys-color-surface: #FFFBFE;
+$md-sys-color-on-surface: #1C1B1F;
+$md-sys-color-surface-variant: #E7E0EC;
+$md-sys-color-on-surface-variant: #49454F;
+$md-sys-color-surface-container: #F3EDF7;
+$md-sys-color-surface-container-high: #ECE6F0;
+$md-sys-color-surface-container-highest: #E6E0E9;
+
+// Outline and Border Colors
+$md-sys-color-outline: #79747E;
+$md-sys-color-outline-variant: #CAC4D0;
+
+// Background Colors
+$md-sys-color-background: #FFFBFE;
+$md-sys-color-on-background: #1C1B1F;
+
+// =============================================================================
+// EXTENDED COLOR SYSTEM (Light Theme)
+// =============================================================================
+
+// Source Colors for Palette Generation
+$md-source-primary: #6750A4;
+$md-source-secondary: #625B71;
+$md-source-tertiary: #7D5260;
+$md-source-neutral: #605D66;
+$md-source-neutral-variant: #49454F;
+$md-source-error: #BA1A1A;
+
+// =============================================================================
+// COLOR ROLES AND STATES
+// =============================================================================
+
+// State Layers
+$md-sys-color-state-hover: rgba(0, 0, 0, 0.08);
+$md-sys-color-state-focus: rgba(0, 0, 0, 0.12);
+$md-sys-color-state-pressed: rgba(0, 0, 0, 0.16);
+$md-sys-color-state-dragged: rgba(0, 0, 0, 0.20);
+
+// State Layer Colors (for specific color schemes)
+$md-sys-color-state-hover-primary: rgba(103, 80, 164, 0.08);
+$md-sys-color-state-focus-primary: rgba(103, 80, 164, 0.12);
+$md-sys-color-state-pressed-primary: rgba(103, 80, 164, 0.16);
+
+$md-sys-color-state-hover-secondary: rgba(98, 91, 113, 0.08);
+$md-sys-color-state-focus-secondary: rgba(98, 91, 113, 0.12);
+$md-sys-color-state-pressed-secondary: rgba(98, 91, 113, 0.16);
+
+$md-sys-color-state-hover-tertiary: rgba(125, 82, 96, 0.08);
+$md-sys-color-state-focus-tertiary: rgba(125, 82, 96, 0.12);
+$md-sys-color-state-pressed-tertiary: rgba(125, 82, 96, 0.16);
+
+$md-sys-color-state-hover-error: rgba(186, 26, 26, 0.08);
+$md-sys-color-state-focus-error: rgba(186, 26, 26, 0.12);
+$md-sys-color-state-pressed-error: rgba(186, 26, 26, 0.16);
+
+// =============================================================================
+// DISABLED COLORS
+// =============================================================================
+
+$md-sys-color-disabled-container: rgba(0, 0, 0, 0.12);
+$md-sys-color-disabled-on-container: rgba(0, 0, 0, 0.38);
+$md-sys-color-disabled-content: rgba(0, 0, 0, 0.38);
+
+// =============================================================================
+// DARK THEME COLORS (for reference)
+// =============================================================================
+
+$md-sys-color-primary-dark: #D0BCFF;
+$md-sys-color-on-primary-dark: #381E72;
+$md-sys-color-primary-container-dark: #4F378B;
+$md-sys-color-on-primary-container-dark: #EADDFF;
+
+$md-sys-color-secondary-dark: #CCC2DC;
+$md-sys-color-on-secondary-dark: #332D41;
+$md-sys-color-secondary-container-dark: #4A4458;
+$md-sys-color-on-secondary-container-dark: #E8DEF8;
+
+$md-sys-color-tertiary-dark: #EFB8C8;
+$md-sys-color-on-tertiary-dark: #492532;
+$md-sys-color-tertiary-container-dark: #633B48;
+$md-sys-color-on-tertiary-container-dark: #FFD8E4;
+
+$md-sys-color-error-dark: #FFB4AB;
+$md-sys-color-on-error-dark: #690005;
+$md-sys-color-error-container-dark: #93000A;
+$md-sys-color-on-error-container-dark: #FFDAD6;
+
+$md-sys-color-surface-dark: #121212;
+$md-sys-color-on-surface-dark: #E6E0E9;
+$md-sys-color-surface-variant-dark: #49454F;
+$md-sys-color-on-surface-variant-dark: #CAC4D0;
+
+$md-sys-color-background-dark: #121212;
+$md-sys-color-on-background-dark: #E6E0E9;
+
+$md-sys-color-outline-dark: #938F99;
+$md-sys-color-outline-variant-dark: #49454F;
+
+// =============================================================================
+// MIXINS FOR EXPORTING COLOR TOKENS
+// =============================================================================
+
+@mixin export-color-tokens {
+  // Primary
+  --md-sys-color-primary: #{$md-sys-color-primary};
+  --md-sys-color-on-primary: #{$md-sys-color-on-primary};
+  --md-sys-color-primary-container: #{$md-sys-color-primary-container};
+  --md-sys-color-on-primary-container: #{$md-sys-color-on-primary-container};
+  
+  // Secondary
+  --md-sys-color-secondary: #{$md-sys-color-secondary};
+  --md-sys-color-on-secondary: #{$md-sys-color-on-secondary};
+  --md-sys-color-secondary-container: #{$md-sys-color-secondary-container};
+  --md-sys-color-on-secondary-container: #{$md-sys-color-on-secondary-container};
+  
+  // Tertiary
+  --md-sys-color-tertiary: #{$md-sys-color-tertiary};
+  --md-sys-color-on-tertiary: #{$md-sys-color-on-tertiary};
+  --md-sys-color-tertiary-container: #{$md-sys-color-tertiary-container};
+  --md-sys-color-on-tertiary-container: #{$md-sys-color-on-tertiary-container};
+  
+  // Error
+  --md-sys-color-error: #{$md-sys-color-error};
+  --md-sys-color-on-error: #{$md-sys-color-on-error};
+  --md-sys-color-error-container: #{$md-sys-color-error-container};
+  --md-sys-color-on-error-container: #{$md-sys-color-on-error-container};
+  
+  // Surface
+  --md-sys-color-surface: #{$md-sys-color-surface};
+  --md-sys-color-on-surface: #{$md-sys-color-on-surface};
+  --md-sys-color-surface-variant: #{$md-sys-color-surface-variant};
+  --md-sys-color-on-surface-variant: #{$md-sys-color-on-surface-variant};
+  --md-sys-color-surface-container: #{$md-sys-color-surface-container};
+  --md-sys-color-surface-container-high: #{$md-sys-color-surface-container-high};
+  --md-sys-color-surface-container-highest: #{$md-sys-color-surface-container-highest};
+  
+  // Outline
+  --md-sys-color-outline: #{$md-sys-color-outline};
+  --md-sys-color-outline-variant: #{$md-sys-color-outline-variant};
+  
+  // Background
+  --md-sys-color-background: #{$md-sys-color-background};
+  --md-sys-color-on-background: #{$md-sys-color-on-background};
+  
+  // State Layers
+  --md-sys-color-state-hover: #{$md-sys-color-state-hover};
+  --md-sys-color-state-focus: #{$md-sys-color-state-focus};
+  --md-sys-color-state-pressed: #{$md-sys-color-state-pressed};
+  --md-sys-color-state-dragged: #{$md-sys-color-state-dragged};
+  
+  // Disabled
+  --md-sys-color-disabled-container: #{$md-sys-color-disabled-container};
+  --md-sys-color-disabled-on-container: #{$md-sys-color-disabled-on-container};
+  --md-sys-color-disabled-content: #{$md-sys-color-disabled-content};
+}
+
+// =============================================================================
+// HELPER FUNCTIONS
+// =============================================================================
+
+@function get-color-token($color-name) {
+  @return map-get((
+    'primary': $md-sys-color-primary,
+    'on-primary': $md-sys-color-on-primary,
+    'primary-container': $md-sys-color-primary-container,
+    'on-primary-container': $md-sys-color-on-primary-container,
+    'secondary': $md-sys-color-secondary,
+    'on-secondary': $md-sys-color-on-secondary,
+    'secondary-container': $md-sys-color-secondary-container,
+    'on-secondary-container': $md-sys-color-on-secondary-container,
+    'tertiary': $md-sys-color-tertiary,
+    'on-tertiary': $md-sys-color-on-tertiary,
+    'tertiary-container': $md-sys-color-tertiary-container,
+    'on-tertiary-container': $md-sys-color-on-tertiary-container,
+    'error': $md-sys-color-error,
+    'on-error': $md-sys-color-on-error,
+    'error-container': $md-sys-color-error-container,
+    'on-error-container': #{$md-sys-color-on-error-container},
+    'surface': $md-sys-color-surface,
+    'on-surface': $md-sys-color-on-surface,
+    'surface-variant': $md-sys-color-surface-variant,
+    'on-surface-variant': $md-sys-color-on-surface-variant,
+    'surface-container': $md-sys-color-surface-container,
+    'surface-container-high': $md-sys-color-surface-container-high,
+    'surface-container-highest': $md-sys-color-surface-container-highest,
+    'outline': $md-sys-color-outline,
+    'outline-variant': $md-sys-color-outline-variant,
+    'background': $md-sys-color-background,
+    'on-background': $md-sys-color-on-background
+  ), $color-name);
+}

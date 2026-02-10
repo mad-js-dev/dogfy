@@ -1,0 +1,236 @@
+// Material Design 3 List Component Tokens
+// https://m3.material.io/components/lists/specs
+
+@use '../color-system' as color;
+@use '../shape' as shape;
+@use '../spacing' as spacing;
+@use '../motion' as motion;
+
+// =============================================================================
+// LIST CONTAINER TOKENS
+// =============================================================================
+
+// List Container Shape
+$md-comp-list-container-shape: shape.$md-sys-shape-corner-small;
+
+// List Container Color
+$md-comp-list-container-color: color.$md-sys-color-surface;
+
+// =============================================================================
+// LIST ITEM TOKENS
+// =============================================================================
+
+// List Item Heights
+$md-comp-list-one-line-container-height: 56px;
+$md-comp-list-two-line-container-height: 72px;
+$md-comp-list-three-line-container-height: 88px;
+
+// List Item Spacing
+$md-comp-list-item-padding-horizontal: 16px;
+$md-comp-list-item-padding-vertical: 12px;
+$md-comp-list-item-padding-vertical-two-line: 16px;
+$md-comp-list-item-padding-vertical-three-line: 16px;
+
+// List Item Gaps
+$md-comp-list-item-gap: 16px;
+$md-comp-list-item-text-gap: 2px;
+
+// =============================================================================
+// LIST ITEM TEXT TOKENS
+// =============================================================================
+
+// Headline Text (Primary text)
+$md-comp-list-headline-text-font: 'Roboto';
+$md-comp-list-headline-text-weight: 400;
+$md-comp-list-headline-text-size: 16px;
+$md-comp-list-headline-text-line-height: 24px;
+$md-comp-list-headline-text-color: color.$md-sys-color-on-surface;
+
+// Supporting Text (Secondary text)
+$md-comp-list-supporting-text-font: 'Roboto';
+$md-comp-list-supporting-text-weight: 400;
+$md-comp-list-supporting-text-size: 14px;
+$md-comp-list-supporting-text-line-height: 20px;
+$md-comp-list-supporting-text-color: color.$md-sys-color-on-surface-variant;
+
+// =============================================================================
+// LIST ITEM ICON TOKENS
+// =============================================================================
+
+// Leading Icon
+$md-comp-list-leading-icon-size: 24px;
+$md-comp-list-leading-icon-color: color.$md-sys-color-on-surface-variant;
+
+// Trailing Icon
+$md-comp-list-trailing-icon-size: 24px;
+$md-comp-list-trailing-icon-color: color.$md-sys-color-on-surface-variant;
+
+// =============================================================================
+// LIST ITEM STATE TOKENS
+// =============================================================================
+
+// Hover State
+$md-comp-list-hover-state-color: rgba(0, 0, 0, 0.08);
+$md-comp-list-hover-state-opacity: 1.0;
+
+// Pressed State
+$md-comp-list-pressed-state-color: rgba(0, 0, 0, 0.12);
+$md-comp-list-pressed-state-opacity: 1.0;
+
+// Focus State
+$md-comp-list-focus-state-color: rgba(0, 0, 0, 0.12);
+$md-comp-list-focus-state-opacity: 1.0;
+
+// Disabled State
+$md-comp-list-disabled-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-list-disabled-icon-color: rgba(0, 0, 0, 0.38);
+
+// =============================================================================
+// LIST ITEM STATE LAYER TOKENS
+// =============================================================================
+
+// State Layer
+$md-comp-list-state-layer-color: color.$md-sys-color-on-surface;
+$md-comp-list-state-layer-opacity: 0.12;
+
+// State Layer Shape
+$md-comp-list-state-layer-shape: shape.$md-sys-shape-corner-small;
+
+// =============================================================================
+// LIST TRANSITION TOKENS
+// =============================================================================
+
+// State Transitions
+$md-comp-list-state-transition-duration: motion.$md-sys-motion-duration-short-2;
+$md-comp-list-state-transition-easing: motion.$md-sys-motion-easing-standard;
+
+// =============================================================================
+// LIST SEMANTIC TOKENS
+// =============================================================================
+
+// Standard List (assist)
+$md-comp-list-standard-container-color: $md-comp-list-container-color;
+$md-comp-list-standard-headline-text-color: $md-comp-list-headline-text-color;
+$md-comp-list-standard-supporting-text-color: $md-comp-list-supporting-text-color;
+$md-comp-list-standard-leading-icon-color: $md-comp-list-leading-icon-color;
+$md-comp-list-standard-trailing-icon-color: $md-comp-list-trailing-icon-color;
+
+// Navigation List
+$md-comp-list-navigation-container-color: $md-comp-list-container-color;
+$md-comp-list-navigation-headline-text-color: color.$md-sys-color-on-surface;
+$md-comp-list-navigation-supporting-text-color: color.$md-sys-color-on-surface-variant;
+$md-comp-list-navigation-leading-icon-color: color.$md-sys-color-on-surface-variant;
+$md-comp-list-navigation-trailing-icon-color: color.$md-sys-color-on-surface-variant;
+
+// Menu List
+$md-comp-list-menu-container-color: color.$md-sys-color-surface-container;
+$md-comp-list-menu-headline-text-color: color.$md-sys-color-on-surface;
+$md-comp-list-menu-supporting-text-color: color.$md-sys-color-on-surface-variant;
+$md-comp-list-menu-leading-icon-color: color.$md-sys-color-on-surface-variant;
+$md-comp-list-menu-trailing-icon-color: color.$md-sys-color-on-surface-variant;
+
+// =============================================================================
+// LIST MIXINS
+// =============================================================================
+
+@mixin md-comp-list-base {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: $md-comp-list-container-color;
+  border-radius: $md-comp-list-container-shape;
+  overflow: hidden;
+}
+
+@mixin md-comp-list-item-base {
+  padding: 0;
+  margin: 0;
+  transition: background-color $md-comp-list-state-transition-duration $md-comp-list-state-transition-easing;
+}
+
+@mixin md-comp-list-item-content {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $md-comp-list-headline-text-color;
+  min-height: $md-comp-list-one-line-container-height;
+  gap: $md-comp-list-item-gap;
+  padding: $md-comp-list-item-padding-vertical $md-comp-list-item-padding-horizontal;
+}
+
+@mixin md-comp-list-item-two-line {
+  min-height: $md-comp-list-two-line-container-height;
+  padding-top: $md-comp-list-item-padding-vertical-two-line;
+  padding-bottom: $md-comp-list-item-padding-vertical-two-line;
+}
+
+@mixin md-comp-list-item-three-line {
+  min-height: $md-comp-list-three-line-container-height;
+  padding-top: $md-comp-list-item-padding-vertical-three-line;
+  padding-bottom: $md-comp-list-item-padding-vertical-three-line;
+}
+
+@mixin md-comp-list-item-text {
+  font-family: $md-comp-list-headline-text-font;
+  font-size: $md-comp-list-headline-text-size;
+  font-weight: $md-comp-list-headline-text-weight;
+  line-height: $md-comp-list-headline-text-line-height;
+  color: $md-comp-list-headline-text-color;
+}
+
+@mixin md-comp-list-item-supporting-text {
+  font-family: $md-comp-list-supporting-text-font;
+  font-size: $md-comp-list-supporting-text-size;
+  font-weight: $md-comp-list-supporting-text-weight;
+  line-height: $md-comp-list-supporting-text-line-height;
+  color: $md-comp-list-supporting-text-color;
+}
+
+@mixin md-comp-list-item-leading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $md-comp-list-leading-icon-size;
+  height: $md-comp-list-leading-icon-size;
+  color: $md-comp-list-leading-icon-color;
+}
+
+@mixin md-comp-list-item-trailing-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  color: $md-comp-list-trailing-icon-color;
+}
+
+@mixin md-comp-list-item-states {
+  &:hover {
+    background-color: $md-comp-list-hover-state-color;
+  }
+  
+  &:focus-visible {
+    background-color: $md-comp-list-focus-state-color;
+  }
+  
+  &:active {
+    background-color: $md-comp-list-pressed-state-color;
+  }
+}
+
+// =============================================================================
+// LIST SEMANTIC MIXINS
+// =============================================================================
+
+@mixin md-semantic-list-assist {
+  @include md-comp-list-base;
+}
+
+@mixin md-semantic-list-navigation {
+  @include md-comp-list-base;
+}
+
+@mixin md-semantic-list-menu {
+  @include md-comp-list-base;
+  background-color: $md-comp-list-menu-container-color;
+}

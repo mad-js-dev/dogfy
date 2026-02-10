@@ -1,17 +1,26 @@
 <template>
   <div class="">
     <div>
-      <ul>
-        <li v-for="room in rooms.getRooms" :key="room.roomId">
-            <NuxtLink :to="`room/${room.roomId}`">{{ room.roomName }}</NuxtLink>
-        </li>
-      </ul>
+      <M3List :items="rooms.getRooms.map(room => ({ 
+        text: room.roomName, 
+        to: `room/${room.roomId}`,
+        slots: {
+          content: (props) => h(M3Link, { 
+            trailingIcon: 'chevron-right', 
+            text: props.text,
+            to: props.to 
+          })
+        }
+      }))" />
     </div>
   </div>
 </template>
 
 <script setup>
 import { useRoomsStore } from '../../stores/rooms'
+import { h } from 'vue'
+import M3List from '../components/organisms/M3List/M3List.vue'
+import M3Link from '../components/molecules/M3Link/M3Link.vue'
 
 const rooms = useRoomsStore()
 </script>
@@ -116,5 +125,7 @@ const rooms = useRoomsStore()
     width: 100%;
     max-width: 200px;
   }
+
+
 }
 </style>

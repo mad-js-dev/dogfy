@@ -1,0 +1,579 @@
+// Material Design 3 Breakpoint Settings
+// Responsive design breakpoints and media queries
+
+// =============================================================================
+// BREAKPOINT DEFINITIONS
+// =============================================================================
+
+// Breakpoint values (in pixels)
+$md-breakpoint-xs: 0px;
+$md-breakpoint-sm: 600px;
+$md-breakpoint-md: 960px;
+$md-breakpoint-lg: 1280px;
+$md-breakpoint-xl: 1920px;
+
+// Breakpoint names map
+$md-breakpoints: (
+  'xs': $md-breakpoint-xs,
+  'sm': $md-breakpoint-sm,
+  'md': $md-breakpoint-md,
+  'lg': $md-breakpoint-lg,
+  'xl': $md-breakpoint-xl
+);
+
+// =============================================================================
+// CONTAINER DEFINITIONS
+// =============================================================================
+
+// Container max widths (in pixels)
+$md-container-max-width-xs: 100%;
+$md-container-max-width-sm: 540px;
+$md-container-max-width-md: 720px;
+$md-container-max-width-lg: 960px;
+$md-container-max-width-xl: 1140px;
+$md-container-max-width-2xl: 1320px;
+
+// Container padding (in pixels)
+$md-container-padding-xs: $md-sys-spacing-2;  // 8px
+$md-container-padding-sm: $md-sys-spacing-3;  // 12px
+$md-container-padding-md: $md-sys-spacing-4;  // 16px
+$md-container-padding-lg: $md-sys-spacing-6;  // 24px
+$md-container-padding-xl: $md-sys-spacing-8;  // 32px
+
+// Container map
+$md-containers: (
+  'xs': (
+    max-width: $md-container-max-width-xs,
+    padding: $md-container-padding-xs
+  ),
+  'sm': (
+    max-width: $md-container-max-width-sm,
+    padding: $md-container-padding-sm
+  ),
+  'md': (
+    max-width: $md-container-max-width-md,
+    padding: $md-container-padding-md
+  ),
+  'lg': (
+    max-width: $md-container-max-width-lg,
+    padding: $md-container-padding-lg
+  ),
+  'xl': (
+    max-width: $md-container-max-width-xl,
+    padding: $md-container-padding-xl
+  )
+);
+
+// =============================================================================
+// GRID DEFINITIONS
+// =============================================================================
+
+// Grid columns
+$md-grid-columns: 12;
+
+// Grid gutters (in pixels)
+$md-grid-gutter-xs: $md-sys-spacing-1;  // 4px
+$md-grid-gutter-sm: $md-sys-spacing-2;  // 8px
+$md-grid-gutter-md: $md-sys-spacing-3;  // 12px
+$md-grid-gutter-lg: $md-sys-spacing-4;  // 16px
+$md-grid-gutter-xl: $md-sys-spacing-6;  // 24px
+
+// Grid map
+$md-grids: (
+  'xs': (
+    columns: $md-grid-columns,
+    gutter: $md-grid-gutter-xs
+  ),
+  'sm': (
+    columns: $md-grid-columns,
+    gutter: $md-grid-gutter-sm
+  ),
+  'md': (
+    columns: $md-grid-columns,
+    gutter: $md-grid-gutter-md
+  ),
+  'lg': (
+    columns: $md-grid-columns,
+    gutter: $md-grid-gutter-lg
+  ),
+  'xl': (
+    columns: $md-grid-columns,
+    gutter: $md-grid-gutter-xl
+  )
+);
+
+// =============================================================================
+// MEDIA QUERY MIXINS
+// =============================================================================
+
+// Up from breakpoint (min-width)
+@mixin md-breakpoint-up($breakpoint) {
+  @if map-has-key($md-breakpoints, $breakpoint) {
+    @media (min-width: map-get($md-breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not found in $md-breakpoints map.";
+  }
+}
+
+// Down to breakpoint (max-width)
+@mixin md-breakpoint-down($breakpoint) {
+  @if map-has-key($md-breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($md-breakpoints, $breakpoint) - 1px}) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not found in $md-breakpoints map.";
+  }
+}
+
+// Between breakpoints (min-width and max-width)
+@mixin md-breakpoint-between($lower, $upper) {
+  @if map-has-key($md-breakpoints, $lower) and map-has-key($md-breakpoints, $upper) {
+    @media (min-width: #{map-get($md-breakpoints, $lower)}) and (max-width: #{map-get($md-breakpoints, $upper) - 1px}) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$lower}` or `#{$upper}` not found in $md-breakpoints map.";
+  }
+}
+
+// Only at breakpoint (exact range)
+@mixin md-breakpoint-only($breakpoint) {
+  @if map-has-key($md-breakpoints, $breakpoint) {
+    $breakpoint-index: index(map-keys($md-breakpoints), $breakpoint);
+    $next-breakpoint: if($breakpoint-index < length($md-breakpoints), nth(map-keys($md-breakpoints), $breakpoint-index + 1), null);
+    
+    @if $next-breakpoint {
+      @include md-breakpoint-between($breakpoint, $next-breakpoint) {
+        @content;
+      }
+    } @else {
+      @include md-breakpoint-up($breakpoint) {
+        @content;
+      }
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not found in $md-breakpoints map.";
+  }
+}
+
+// =============================================================================
+// CONTAINER MIXINS
+// =============================================================================
+
+@mixin md-container($breakpoint: 'md') {
+  @if map-has-key($md-containers, $breakpoint) {
+    $container: map-get($md-containers, $breakpoint);
+    
+    width: 100%;
+    max-width: map-get($container, max-width);
+    padding-left: map-get($container, padding);
+    padding-right: map-get($container, padding);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  } @else {
+    @warn "Container `#{$breakpoint}` not found in $md-containers map.";
+  }
+}
+
+@mixin md-container-fluid {
+  width: 100%;
+  padding-left: $md-container-padding-md;
+  padding-right: $md-container-padding-md;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+// =============================================================================
+// GRID MIXINS
+// =============================================================================
+
+@mixin md-grid($breakpoint: 'md') {
+  @if map-has-key($md-grids, $breakpoint) {
+    $grid: map-get($md-grids, $breakpoint);
+    
+    display: grid;
+    grid-template-columns: repeat(map-get($grid, columns), 1fr);
+    gap: map-get($grid, gutter);
+    box-sizing: border-box;
+  } @else {
+    @warn "Grid `#{$breakpoint}` not found in $md-grids map.";
+  }
+}
+
+@mixin md-grid-columns($columns, $breakpoint: 'md') {
+  @if map-has-key($md-grids, $breakpoint) {
+    $grid: map-get($md-grids, $breakpoint);
+    
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: map-get($grid, gutter);
+    box-sizing: border-box;
+  } @else {
+    @warn "Grid `#{$breakpoint}` not found in $md-grids map.";
+  }
+}
+
+@mixin md-grid-auto-fit($min-width, $breakpoint: 'md') {
+  @if map-has-key($md-grids, $breakpoint) {
+    $grid: map-get($md-grids, $breakpoint);
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+    gap: map-get($grid, gutter);
+    box-sizing: border-box;
+  } @else {
+    @warn "Grid `#{$breakpoint}` not found in $md-grids map.";
+  }
+}
+
+@mixin md-grid-auto-fill($min-width, $breakpoint: 'md') {
+  @if map-has-key($md-grids, $breakpoint) {
+    $grid: map-get($md-grids, $breakpoint);
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min-width, 1fr));
+    gap: map-get($grid, gutter);
+    box-sizing: border-box;
+  } @else {
+    @warn "Grid `#{$breakpoint}` not found in $md-grids map.";
+  }
+}
+
+// =============================================================================
+// RESPONSIVE TYPOGRAPHY MIXINS
+// =============================================================================
+
+@mixin md-responsive-typography {
+  @include md-breakpoint-up('sm') {
+    font-size: calc(1rem * 1.1);
+  }
+  
+  @include md-breakpoint-up('md') {
+    font-size: calc(1rem * 1.2);
+  }
+  
+  @include md-breakpoint-up('lg') {
+    font-size: calc(1rem * 1.3);
+  }
+  
+  @include md-breakpoint-up('xl') {
+    font-size: calc(1rem * 1.4);
+  }
+}
+
+@mixin md-responsive-display-large {
+  @include md-typescale-display-large;
+  
+  @include md-breakpoint-up('sm') {
+    font-size: calc(#{$md-sys-typescale-display-large-size} * 1.1);
+    line-height: calc(#{$md-sys-typescale-display-large-line-height} * 1.1);
+  }
+  
+  @include md-breakpoint-up('md') {
+    font-size: calc(#{$md-sys-typescale-display-large-size} * 1.2);
+    line-height: calc(#{$md-sys-typescale-display-large-line-height} * 1.2);
+  }
+  
+  @include md-breakpoint-up('lg') {
+    font-size: calc(#{$md-sys-typescale-display-large-size} * 1.3);
+    line-height: calc(#{$md-sys-typescale-display-large-line-height} * 1.3);
+  }
+}
+
+@mixin md-responsive-headline-large {
+  @include md-typescale-headline-large;
+  
+  @include md-breakpoint-up('sm') {
+    font-size: calc(#{$md-sys-typescale-headline-large-size} * 1.1);
+    line-height: calc(#{$md-sys-typescale-headline-large-line-height} * 1.1);
+  }
+  
+  @include md-breakpoint-up('md') {
+    font-size: calc(#{$md-sys-typescale-headline-large-size} * 1.2);
+    line-height: calc(#{$md-sys-typescale-headline-large-line-height} * 1.2);
+  }
+  
+  @include md-breakpoint-up('lg') {
+    font-size: calc(#{$md-sys-typescale-headline-large-size} * 1.3);
+    line-height: calc(#{$md-sys-typescale-headline-large-line-height} * 1.3);
+  }
+}
+
+@mixin md-responsive-title-large {
+  @include md-typescale-title-large;
+  
+  @include md-breakpoint-up('sm') {
+    font-size: calc(#{$md-sys-typescale-title-large-size} * 1.1);
+    line-height: calc(#{$md-sys-typescale-title-large-line-height} * 1.1);
+  }
+  
+  @include md-breakpoint-up('md') {
+    font-size: calc(#{$md-sys-typescale-title-large-size} * 1.2);
+    line-height: calc(#{$md-sys-typescale-title-large-line-height} * 1.2);
+  }
+  
+  @include md-breakpoint-up('lg') {
+    font-size: calc(#{$md-sys-typescale-title-large-size} * 1.3);
+    line-height: calc(#{$md-sys-typescale-title-large-line-height} * 1.3);
+  }
+}
+
+@mixin md-responsive-body-large {
+  @include md-typescale-body-large;
+  
+  @include md-breakpoint-up('sm') {
+    font-size: calc(#{$md-sys-typescale-body-large-size} * 1.05);
+    line-height: calc(#{$md-sys-typescale-body-large-line-height} * 1.05);
+  }
+  
+  @include md-breakpoint-up('md') {
+    font-size: calc(#{$md-sys-typescale-body-large-size} * 1.1);
+    line-height: calc(#{$md-sys-typescale-body-large-line-height} * 1.1);
+  }
+  
+  @include md-breakpoint-up('lg') {
+    font-size: calc(#{$md-sys-typescale-body-large-size} * 1.15);
+    line-height: calc(#{$md-sys-typescale-body-large-line-height} * 1.15);
+  }
+}
+
+// =============================================================================
+// RESPONSIVE SPACING MIXINS
+// =============================================================================
+
+@mixin md-responsive-spacing {
+  @include md-breakpoint-up('sm') {
+    --spacing-scale: 1.2;
+  }
+  
+  @include md-breakpoint-up('md') {
+    --spacing-scale: 1.4;
+  }
+  
+  @include md-breakpoint-up('lg') {
+    --spacing-scale: 1.6;
+  }
+  
+  @include md-breakpoint-up('xl') {
+    --spacing-scale: 1.8;
+  }
+}
+
+@mixin md-responsive-padding($base-padding: $md-sys-spacing-4) {
+  padding: $base-padding;
+  
+  @include md-breakpoint-up('sm') {
+    padding: calc(#{$base-padding} * 1.2);
+  }
+  
+  @include md-breakpoint-up('md') {
+    padding: calc(#{$base-padding} * 1.4);
+  }
+  
+  @include md-breakpoint-up('lg') {
+    padding: calc(#{$base-padding} * 1.6);
+  }
+  
+  @include md-breakpoint-up('xl') {
+    padding: calc(#{$base-padding} * 1.8);
+  }
+}
+
+@mixin md-responsive-margin($base-margin: $md-sys-spacing-4) {
+  margin: $base-margin;
+  
+  @include md-breakpoint-up('sm') {
+    margin: calc(#{$base-margin} * 1.2);
+  }
+  
+  @include md-breakpoint-up('md') {
+    margin: calc(#{$base-margin} * 1.4);
+  }
+  
+  @include md-breakpoint-up('lg') {
+    margin: calc(#{$base-margin} * 1.6);
+  }
+  
+  @include md-breakpoint-up('xl') {
+    margin: calc(#{$base-margin} * 1.8);
+  }
+}
+
+@mixin md-responsive-gap($base-gap: $md-sys-spacing-2) {
+  gap: $base-gap;
+  
+  @include md-breakpoint-up('sm') {
+    gap: calc(#{$base-gap} * 1.2);
+  }
+  
+  @include md-breakpoint-up('md') {
+    gap: calc(#{$base-gap} * 1.4);
+  }
+  
+  @include md-breakpoint-up('lg') {
+    gap: calc(#{$base-gap} * 1.6);
+  }
+  
+  @include md-breakpoint-up('xl') {
+    gap: calc(#{$base-gap} * 1.8);
+  }
+}
+
+// =============================================================================
+// LAYOUT MIXINS
+// =============================================================================
+
+@mixin md-responsive-layout {
+  @include md-container;
+  
+  @include md-breakpoint-up('sm') {
+    @include md-container('sm');
+  }
+  
+  @include md-breakpoint-up('md') {
+    @include md-container('md');
+  }
+  
+  @include md-breakpoint-up('lg') {
+    @include md-container('lg');
+  }
+  
+  @include md-breakpoint-up('xl') {
+    @include md-container('xl');
+  }
+}
+
+@mixin md-flex-responsive {
+  display: flex;
+  flex-direction: column;
+  
+  @include md-breakpoint-up('md') {
+    flex-direction: row;
+  }
+}
+
+@mixin md-grid-responsive {
+  @include md-grid('xs');
+  
+  @include md-breakpoint-up('sm') {
+    @include md-grid('sm');
+  }
+  
+  @include md-breakpoint-up('md') {
+    @include md-grid('md');
+  }
+  
+  @include md-breakpoint-up('lg') {
+    @include md-grid('lg');
+  }
+  
+  @include md-breakpoint-up('xl') {
+    @include md-grid('xl');
+  }
+}
+
+// =============================================================================
+// UTILITY MIXINS
+// =============================================================================
+
+@mixin md-hide-on($breakpoint) {
+  @include md-breakpoint-down($breakpoint) {
+    display: none !important;
+  }
+}
+
+@mixin md-show-on($breakpoint) {
+  display: none !important;
+  
+  @include md-breakpoint-up($breakpoint) {
+    display: block !important;
+  }
+}
+
+@mixin md-hide-between($lower, $upper) {
+  @include md-breakpoint-between($lower, $upper) {
+    display: none !important;
+  }
+}
+
+@mixin md-show-between($lower, $upper) {
+  display: none !important;
+  
+  @include md-breakpoint-between($lower, $upper) {
+    display: block !important;
+  }
+}
+
+// =============================================================================
+// HELPER FUNCTIONS
+// =============================================================================
+
+@function get-breakpoint($breakpoint) {
+  @return map-get($md-breakpoints, $breakpoint);
+}
+
+@function get-container($breakpoint) {
+  @return map-get($md-containers, $breakpoint);
+}
+
+@function get-grid($breakpoint) {
+  @return map-get($md-grids, $breakpoint);
+}
+
+@function get-next-breakpoint($breakpoint) {
+  $breakpoint-index: index(map-keys($md-breakpoints), $breakpoint);
+  @if $breakpoint-index < length($md-breakpoints) {
+    @return nth(map-keys($md-breakpoints), $breakpoint-index + 1);
+  } @else {
+    @return null;
+  }
+}
+
+@function get-previous-breakpoint($breakpoint) {
+  $breakpoint-index: index(map-keys($md-breakpoints), $breakpoint);
+  @if $breakpoint-index > 1 {
+    @return nth(map-keys($md-breakpoints), $breakpoint-index - 1);
+  } @else {
+    @return null;
+  }
+}
+
+// =============================================================================
+// EXPORT MIXIN
+// =============================================================================
+
+@mixin export-breakpoint-tokens {
+  // Breakpoint tokens
+  --md-breakpoint-xs: #{$md-breakpoint-xs};
+  --md-breakpoint-sm: #{$md-breakpoint-sm};
+  --md-breakpoint-md: #{$md-breakpoint-md};
+  --md-breakpoint-lg: #{$md-breakpoint-lg};
+  --md-breakpoint-xl: #{$md-breakpoint-xl};
+  
+  // Container tokens
+  --md-container-max-width-xs: #{$md-container-max-width-xs};
+  --md-container-max-width-sm: #{$md-container-max-width-sm};
+  --md-container-max-width-md: #{$md-container-max-width-md};
+  --md-container-max-width-lg: #{$md-container-max-width-lg};
+  --md-container-max-width-xl: #{$md-container-max-width-xl};
+  --md-container-max-width-2xl: #{$md-container-max-width-2xl};
+  
+  --md-container-padding-xs: #{$md-container-padding-xs};
+  --md-container-padding-sm: #{$md-container-padding-sm};
+  --md-container-padding-md: #{$md-container-padding-md};
+  --md-container-padding-lg: #{$md-container-padding-lg};
+  --md-container-padding-xl: #{$md-container-padding-xl};
+  
+  // Grid tokens
+  --md-grid-columns: #{$md-grid-columns};
+  --md-grid-gutter-xs: #{$md-grid-gutter-xs};
+  --md-grid-gutter-sm: #{$md-grid-gutter-sm};
+  --md-grid-gutter-md: #{$md-grid-gutter-md};
+  --md-grid-gutter-lg: #{$md-grid-gutter-lg};
+  --md-grid-gutter-xl: #{$md-grid-gutter-xl};
+}

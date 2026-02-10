@@ -1,0 +1,508 @@
+// Material Design 3 Field Component Tokens
+// https://m3.material.io/components/text-fields/overview
+
+@use '../color-system' as color;
+@use '../shape' as shape;
+@use '../motion' as motion;
+
+// =============================================================================
+// TEXT FIELD CONTAINER TOKENS
+// =============================================================================
+
+// Text Field Heights
+$md-comp-text-field-container-height: 56px;
+$md-comp-text-field-small-container-height: 40px;
+
+// Text Field Shape
+$md-comp-text-field-container-shape: 4px;
+$md-comp-text-field-filled-container-shape: 4px;
+$md-comp-text-field-outlined-container-shape: 4px;
+
+// =============================================================================
+// TEXT FIELD LABEL TOKENS
+// =============================================================================
+
+// Label Typography
+$md-comp-text-field-label-text-type: 'Roboto';
+$md-comp-text-field-label-text-weight: 400;
+$md-comp-text-field-label-text-size: 16px;
+$md-comp-text-field-label-text-line-height: 24px;
+$md-comp-text-field-label-text-tracking: 0.1px;
+
+$md-comp-text-field-small-label-text-size: 12px;
+$md-comp-text-field-small-label-text-line-height: 16px;
+
+// =============================================================================
+// TEXT FIELD INPUT TOKENS
+// =============================================================================
+
+// Input Typography
+$md-comp-text-field-input-text-type: 'Roboto';
+$md-comp-text-field-input-text-weight: 400;
+$md-comp-text-field-input-text-size: 16px;
+$md-comp-text-field-input-text-line-height: 24px;
+$md-comp-text-field-input-text-tracking: 0.5px;
+
+$md-comp-text-field-small-input-text-size: 14px;
+$md-comp-text-field-small-input-text-line-height: 20px;
+
+// =============================================================================
+// FILLED TEXT FIELD TOKENS
+// =============================================================================
+
+// Filled Container
+$md-comp-filled-text-field-container-color: color.$md-sys-color-surface-variant;
+$md-comp-filled-text-field-input-text-color: color.$md-sys-color-on-surface;
+$md-comp-filled-text-field-disabled-container-color: rgba(0, 0, 0, 0.04);
+$md-comp-filled-text-field-disabled-input-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-filled-text-field-focus-container-color: color.$md-sys-color-surface-variant;
+$md-comp-filled-text-field-focus-input-text-color: color.$md-sys-color-on-surface;
+$md-comp-filled-text-field-hover-container-color: color.$md-sys-color-surface-variant;
+$md-comp-filled-text-field-hover-input-text-color: color.$md-sys-color-on-surface;
+$md-comp-filled-text-field-error-container-color: color.$md-sys-color-surface-variant;
+$md-comp-filled-text-field-error-input-text-color: color.$md-sys-color-error;
+
+// Filled Label
+$md-comp-filled-text-field-label-text-color: color.$md-sys-color-on-surface-variant;
+$md-comp-filled-text-field-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-filled-text-field-focus-label-text-color: color.$md-sys-color-primary;
+$md-comp-filled-text-field-hover-label-text-color: color.$md-sys-color-on-surface-variant;
+$md-comp-filled-text-field-error-label-text-color: color.$md-sys-color-error;
+
+// Filled Indicator
+$md-comp-filled-text-field-active-indicator-color: color.$md-sys-color-on-surface-variant;
+$md-comp-filled-text-field-disabled-active-indicator-color: rgba(0, 0, 0, 0.38);
+$md-comp-filled-text-field-focus-active-indicator-color: color.$md-sys-color-primary;
+$md-comp-filled-text-field-hover-active-indicator-color: color.$md-sys-color-on-surface;
+$md-comp-filled-text-field-error-active-indicator-color: color.$md-sys-color-error;
+$md-comp-filled-text-field-active-indicator-height: 2px;
+$md-comp-filled-text-field-focus-active-indicator-height: 3px;
+
+// =============================================================================
+// OUTLINED TEXT FIELD TOKENS
+// =============================================================================
+
+// Outlined Container
+$md-comp-outlined-text-field-container-color: transparent;
+$md-comp-outlined-text-field-input-text-color: color.$md-sys-color-on-surface;
+$md-comp-outlined-text-field-disabled-container-color: transparent;
+$md-comp-outlined-text-field-disabled-input-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-outlined-text-field-focus-container-color: transparent;
+$md-comp-outlined-text-field-focus-input-text-color: color.$md-sys-color-on-surface;
+$md-comp-outlined-text-field-hover-container-color: transparent;
+$md-comp-outlined-text-field-hover-input-text-color: color.$md-sys-color-on-surface;
+$md-comp-outlined-text-field-error-container-color: transparent;
+$md-comp-outlined-text-field-error-input-text-color: color.$md-sys-color-error;
+
+// Outlined Label
+$md-comp-outlined-text-field-label-text-color: color.$md-sys-color-on-surface-variant;
+$md-comp-outlined-text-field-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-outlined-text-field-focus-label-text-color: color.$md-sys-color-primary;
+$md-comp-outlined-text-field-hover-label-text-color: color.$md-sys-color-on-surface-variant;
+$md-comp-outlined-text-field-error-label-text-color: color.$md-sys-color-error;
+
+// Outlined Outline
+$md-comp-outlined-text-field-outline-color: color.$md-sys-color-outline;
+$md-comp-outlined-text-field-disabled-outline-color: rgba(0, 0, 0, 0.06);
+$md-comp-outlined-text-field-focus-outline-color: color.$md-sys-color-primary;
+$md-comp-outlined-text-field-hover-outline-color: color.$md-sys-color-on-surface;
+$md-comp-outlined-text-field-error-outline-color: color.$md-sys-color-error;
+$md-comp-outlined-text-field-outline-width: 1px;
+$md-comp-outlined-text-field-focus-outline-width: 2px;
+
+// =============================================================================
+// SUPPORTING TEXT TOKENS
+// =============================================================================
+
+// Supporting Text Typography
+$md-comp-text-field-supporting-text-type: 'Roboto';
+$md-comp-text-field-supporting-text-weight: 400;
+$md-comp-text-field-supporting-text-size: 12px;
+$md-comp-text-field-supporting-text-line-height: 16px;
+$md-comp-text-field-supporting-text-tracking: 0.4px;
+
+// Supporting Text Colors
+$md-comp-text-field-supporting-text-color: color.$md-sys-color-on-surface-variant;
+$md-comp-text-field-disabled-supporting-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-text-field-error-supporting-text-color: color.$md-sys-color-error;
+
+// =============================================================================
+// PREFIX/SUFFIX TOKENS
+// =============================================================================
+
+// Prefix/Suffix Typography
+$md-comp-text-field-prefix-suffix-text-type: 'Roboto';
+$md-comp-text-field-prefix-suffix-text-weight: 400;
+$md-comp-text-field-prefix-suffix-text-size: 16px;
+$md-comp-text-field-prefix-suffix-text-line-height: 24px;
+$md-comp-text-field-prefix-suffix-text-tracking: 0.5px;
+
+$md-comp-text-field-small-prefix-suffix-text-size: 14px;
+$md-comp-text-field-small-prefix-suffix-text-line-height: 20px;
+
+// Prefix/Suffix Colors
+$md-comp-text-field-prefix-suffix-text-color: color.$md-sys-color-on-surface-variant;
+$md-comp-text-field-disabled-prefix-suffix-text-color: rgba(0, 0, 0, 0.38);
+$md-comp-text-field-error-prefix-suffix-text-color: color.$md-sys-color-error;
+
+// =============================================================================
+// ICON TOKENS
+// =============================================================================
+
+// Icon Size
+$md-comp-text-field-icon-size: 24px;
+$md-comp-text-field-small-icon-size: 20px;
+
+// Icon Colors
+$md-comp-text-field-leading-icon-color: color.$md-sys-color-on-surface-variant;
+$md-comp-text-field-disabled-leading-icon-color: rgba(0, 0, 0, 0.38);
+$md-comp-text-field-error-leading-icon-color: color.$md-sys-color-error;
+$md-comp-text-field-trailing-icon-color: color.$md-sys-color-on-surface-variant;
+$md-comp-text-field-disabled-trailing-icon-color: rgba(0, 0, 0, 0.38);
+$md-comp-text-field-error-trailing-icon-color: color.$md-sys-color-error;
+
+// =============================================================================
+// TEXT FIELD SPACING TOKENS
+// =============================================================================
+
+// Container Spacing
+$md-comp-text-field-container-padding-horizontal: 16px;
+$md-comp-text-field-container-padding-vertical: 16px;
+$md-comp-text-field-small-container-padding-horizontal: 12px;
+$md-comp-text-field-small-container-padding-vertical: 8px;
+
+// Input Spacing
+$md-comp-text-field-input-padding-top: 24px;
+$md-comp-text-field-small-input-padding-top: 16px;
+
+// Label Spacing
+$md-comp-text-field-label-padding-top: 16px;
+$md-comp-text-field-small-label-padding-top: 8px;
+
+// Icon Spacing
+$md-comp-text-field-leading-icon-space: 12px;
+$md-comp-text-field-trailing-icon-space: 12px;
+$md-comp-text-field-small-leading-icon-space: 8px;
+$md-comp-text-field-small-trailing-icon-space: 8px;
+
+// Prefix/Suffix Spacing
+$md-comp-text-field-prefix-space: 4px;
+$md-comp-text-field-suffix-space: 4px;
+$md-comp-text-field-small-prefix-space: 2px;
+$md-comp-text-field-small-suffix-space: 2px;
+
+// Supporting Text Spacing
+$md-comp-text-field-supporting-text-padding-top: 4px;
+
+// =============================================================================
+// TEXT FIELD MIXINS
+// =============================================================================
+
+@mixin md-comp-text-field-base {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: $md-comp-text-field-label-text-type;
+}
+
+@mixin md-comp-filled-text-field {
+  .md3-text-field__container {
+    background-color: $md-comp-filled-text-field-container-color;
+    border-radius: $md-comp-text-field-filled-container-shape;
+    padding: 0 $md-comp-text-field-container-padding-horizontal;
+    border-bottom: $md-comp-filled-text-field-active-indicator-height solid $md-comp-filled-text-field-active-indicator-color;
+    transition: all motion.$md-sys-motion-duration-short-3 motion.$md-sys-motion-easing-emphasized;
+  }
+  
+  .md3-text-field__input {
+    color: $md-comp-filled-text-field-input-text-color;
+    font-family: $md-comp-text-field-input-text-type;
+    font-weight: $md-comp-text-field-input-text-weight;
+    font-size: $md-comp-text-field-input-text-size;
+    line-height: $md-comp-text-field-input-text-line-height;
+    letter-spacing: $md-comp-text-field-input-text-tracking;
+    padding: $md-comp-text-field-input-padding-top 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+  
+  .md3-text-field__label {
+    color: $md-comp-filled-text-field-label-text-color;
+    font-family: $md-comp-text-field-label-text-type;
+    font-weight: $md-comp-text-field-label-text-weight;
+    font-size: $md-comp-text-field-label-text-size;
+    line-height: $md-comp-text-field-label-text-line-height;
+    letter-spacing: $md-comp-text-field-label-text-tracking;
+    position: absolute;
+    top: $md-comp-text-field-label-padding-top;
+    left: $md-comp-text-field-container-padding-horizontal;
+    transition: all motion.$md-sys-motion-duration-short-3 motion.$md-sys-motion-easing-emphasized;
+    pointer-events: none;
+  }
+  
+  &:focus-within {
+    .md3-text-field__container {
+      border-bottom-width: $md-comp-filled-text-field-focus-active-indicator-height;
+      border-bottom-color: $md-comp-filled-text-field-focus-active-indicator-color;
+    }
+    
+    .md3-text-field__label {
+      color: $md-comp-filled-text-field-focus-label-text-color;
+      transform: translateY(-8px) scale(0.75);
+    }
+  }
+  
+  &:hover:not(:focus-within) {
+    .md3-text-field__container {
+      border-bottom-color: $md-comp-filled-text-field-hover-active-indicator-color;
+    }
+  }
+  
+  &.has-value .md3-text-field__label {
+    transform: translateY(-8px) scale(0.75);
+  }
+  
+  &.disabled {
+    .md3-text-field__container {
+      background-color: $md-comp-filled-text-field-disabled-container-color;
+      border-bottom-color: $md-comp-filled-text-field-disabled-active-indicator-color;
+    }
+    
+    .md3-text-field__input {
+      color: $md-comp-filled-text-field-disabled-input-text-color;
+    }
+    
+    .md3-text-field__label {
+      color: $md-comp-filled-text-field-disabled-label-text-color;
+    }
+  }
+  
+  &.error {
+    .md3-text-field__container {
+      border-bottom-color: $md-comp-filled-text-field-error-active-indicator-color;
+    }
+    
+    .md3-text-field__input {
+      color: $md-comp-filled-text-field-error-input-text-color;
+    }
+    
+    .md3-text-field__label {
+      color: $md-comp-filled-text-field-error-label-text-color;
+    }
+  }
+}
+
+@mixin md-comp-outlined-text-field {
+  .md3-text-field__container {
+    background-color: $md-comp-outlined-text-field-container-color;
+    border: $md-comp-outlined-text-field-outline-width solid $md-comp-outlined-text-field-outline-color;
+    border-radius: $md-comp-text-field-outlined-container-shape;
+    padding: 0 $md-comp-text-field-container-padding-horizontal;
+    transition: all motion.$md-sys-motion-duration-short-3 motion.$md-sys-motion-easing-emphasized;
+  }
+  
+  .md3-text-field__input {
+    color: $md-comp-outlined-text-field-input-text-color;
+    font-family: $md-comp-text-field-input-text-type;
+    font-weight: $md-comp-text-field-input-text-weight;
+    font-size: $md-comp-text-field-input-text-size;
+    line-height: $md-comp-text-field-input-text-line-height;
+    letter-spacing: $md-comp-text-field-input-text-tracking;
+    padding: $md-comp-text-field-input-padding-top 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+  
+  .md3-text-field__label {
+    color: $md-comp-outlined-text-field-label-text-color;
+    font-family: $md-comp-text-field-label-text-type;
+    font-weight: $md-comp-text-field-label-text-weight;
+    font-size: $md-comp-text-field-label-text-size;
+    line-height: $md-comp-text-field-label-text-line-height;
+    letter-spacing: $md-comp-text-field-label-text-tracking;
+    position: absolute;
+    top: $md-comp-text-field-label-padding-top;
+    left: $md-comp-text-field-container-padding-horizontal;
+    background-color: color.$md-sys-color-surface;
+    padding: 0 4px;
+    transition: all motion.$md-sys-motion-duration-short-3 motion.$md-sys-motion-easing-emphasized;
+    pointer-events: none;
+  }
+  
+  &:focus-within {
+    .md3-text-field__container {
+      border-width: $md-comp-outlined-text-field-focus-outline-width;
+      border-color: $md-comp-outlined-text-field-focus-outline-color;
+    }
+    
+    .md3-text-field__label {
+      color: $md-comp-outlined-text-field-focus-label-text-color;
+      transform: translateY(-8px) scale(0.75);
+    }
+  }
+  
+  &:hover:not(:focus-within) {
+    .md3-text-field__container {
+      border-color: $md-comp-outlined-text-field-hover-outline-color;
+    }
+  }
+  
+  &.has-value .md3-text-field__label {
+    transform: translateY(-8px) scale(0.75);
+  }
+  
+  &.disabled {
+    .md3-text-field__container {
+      border-color: $md-comp-outlined-text-field-disabled-outline-color;
+    }
+    
+    .md3-text-field__input {
+      color: $md-comp-outlined-text-field-disabled-input-text-color;
+    }
+    
+    .md3-text-field__label {
+      color: $md-comp-outlined-text-field-disabled-label-text-color;
+    }
+  }
+  
+  &.error {
+    .md3-text-field__container {
+      border-color: $md-comp-outlined-text-field-error-outline-color;
+    }
+    
+    .md3-text-field__input {
+      color: $md-comp-outlined-text-field-error-input-text-color;
+    }
+    
+    .md3-text-field__label {
+      color: $md-comp-outlined-text-field-error-label-text-color;
+    }
+  }
+}
+
+// =============================================================================
+// MIXIN FOR EXPORTING TEXT FIELD TOKENS
+// =============================================================================
+
+@mixin export-text-field-tokens {
+  // Container tokens
+  --md-comp-text-field-container-height: #{$md-comp-text-field-container-height};
+  --md-comp-text-field-small-container-height: #{$md-comp-text-field-small-container-height};
+  --md-comp-text-field-container-shape: #{$md-comp-text-field-container-shape};
+  --md-comp-text-field-filled-container-shape: #{$md-comp-text-field-filled-container-shape};
+  --md-comp-text-field-outlined-container-shape: #{$md-comp-text-field-outlined-container-shape};
+  
+  // Label tokens
+  --md-comp-text-field-label-text-type: #{$md-comp-text-field-label-text-type};
+  --md-comp-text-field-label-text-weight: #{$md-comp-text-field-label-text-weight};
+  --md-comp-text-field-label-text-size: #{$md-comp-text-field-label-text-size};
+  --md-comp-text-field-label-text-line-height: #{$md-comp-text-field-label-text-line-height};
+  --md-comp-text-field-label-text-tracking: #{$md-comp-text-field-label-text-tracking};
+  --md-comp-text-field-small-label-text-size: #{$md-comp-text-field-small-label-text-size};
+  --md-comp-text-field-small-label-text-line-height: #{$md-comp-text-field-small-label-text-line-height};
+  
+  // Input tokens
+  --md-comp-text-field-input-text-type: #{$md-comp-text-field-input-text-type};
+  --md-comp-text-field-input-text-weight: #{$md-comp-text-field-input-text-weight};
+  --md-comp-text-field-input-text-size: #{$md-comp-text-field-input-text-size};
+  --md-comp-text-field-input-text-line-height: #{$md-comp-text-field-input-text-line-height};
+  --md-comp-text-field-input-text-tracking: #{$md-comp-text-field-input-text-tracking};
+  --md-comp-text-field-small-input-text-size: #{$md-comp-text-field-small-input-text-size};
+  --md-comp-text-field-small-input-text-line-height: #{$md-comp-text-field-small-input-text-line-height};
+  
+  // Filled text field tokens
+  --md-comp-filled-text-field-container-color: #{$md-comp-filled-text-field-container-color};
+  --md-comp-filled-text-field-input-text-color: #{$md-comp-filled-text-field-input-text-color};
+  --md-comp-filled-text-field-disabled-container-color: #{$md-comp-filled-text-field-disabled-container-color};
+  --md-comp-filled-text-field-disabled-input-text-color: #{$md-comp-filled-text-field-disabled-input-text-color};
+  --md-comp-filled-text-field-focus-container-color: #{$md-comp-filled-text-field-focus-container-color};
+  --md-comp-filled-text-field-focus-input-text-color: #{$md-comp-filled-text-field-focus-input-text-color};
+  --md-comp-filled-text-field-hover-container-color: #{$md-comp-filled-text-field-hover-container-color};
+  --md-comp-filled-text-field-hover-input-text-color: #{$md-comp-filled-text-field-hover-input-text-color};
+  --md-comp-filled-text-field-error-container-color: #{$md-comp-filled-text-field-error-container-color};
+  --md-comp-filled-text-field-error-input-text-color: #{$md-comp-filled-text-field-error-input-text-color};
+  
+  --md-comp-filled-text-field-label-text-color: #{$md-comp-filled-text-field-label-text-color};
+  --md-comp-filled-text-field-disabled-label-text-color: #{$md-comp-filled-text-field-disabled-label-text-color};
+  --md-comp-filled-text-field-focus-label-text-color: #{$md-comp-filled-text-field-focus-label-text-color};
+  --md-comp-filled-text-field-hover-label-text-color: #{$md-comp-filled-text-field-hover-label-text-color};
+  --md-comp-filled-text-field-error-label-text-color: #{$md-comp-filled-text-field-error-label-text-color};
+  
+  --md-comp-filled-text-field-active-indicator-color: #{$md-comp-filled-text-field-active-indicator-color};
+  --md-comp-filled-text-field-disabled-active-indicator-color: #{$md-comp-filled-text-field-disabled-active-indicator-color};
+  --md-comp-filled-text-field-focus-active-indicator-color: #{$md-comp-filled-text-field-focus-active-indicator-color};
+  --md-comp-filled-text-field-hover-active-indicator-color: #{$md-comp-filled-text-field-hover-active-indicator-color};
+  --md-comp-filled-text-field-error-active-indicator-color: #{$md-comp-filled-text-field-error-active-indicator-color};
+  --md-comp-filled-text-field-active-indicator-height: #{$md-comp-filled-text-field-active-indicator-height};
+  --md-comp-filled-text-field-focus-active-indicator-height: #{$md-comp-filled-text-field-focus-active-indicator-height};
+  
+  // Outlined text field tokens
+  --md-comp-outlined-text-field-container-color: #{$md-comp-outlined-text-field-container-color};
+  --md-comp-outlined-text-field-input-text-color: #{$md-comp-outlined-text-field-input-text-color};
+  --md-comp-outlined-text-field-disabled-container-color: #{$md-comp-outlined-text-field-disabled-container-color};
+  --md-comp-outlined-text-field-disabled-input-text-color: #{$md-comp-outlined-text-field-disabled-input-text-color};
+  --md-comp-outlined-text-field-focus-container-color: #{$md-comp-outlined-text-field-focus-container-color};
+  --md-comp-outlined-text-field-focus-input-text-color: #{$md-comp-outlined-text-field-focus-input-text-color};
+  --md-comp-outlined-text-field-hover-container-color: #{$md-comp-outlined-text-field-hover-container-color};
+  --md-comp-outlined-text-field-hover-input-text-color: #{$md-comp-outlined-text-field-hover-input-text-color};
+  --md-comp-outlined-text-field-error-container-color: #{$md-comp-outlined-text-field-error-container-color};
+  --md-comp-outlined-text-field-error-input-text-color: #{$md-comp-outlined-text-field-error-input-text-color};
+  
+  --md-comp-outlined-text-field-label-text-color: #{$md-comp-outlined-text-field-label-text-color};
+  --md-comp-outlined-text-field-disabled-label-text-color: #{$md-comp-outlined-text-field-disabled-label-text-color};
+  --md-comp-outlined-text-field-focus-label-text-color: #{$md-comp-outlined-text-field-focus-label-text-color};
+  --md-comp-outlined-text-field-hover-label-text-color: #{$md-comp-outlined-text-field-hover-label-text-color};
+  --md-comp-outlined-text-field-error-label-text-color: #{$md-comp-outlined-text-field-error-label-text-color};
+  
+  --md-comp-outlined-text-field-outline-color: #{$md-comp-outlined-text-field-outline-color};
+  --md-comp-outlined-text-field-disabled-outline-color: #{$md-comp-outlined-text-field-disabled-outline-color};
+  --md-comp-outlined-text-field-focus-outline-color: #{$md-comp-outlined-text-field-focus-outline-color};
+  --md-comp-outlined-text-field-hover-outline-color: #{$md-comp-outlined-text-field-hover-outline-color};
+  --md-comp-outlined-text-field-error-outline-color: #{$md-comp-outlined-text-field-error-outline-color};
+  --md-comp-outlined-text-field-outline-width: #{$md-comp-outlined-text-field-outline-width};
+  --md-comp-outlined-text-field-focus-outline-width: #{$md-comp-outlined-text-field-focus-outline-width};
+  
+  // Supporting text tokens
+  --md-comp-text-field-supporting-text-type: #{$md-comp-text-field-supporting-text-type};
+  --md-comp-text-field-supporting-text-weight: #{$md-comp-text-field-supporting-text-weight};
+  --md-comp-text-field-supporting-text-size: #{$md-comp-text-field-supporting-text-size};
+  --md-comp-text-field-supporting-text-line-height: #{$md-comp-text-field-supporting-text-line-height};
+  --md-comp-text-field-supporting-text-tracking: #{$md-comp-text-field-supporting-text-tracking};
+  --md-comp-text-field-supporting-text-color: #{$md-comp-text-field-supporting-text-color};
+  --md-comp-text-field-disabled-supporting-text-color: #{$md-comp-text-field-disabled-supporting-text-color};
+  --md-comp-text-field-error-supporting-text-color: #{$md-comp-text-field-error-supporting-text-color};
+  
+  // Icon tokens
+  --md-comp-text-field-icon-size: #{$md-comp-text-field-icon-size};
+  --md-comp-text-field-small-icon-size: #{$md-comp-text-field-small-icon-size};
+  --md-comp-text-field-leading-icon-color: #{$md-comp-text-field-leading-icon-color};
+  --md-comp-text-field-disabled-leading-icon-color: #{$md-comp-text-field-disabled-leading-icon-color};
+  --md-comp-text-field-error-leading-icon-color: #{$md-comp-text-field-error-leading-icon-color};
+  --md-comp-text-field-trailing-icon-color: #{$md-comp-text-field-trailing-icon-color};
+  --md-comp-text-field-disabled-trailing-icon-color: #{$md-comp-text-field-disabled-trailing-icon-color};
+  --md-comp-text-field-error-trailing-icon-color: #{$md-comp-text-field-error-trailing-icon-color};
+  
+  // Spacing tokens
+  --md-comp-text-field-container-padding-horizontal: #{$md-comp-text-field-container-padding-horizontal};
+  --md-comp-text-field-container-padding-vertical: #{$md-comp-text-field-container-padding-vertical};
+  --md-comp-text-field-small-container-padding-horizontal: #{$md-comp-text-field-small-container-padding-horizontal};
+  --md-comp-text-field-small-container-padding-vertical: #{$md-comp-text-field-small-container-padding-vertical};
+  --md-comp-text-field-input-padding-top: #{$md-comp-text-field-input-padding-top};
+  --md-comp-text-field-small-input-padding-top: #{$md-comp-text-field-small-input-padding-top};
+  --md-comp-text-field-label-padding-top: #{$md-comp-text-field-label-padding-top};
+  --md-comp-text-field-small-label-padding-top: #{$md-comp-text-field-small-label-padding-top};
+  --md-comp-text-field-leading-icon-space: #{$md-comp-text-field-leading-icon-space};
+  --md-comp-text-field-trailing-icon-space: #{$md-comp-text-field-trailing-icon-space};
+  --md-comp-text-field-small-leading-icon-space: #{$md-comp-text-field-small-leading-icon-space};
+  --md-comp-text-field-small-trailing-icon-space: #{$md-comp-text-field-small-trailing-icon-space};
+  --md-comp-text-field-prefix-space: #{$md-comp-text-field-prefix-space};
+  --md-comp-text-field-suffix-space: #{$md-comp-text-field-suffix-space};
+  --md-comp-text-field-small-prefix-space: #{$md-comp-text-field-small-prefix-space};
+  --md-comp-text-field-small-suffix-space: #{$md-comp-text-field-small-suffix-space};
+  --md-comp-text-field-supporting-text-padding-top: #{$md-comp-text-field-supporting-text-padding-top};
+}

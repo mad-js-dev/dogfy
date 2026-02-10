@@ -1,0 +1,372 @@
+// Material Design 3 Motion Tokens
+// https://m3.material.io/styles/motion/overview
+
+// =============================================================================
+// MOTION TOKENS
+// =============================================================================
+
+// Easing Curves
+$md-sys-motion-easing-emphasized: cubic-bezier(0.2, 0.0, 0.0, 1.0);
+$md-sys-motion-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1.0);
+$md-sys-motion-easing-emphasized-accelerate: cubic-bezier(0.3, 0.0, 0.8, 0.15);
+$md-sys-motion-easing-standard: cubic-bezier(0.2, 0.0, 0.0, 1.0);
+$md-sys-motion-easing-standard-decelerate: cubic-bezier(0.0, 0.0, 0.0, 1.0);
+$md-sys-motion-easing-standard-accelerate: cubic-bezier(0.3, 0.0, 1.0, 1.0);
+$md-sys-motion-easing-linear: cubic-bezier(0.0, 0.0, 1.0, 1.0);
+
+// Duration Tokens (in milliseconds)
+$md-sys-motion-duration-short-1: 50ms;
+$md-sys-motion-duration-short-2: 100ms;
+$md-sys-motion-duration-short-3: 150ms;
+$md-sys-motion-duration-short-4: 200ms;
+$md-sys-motion-duration-medium-1: 250ms;
+$md-sys-motion-duration-medium-2: 300ms;
+$md-sys-motion-duration-medium-3: 350ms;
+$md-sys-motion-duration-medium-4: 400ms;
+$md-sys-motion-duration-long-1: 450ms;
+$md-sys-motion-duration-long-2: 500ms;
+$md-sys-motion-duration-long-3: 550ms;
+$md-sys-motion-duration-long-4: 600ms;
+$md-sys-motion-duration-extra-long-1: 700ms;
+$md-sys-motion-duration-extra-long-2: 800ms;
+$md-sys-motion-duration-extra-long-3: 900ms;
+$md-sys-motion-duration-extra-long-4: 1000ms;
+
+// =============================================================================
+// MOTION PATHS
+// =============================================================================
+
+// Path tokens for common motion patterns
+$md-sys-motion-path-fade-in: opacity 0 → 1;
+$md-sys-motion-path-fade-out: opacity 1 → 0;
+$md-sys-motion-path-scale-in: scale 0.8 → 1;
+$md-sys-motion-path-scale-out: scale 1 → 0.8;
+$md-sys-motion-path-slide-up: translateY 100% → 0;
+$md-sys-motion-path-slide-down: translateY -100% → 0;
+$md-sys-motion-path-slide-left: translateX 100% → 0;
+$md-sys-motion-path-slide-right: translateX -100% → 0;
+
+// =============================================================================
+// COMPONENT-SPECIFIC MOTION TOKENS
+// =============================================================================
+
+// Button motion
+$md-sys-motion-button-press-duration: $md-sys-motion-duration-short-3;
+$md-sys-motion-button-press-easing: $md-sys-motion-easing-emphasized;
+$md-sys-motion-button-ripple-duration: $md-sys-motion-duration-medium-2;
+$md-sys-motion-button-ripple-easing: $md-sys-motion-easing-standard;
+
+// Card motion
+$md-sys-motion-card-hover-duration: $md-sys-motion-duration-short-4;
+$md-sys-motion-card-hover-easing: $md-sys-motion-easing-standard;
+$md-sys-motion-card-enter-duration: $md-sys-motion-duration-medium-2;
+$md-sys-motion-card-enter-easing: $md-sys-motion-easing-emphasized-decelerate;
+$md-sys-motion-card-exit-duration: $md-sys-motion-duration-short-3;
+$md-sys-motion-card-exit-easing: $md-sys-motion-easing-emphasized-accelerate;
+
+// Chip motion
+$md-sys-motion-chip-enter-duration: $md-sys-motion-duration-medium-1;
+$md-sys-motion-chip-enter-easing: $md-sys-motion-easing-emphasized-decelerate;
+$md-sys-motion-chip-exit-duration: $md-sys-motion-duration-short-2;
+$md-sys-motion-chip-exit-easing: $md-sys-motion-easing-emphasized-accelerate;
+
+// Dialog motion
+$md-sys-motion-dialog-enter-duration: $md-sys-motion-duration-medium-3;
+$md-sys-motion-dialog-enter-easing: $md-sys-motion-easing-emphasized-decelerate;
+$md-sys-motion-dialog-exit-duration: $md-sys-motion-duration-short-4;
+$md-sys-motion-dialog-exit-easing: $md-sys-motion-easing-emphasized-accelerate;
+
+// FAB motion
+$md-sys-motion-fab-extend-duration: $md-sys-motion-duration-medium-2;
+$md-sys-motion-fab-extend-easing: $md-sys-motion-easing-emphasized;
+$md-sys-motion-fab-shrink-duration: $md-sys-motion-duration-short-3;
+$md-sys-motion-fab-shrink-easing: $md-sys-motion-easing-emphasized;
+
+// List motion
+$md-sys-motion-list-item-enter-duration: $md-sys-motion-duration-short-4;
+$md-sys-motion-list-item-enter-easing: $md-sys-motion-easing-emphasized-decelerate;
+$md-sys-motion-list-item-exit-duration: $md-sys-motion-duration-short-2;
+$md-sys-motion-list-item-exit-easing: $md-sys-motion-easing-emphasized-accelerate;
+
+// Navigation motion
+$md-sys-motion-navigation-enter-duration: $md-sys-motion-duration-medium-2;
+$md-sys-motion-navigation-enter-easing: $md-sys-motion-easing-emphasized-decelerate;
+$md-sys-motion-navigation-exit-duration: $md-sys-motion-duration-short-3;
+$md-sys-motion-navigation-exit-easing: $md-sys-motion-easing-emphasized-accelerate;
+
+// Text field motion
+$md-sys-motion-text-field-focus-duration: $md-sys-motion-duration-short-2;
+$md-sys-motion-text-field-focus-easing: $md-sys-motion-easing-emphasized;
+$md-sys-motion-text-field-label-rise-duration: $md-sys-motion-duration-short-3;
+$md-sys-motion-text-field-label-rise-easing: $md-sys-motion-easing-emphasized;
+
+// =============================================================================
+// MOTION MIXINS
+// =============================================================================
+
+// Easing mixins
+@mixin md-motion-easing-emphasized {
+  transition-timing-function: $md-sys-motion-easing-emphasized;
+}
+
+@mixin md-motion-easing-emphasized-decelerate {
+  transition-timing-function: $md-sys-motion-easing-emphasized-decelerate;
+}
+
+@mixin md-motion-easing-emphasized-accelerate {
+  transition-timing-function: $md-sys-motion-easing-emphasized-accelerate;
+}
+
+@mixin md-motion-easing-standard {
+  transition-timing-function: $md-sys-motion-easing-standard;
+}
+
+@mixin md-motion-easing-standard-decelerate {
+  transition-timing-function: $md-sys-motion-easing-standard-decelerate;
+}
+
+@mixin md-motion-easing-standard-accelerate {
+  transition-timing-function: $md-sys-motion-easing-standard-accelerate;
+}
+
+@mixin md-motion-easing-linear {
+  transition-timing-function: $md-sys-motion-easing-linear;
+}
+
+// Duration mixins
+@mixin md-motion-duration-short-1 { transition-duration: $md-sys-motion-duration-short-1; }
+@mixin md-motion-duration-short-2 { transition-duration: $md-sys-motion-duration-short-2; }
+@mixin md-motion-duration-short-3 { transition-duration: $md-sys-motion-duration-short-3; }
+@mixin md-motion-duration-short-4 { transition-duration: $md-sys-motion-duration-short-4; }
+
+@mixin md-motion-duration-medium-1 { transition-duration: $md-sys-motion-duration-medium-1; }
+@mixin md-motion-duration-medium-2 { transition-duration: $md-sys-motion-duration-medium-2; }
+@mixin md-motion-duration-medium-3 { transition-duration: $md-sys-motion-duration-medium-3; }
+@mixin md-motion-duration-medium-4 { transition-duration: $md-sys-motion-duration-medium-4; }
+
+@mixin md-motion-duration-long-1 { transition-duration: $md-sys-motion-duration-long-1; }
+@mixin md-motion-duration-long-2 { transition-duration: $md-sys-motion-duration-long-2; }
+@mixin md-motion-duration-long-3 { transition-duration: $md-sys-motion-duration-long-3; }
+@mixin md-motion-duration-long-4 { transition-duration: $md-sys-motion-duration-long-4; }
+
+// Combined motion mixins
+@mixin md-motion-transition-emphasized-short {
+  transition: all $md-sys-motion-duration-short-3 $md-sys-motion-easing-emphasized;
+}
+
+@mixin md-motion-transition-emphasized-medium {
+  transition: all $md-sys-motion-duration-medium-2 $md-sys-motion-easing-emphasized;
+}
+
+@mixin md-motion-transition-emphasized-long {
+  transition: all $md-sys-motion-duration-long-2 $md-sys-motion-easing-emphasized;
+}
+
+@mixin md-motion-transition-standard-short {
+  transition: all $md-sys-motion-duration-short-3 $md-sys-motion-easing-standard;
+}
+
+@mixin md-motion-transition-standard-medium {
+  transition: all $md-sys-motion-duration-medium-2 $md-sys-motion-easing-standard;
+}
+
+@mixin md-motion-transition-standard-long {
+  transition: all $md-sys-motion-duration-long-2 $md-sys-motion-easing-standard;
+}
+
+// Component motion mixins
+@mixin md-motion-button {
+  transition: all $md-sys-motion-button-press-duration $md-sys-motion-button-press-easing;
+}
+
+@mixin md-motion-card {
+  transition: all $md-sys-motion-card-hover-duration $md-sys-motion-card-hover-easing;
+}
+
+@mixin md-motion-chip {
+  transition: all $md-sys-motion-chip-enter-duration $md-sys-motion-chip-enter-easing;
+}
+
+@mixin md-motion-dialog {
+  transition: all $md-sys-motion-dialog-enter-duration $md-sys-motion-dialog-enter-easing;
+}
+
+@mixin md-motion-fab {
+  transition: all $md-sys-motion-fab-extend-duration $md-sys-motion-fab-extend-easing;
+}
+
+@mixin md-motion-text-field {
+  transition: all $md-sys-motion-text-field-focus-duration $md-sys-motion-text-field-focus-easing;
+}
+
+// =============================================================================
+// KEYFRAME ANIMATIONS
+// =============================================================================
+
+@keyframes md-motion-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes md-motion-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes md-motion-scale-in {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes md-motion-scale-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes md-motion-slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes md-motion-slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes md-motion-slide-left {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes md-motion-slide-right {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// =============================================================================
+// MIXIN FOR EXPORTING MOTION TOKENS
+// =============================================================================
+
+@mixin export-motion-tokens {
+  // Easing curves
+  --md-sys-motion-easing-emphasized: #{$md-sys-motion-easing-emphasized};
+  --md-sys-motion-easing-emphasized-decelerate: #{$md-sys-motion-easing-emphasized-decelerate};
+  --md-sys-motion-easing-emphasized-accelerate: #{$md-sys-motion-easing-emphasized-accelerate};
+  --md-sys-motion-easing-standard: #{$md-sys-motion-easing-standard};
+  --md-sys-motion-easing-standard-decelerate: #{$md-sys-motion-easing-standard-decelerate};
+  --md-sys-motion-easing-standard-accelerate: #{$md-sys-motion-easing-standard-accelerate};
+  --md-sys-motion-easing-linear: #{$md-sys-motion-easing-linear};
+  
+  // Durations
+  --md-sys-motion-duration-short-1: #{$md-sys-motion-duration-short-1};
+  --md-sys-motion-duration-short-2: #{$md-sys-motion-duration-short-2};
+  --md-sys-motion-duration-short-3: #{$md-sys-motion-duration-short-3};
+  --md-sys-motion-duration-short-4: #{$md-sys-motion-duration-short-4};
+  --md-sys-motion-duration-medium-1: #{$md-sys-motion-duration-medium-1};
+  --md-sys-motion-duration-medium-2: #{$md-sys-motion-duration-medium-2};
+  --md-sys-motion-duration-medium-3: #{$md-sys-motion-duration-medium-3};
+  --md-sys-motion-duration-medium-4: #{$md-sys-motion-duration-medium-4};
+  --md-sys-motion-duration-long-1: #{$md-sys-motion-duration-long-1};
+  --md-sys-motion-duration-long-2: #{$md-sys-motion-duration-long-2};
+  --md-sys-motion-duration-long-3: #{$md-sys-motion-duration-long-3};
+  --md-sys-motion-duration-long-4: #{$md-sys-motion-duration-long-4};
+  --md-sys-motion-duration-extra-long-1: #{$md-sys-motion-duration-extra-long-1};
+  --md-sys-motion-duration-extra-long-2: #{$md-sys-motion-duration-extra-long-2};
+  --md-sys-motion-duration-extra-long-3: #{$md-sys-motion-duration-extra-long-3};
+  --md-sys-motion-duration-extra-long-4: #{$md-sys-motion-duration-extra-long-4};
+  
+  // Component-specific motion
+  --md-sys-motion-button-press-duration: #{$md-sys-motion-button-press-duration};
+  --md-sys-motion-button-press-easing: #{$md-sys-motion-button-press-easing};
+  --md-sys-motion-card-hover-duration: #{$md-sys-motion-card-hover-duration};
+  --md-sys-motion-card-hover-easing: #{$md-sys-motion-card-hover-easing};
+  --md-sys-motion-chip-enter-duration: #{$md-sys-motion-chip-enter-duration};
+  --md-sys-motion-chip-enter-easing: #{$md-sys-motion-chip-enter-easing};
+  --md-sys-motion-dialog-enter-duration: #{$md-sys-motion-dialog-enter-duration};
+  --md-sys-motion-dialog-enter-easing: #{$md-sys-motion-dialog-enter-easing};
+  --md-sys-motion-fab-extend-duration: #{$md-sys-motion-fab-extend-duration};
+  --md-sys-motion-fab-extend-easing: #{$md-sys-motion-fab-extend-easing};
+  --md-sys-motion-text-field-focus-duration: #{$md-sys-motion-text-field-focus-duration};
+  --md-sys-motion-text-field-focus-easing: #{$md-sys-motion-text-field-focus-easing};
+}
+
+// =============================================================================
+// HELPER FUNCTIONS
+// =============================================================================
+
+@function get-motion-easing($easing-name) {
+  @return map-get((
+    'emphasized': $md-sys-motion-easing-emphasized,
+    'emphasized-decelerate': $md-sys-motion-easing-emphasized-decelerate,
+    'emphasized-accelerate': $md-sys-motion-easing-emphasized-accelerate,
+    'standard': $md-sys-motion-easing-standard,
+    'standard-decelerate': $md-sys-motion-easing-standard-decelerate,
+    'standard-accelerate': $md-sys-motion-easing-standard-accelerate,
+    'linear': $md-sys-motion-easing-linear
+  ), $easing-name);
+}
+
+@function get-motion-duration($duration-name) {
+  @return map-get((
+    'short-1': $md-sys-motion-duration-short-1,
+    'short-2': $md-sys-motion-duration-short-2,
+    'short-3': $md-sys-motion-duration-short-3,
+    'short-4': $md-sys-motion-duration-short-4,
+    'medium-1': $md-sys-motion-duration-medium-1,
+    'medium-2': $md-sys-motion-duration-medium-2,
+    'medium-3': $md-sys-motion-duration-medium-3,
+    'medium-4': $md-sys-motion-duration-medium-4,
+    'long-1': $md-sys-motion-duration-long-1,
+    'long-2': $md-sys-motion-duration-long-2,
+    'long-3': $md-sys-motion-duration-long-3,
+    'long-4': $md-sys-motion-duration-long-4,
+    'extra-long-1': $md-sys-motion-duration-extra-long-1,
+    'extra-long-2': $md-sys-motion-duration-extra-long-2,
+    'extra-long-3': #{$md-sys-motion-duration-extra-long-3},
+    'extra-long-4': #{$md-sys-motion-duration-extra-long-4}
+  ), $duration-name);
+}

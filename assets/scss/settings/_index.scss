@@ -1,0 +1,14 @@
+// Material Design 3 Settings
+// Main entry point for all settings files
+
+// Import all settings
+@import 'theme-settings';
+@import 'breakpoints';
+
+// Apply theme overrides
+@include md-theme-apply-overrides;
+
+// Export settings as CSS custom properties
+:root {
+  @include export-breakpoint-tokens;
+}

@@ -1,0 +1,45 @@
+// Material Design 3 Token System
+// Main entry point for all design tokens
+
+// Import legacy variables for backward compatibility
+@use '_variables';
+
+// Core token imports
+@use 'tokens/color-system';
+@use 'tokens/typography';
+@use 'tokens/shape';
+@use 'tokens/spacing';
+@use 'tokens/motion';
+@use 'tokens/elevation';
+
+// Component-specific tokens
+@use 'tokens/components/buttons';
+@use 'tokens/components/chips';
+@use 'tokens/components/fields';
+@use 'tokens/components/navigation';
+@forward 'tokens/components/lists';
+
+// Semantic tokens (derived from core tokens)
+@use 'tokens/semantic/colors';
+@use 'tokens/semantic/typography' as semantic-typography;
+@use 'tokens/semantic/spacing' as semantic-spacing;
+
+// Export semantic tokens as a single module
+@forward '_variables';
+@forward 'tokens/semantic/colors';
+@forward 'tokens/semantic/typography';
+@forward 'tokens/semantic/spacing';
+@forward 'tokens/components/chips';
+@forward 'tokens/shape';
+@forward 'tokens/motion';
+@forward 'tokens/elevation';
+
+// Theme exports
+:root {
+  @include color-system.export-color-tokens;
+  @include typography.export-typography-tokens;
+  @include shape.export-shape-tokens;
+  @include spacing.export-spacing-tokens;
+  @include motion.export-motion-tokens;
+  @include elevation.export-elevation-tokens;
+}

@@ -1,0 +1,251 @@
+// Material Design 3 Shape Tokens
+// https://m3.material.io/styles/shape/overview
+
+// =============================================================================
+// SHAPE TOKENS
+// =============================================================================
+
+// Corner Radius Tokens
+$md-sys-shape-corner-none: 0px;
+$md-sys-shape-corner-extra-small: 4px;
+$md-sys-shape-corner-small: 8px;
+$md-sys-shape-corner-medium: 12px;
+$md-sys-shape-corner-large: 16px;
+$md-sys-shape-corner-extra-large: 28px;
+
+// Full Screen Corner Radius (for special cases)
+$md-sys-shape-corner-full: 9999px;
+
+// =============================================================================
+// COMPONENT SHAPE TOKENS
+// =============================================================================
+
+// Button Shapes
+$md-sys-shape-corner-small-button: 20px;
+$md-sys-shape-corner-medium-button: 28px;
+$md-sys-shape-corner-large-button: 40px;
+
+// Card Shapes
+$md-sys-shape-corner-small-card: 4px;
+$md-sys-shape-corner-medium-card: 12px;
+$md-sys-shape-corner-large-card: 16px;
+
+// Chip Shapes
+$md-sys-shape-corner-small-chip: 8px;
+$md-sys-shape-corner-medium-chip: 8px;
+$md-sys-shape-corner-large-chip: 8px;
+
+// Dialog Shapes
+$md-sys-shape-corner-small-dialog: 4px;
+$md-sys-shape-corner-medium-dialog: 16px;
+$md-sys-shape-corner-large-dialog: 28px;
+
+// Bottom Sheet Shapes
+$md-sys-shape-corner-small-bottom-sheet: 16px;
+$md-sys-shape-corner-medium-bottom-sheet: 16px;
+$md-sys-shape-corner-large-bottom-sheet: 28px;
+
+// Navigation Drawer Shapes
+$md-sys-shape-corner-small-navigation-drawer: 0px;
+$md-sys-shape-corner-medium-navigation-drawer: 16px;
+$md-sys-shape-corner-large-navigation-drawer: 28px;
+
+// Extended FAB Shapes
+$md-sys-shape-corner-small-extended-fab: 16px;
+$md-sys-shape-corner-medium-extended-fab: 16px;
+$md-sys-shape-corner-large-extended-fab: 28px;
+
+// FAB Shapes
+$md-sys-shape-corner-small-fab: 16px;
+$md-sys-shape-corner-medium-fab: 16px;
+$md-sys-shape-corner-large-fab: 28px;
+
+// Search Bar Shapes
+$md-sys-shape-corner-small-search-bar: 16px;
+$md-sys-shape-corner-medium-search-bar: 16px;
+$md-sys-shape-corner-large-search-bar: 16px;
+
+// Segmented Button Shapes
+$md-sys-shape-corner-small-segmented-button: 8px;
+$md-sys-shape-corner-medium-segmented-button: 8px;
+$md-sys-shape-corner-large-segmented-button: 8px;
+
+// Small Component Shapes (Switches, Checkboxes, Radio buttons)
+$md-sys-shape-corner-small-component: 4px;
+$md-sys-shape-corner-medium-component: 4px;
+$md-sys-shape-corner-large-component: 4px;
+
+// Slider Shapes
+$md-sys-shape-corner-small-slider: 2px;
+$md-sys-shape-corner-medium-slider: 2px;
+$md-sys-shape-corner-large-slider: 2px;
+
+// Snackbar Shapes
+$md-sys-shape-corner-small-snackbar: 4px;
+$md-sys-shape-corner-medium-snackbar: 4px;
+$md-sys-shape-corner-large-snackbar: 4px;
+
+// Text Field Shapes
+$md-sys-shape-corner-small-text-field: 4px;
+$md-sys-shape-corner-medium-text-field: 4px;
+$md-sys-shape-corner-large-text-field: 4px;
+
+// Tooltip Shapes
+$md-sys-shape-corner-small-tooltip: 4px;
+$md-sys-shape-corner-medium-tooltip: 4px;
+$md-sys-shape-corner-large-tooltip: 4px;
+
+// =============================================================================
+// SHAPE MIXINS
+// =============================================================================
+
+@mixin md-shape-corner-none {
+  border-radius: $md-sys-shape-corner-none;
+}
+
+@mixin md-shape-corner-extra-small {
+  border-radius: $md-sys-shape-corner-extra-small;
+}
+
+@mixin md-shape-corner-small {
+  border-radius: $md-sys-shape-corner-small;
+}
+
+@mixin md-shape-corner-medium {
+  border-radius: $md-sys-shape-corner-medium;
+}
+
+@mixin md-shape-corner-large {
+  border-radius: $md-sys-shape-corner-large;
+}
+
+@mixin md-shape-corner-extra-large {
+  border-radius: $md-sys-shape-corner-extra-large;
+}
+
+@mixin md-shape-corner-full {
+  border-radius: $md-sys-shape-corner-full;
+}
+
+// Component-specific shape mixins
+@mixin md-shape-button-small {
+  border-radius: $md-sys-shape-corner-small-button;
+}
+
+@mixin md-shape-button-medium {
+  border-radius: $md-sys-shape-corner-medium-button;
+}
+
+@mixin md-shape-button-large {
+  border-radius: $md-sys-shape-corner-large-button;
+}
+
+@mixin md-shape-card-small {
+  border-radius: $md-sys-shape-corner-small-card;
+}
+
+@mixin md-shape-card-medium {
+  border-radius: $md-sys-shape-corner-medium-card;
+}
+
+@mixin md-shape-card-large {
+  border-radius: $md-sys-shape-corner-large-card;
+}
+
+@mixin md-shape-chip {
+  border-radius: $md-sys-shape-corner-medium-chip;
+}
+
+@mixin md-shape-dialog-small {
+  border-radius: $md-sys-shape-corner-small-dialog;
+}
+
+@mixin md-shape-dialog-medium {
+  border-radius: $md-sys-shape-corner-medium-dialog;
+}
+
+@mixin md-shape-dialog-large {
+  border-radius: $md-sys-shape-corner-large-dialog;
+}
+
+@mixin md-shape-fab {
+  border-radius: $md-sys-shape-corner-medium-fab;
+}
+
+@mixin md-shape-text-field {
+  border-radius: $md-sys-shape-corner-medium-text-field;
+}
+
+@mixin md-shape-snackbar {
+  border-radius: $md-sys-shape-corner-medium-snackbar;
+}
+
+// =============================================================================
+// MIXIN FOR EXPORTING SHAPE TOKENS
+// =============================================================================
+
+@mixin export-shape-tokens {
+  // Base corner tokens
+  --md-sys-shape-corner-none: #{$md-sys-shape-corner-none};
+  --md-sys-shape-corner-extra-small: #{$md-sys-shape-corner-extra-small};
+  --md-sys-shape-corner-small: #{$md-sys-shape-corner-small};
+  --md-sys-shape-corner-medium: #{$md-sys-shape-corner-medium};
+  --md-sys-shape-corner-large: #{$md-sys-shape-corner-large};
+  --md-sys-shape-corner-extra-large: #{$md-sys-shape-corner-extra-large};
+  --md-sys-shape-corner-full: #{$md-sys-shape-corner-full};
+  
+  // Button shapes
+  --md-sys-shape-corner-small-button: #{$md-sys-shape-corner-small-button};
+  --md-sys-shape-corner-medium-button: #{$md-sys-shape-corner-medium-button};
+  --md-sys-shape-corner-large-button: #{$md-sys-shape-corner-large-button};
+  
+  // Card shapes
+  --md-sys-shape-corner-small-card: #{$md-sys-shape-corner-small-card};
+  --md-sys-shape-corner-medium-card: #{$md-sys-shape-corner-medium-card};
+  --md-sys-shape-corner-large-card: #{$md-sys-shape-corner-large-card};
+  
+  // Chip shapes
+  --md-sys-shape-corner-small-chip: #{$md-sys-shape-corner-small-chip};
+  --md-sys-shape-corner-medium-chip: #{$md-sys-shape-corner-medium-chip};
+  --md-sys-shape-corner-large-chip: #{$md-sys-shape-corner-large-chip};
+  
+  // Dialog shapes
+  --md-sys-shape-corner-small-dialog: #{$md-sys-shape-corner-small-dialog};
+  --md-sys-shape-corner-medium-dialog: #{$md-sys-shape-corner-medium-dialog};
+  --md-sys-shape-corner-large-dialog: #{$md-sys-shape-corner-large-dialog};
+  
+  // FAB shapes
+  --md-sys-shape-corner-small-fab: #{$md-sys-shape-corner-small-fab};
+  --md-sys-shape-corner-medium-fab: #{$md-sys-shape-corner-medium-fab};
+  --md-sys-shape-corner-large-fab: #{$md-sys-shape-corner-large-fab};
+  
+  // Text field shapes
+  --md-sys-shape-corner-small-text-field: #{$md-sys-shape-corner-small-text-field};
+  --md-sys-shape-corner-medium-text-field: #{$md-sys-shape-corner-medium-text-field};
+  --md-sys-shape-corner-large-text-field: #{$md-sys-shape-corner-large-text-field};
+}
+
+// =============================================================================
+// HELPER FUNCTIONS
+// =============================================================================
+
+@function get-shape-token($shape-name) {
+  @return map-get((
+    'none': $md-sys-shape-corner-none,
+    'extra-small': $md-sys-shape-corner-extra-small,
+    'small': $md-sys-shape-corner-small,
+    'medium': $md-sys-shape-corner-medium,
+    'large': $md-sys-shape-corner-large,
+    'extra-large': $md-sys-shape-corner-extra-large,
+    'full': $md-sys-shape-corner-full,
+    'button-small': $md-sys-shape-corner-small-button,
+    'button-medium': $md-sys-shape-corner-medium-button,
+    'button-large': $md-sys-shape-corner-large-button,
+    'card-small': $md-sys-shape-corner-small-card,
+    'card-medium': $md-sys-shape-corner-medium-card,
+    'card-large': $md-sys-shape-corner-large-card,
+    'chip': $md-sys-shape-corner-medium-chip,
+    'fab': $md-sys-shape-corner-medium-fab,
+    'text-field': $md-sys-shape-corner-medium-text-field
+  ), $shape-name);
+}

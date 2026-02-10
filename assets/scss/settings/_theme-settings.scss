@@ -1,0 +1,423 @@
+// Material Design 3 Theme Settings
+// Configuration for theme customization and overrides
+
+// =============================================================================
+// THEME CONFIGURATION
+// =============================================================================
+
+// Enable/disable theme features
+$md-theme-enable-dark-mode: true;
+$md-theme-enable-custom-colors: true;
+$md-theme-enable-custom-typography: true;
+$md-theme-enable-custom-shapes: true;
+$md-theme-enable-custom-spacing: true;
+
+// Theme variants
+$md-theme-variants: (
+  'light',
+  'dark',
+  'high-contrast',
+  'reduced-motion'
+);
+
+// =============================================================================
+// COLOR OVERRIDE SETTINGS
+// =============================================================================
+
+// Custom color palette (if enabled)
+$md-theme-custom-primary: null;
+$md-theme-custom-secondary: null;
+$md-theme-custom-tertiary: null;
+$md-theme-custom-error: null;
+$md-theme-custom-neutral: null;
+$md-theme-custom-neutral-variant: null;
+
+// Color scheme preferences
+$md-theme-color-scheme: 'light'; // 'light' | 'dark' | 'auto'
+$md-theme-contrast-level: 'standard'; // 'standard' | 'medium' | 'high'
+
+// =============================================================================
+// TYPOGRAPHY OVERRIDE SETTINGS
+// =============================================================================
+
+// Custom font families
+$md-theme-font-brand: 'Roboto';
+$md-theme-font-plain: 'sans-serif';
+$md-theme-font-monospace: 'Roboto Mono';
+
+// Custom font sizes (scale factor)
+$md-theme-font-scale: 1.0; // 0.8 - 1.2
+
+// Custom font weights
+$md-theme-font-weight-light: 300;
+$md-theme-font-weight-regular: 400;
+$md-theme-font-weight-medium: 500;
+$md-theme-font-weight-semibold: 600;
+$md-theme-font-weight-bold: 700;
+
+// =============================================================================
+// SHAPE OVERRIDE SETTINGS
+// =============================================================================
+
+// Custom corner radius scale
+$md-theme-shape-scale: 1.0; // 0.5 - 2.0
+
+// Custom corner radius values
+$md-theme-shape-corner-none: 0px;
+$md-theme-shape-corner-extra-small: 4px;
+$md-theme-shape-corner-small: 8px;
+$md-theme-shape-corner-medium: 12px;
+$md-theme-shape-corner-large: 16px;
+$md-theme-shape-corner-extra-large: 28px;
+
+// =============================================================================
+// SPACING OVERRIDE SETTINGS
+// =============================================================================
+
+// Custom spacing scale
+$md-theme-spacing-scale: 1.0; // 0.5 - 2.0
+
+// Custom grid unit
+$md-theme-spacing-grid-unit: 8px;
+
+// =============================================================================
+// MOTION OVERRIDE SETTINGS
+// =============================================================================
+
+// Motion preferences
+$md-theme-motion-enabled: true;
+$md-theme-motion-reduced: false; // For users who prefer reduced motion
+
+// Custom easing curves
+$md-theme-motion-easing-emphasized: cubic-bezier(0.2, 0.0, 0.0, 1.0);
+$md-theme-motion-easing-standard: cubic-bezier(0.2, 0.0, 0.0, 1.0);
+
+// Custom durations (scale factor)
+$md-theme-motion-duration-scale: 1.0; // 0.5 - 2.0
+
+// =============================================================================
+// ELEVATION OVERRIDE SETTINGS
+// =============================================================================
+
+// Custom elevation scale
+$md-theme-elevation-scale: 1.0; // 0.5 - 2.0
+
+// Custom shadow opacity
+$md-theme-elevation-shadow-opacity: 1.0; // 0.5 - 1.0
+
+// =============================================================================
+// COMPONENT OVERRIDE SETTINGS
+// =============================================================================
+
+// Button customization
+$md-theme-button-shape-scale: 1.0;
+$md-theme-button-spacing-scale: 1.0;
+$md-theme-button-elevation-scale: 1.0;
+
+// Chip customization
+$md-theme-chip-shape-scale: 1.0;
+$md-theme-chip-spacing-scale: 1.0;
+$md-theme-chip-elevation-scale: 1.0;
+
+// Text field customization
+$md-theme-text-field-shape-scale: 1.0;
+$md-theme-text-field-spacing-scale: 1.0;
+$md-theme-text-field-elevation-scale: 1.0;
+
+// Navigation customization
+$md-theme-navigation-spacing-scale: 1.0;
+$md-theme-navigation-elevation-scale: 1.0;
+
+// =============================================================================
+// BREAKPOINT SETTINGS
+// =============================================================================
+
+// Responsive breakpoints
+$md-theme-breakpoint-xs: 0px;
+$md-theme-breakpoint-sm: 600px;
+$md-theme-breakpoint-md: 960px;
+$md-theme-breakpoint-lg: 1280px;
+$md-theme-breakpoint-xl: 1920px;
+
+// Container max widths
+$md-theme-container-max-width-xs: 100%;
+$md-theme-container-max-width-sm: 540px;
+$md-theme-container-max-width-md: 720px;
+$md-theme-container-max-width-lg: 960px;
+$md-theme-container-max-width-xl: 1140px;
+$md-theme-container-max-width-2xl: 1320px;
+
+// =============================================================================
+// UTILITY SETTINGS
+// =============================================================================
+
+// Enable/disable utility classes
+$md-theme-utilities-enabled: true;
+$md-theme-utilities-colors: true;
+$md-theme-utilities-spacing: true;
+$md-theme-utilities-typography: true;
+$md-theme-utilities-layout: true;
+
+// Prefix for utility classes
+$md-theme-utility-prefix: 'md-';
+
+// =============================================================================
+// DEBUG SETTINGS
+// =============================================================================
+
+// Enable debug mode
+$md-theme-debug-enabled: false;
+
+// Show grid overlay
+$md-theme-debug-grid: false;
+
+// Show baseline grid
+$md-theme-debug-baseline: false;
+
+// Show component boundaries
+$md-theme-debug-bounds: false;
+
+// =============================================================================
+// MIXINS FOR THEME APPLICATION
+// =============================================================================
+
+@mixin md-theme-apply-color-overrides {
+  @if $md-theme-enable-custom-colors and $md-theme-custom-primary {
+    $md-sys-color-primary: $md-theme-custom-primary !global;
+  }
+  
+  @if $md-theme-enable-custom-colors and $md-theme-custom-secondary {
+    $md-sys-color-secondary: $md-theme-custom-secondary !global;
+  }
+  
+  @if $md-theme-enable-custom-colors and $md-theme-custom-tertiary {
+    $md-sys-color-tertiary: $md-theme-custom-tertiary !global;
+  }
+  
+  @if $md-theme-enable-custom-colors and $md-theme-custom-error {
+    $md-sys-color-error: $md-theme-custom-error !global;
+  }
+  
+  @if $md-theme-enable-custom-colors and $md-theme-custom-neutral {
+    $md-source-neutral: $md-theme-custom-neutral !global;
+  }
+  
+  @if $md-theme-enable-custom-colors and $md-theme-custom-neutral-variant {
+    $md-source-neutral-variant: $md-theme-custom-neutral-variant !global;
+  }
+}
+
+@mixin md-theme-apply-typography-overrides {
+  @if $md-theme-enable-custom-typography {
+    $md-sys-typescale-brand: $md-theme-font-brand !global;
+    $md-sys-typescale-plain: $md-theme-font-plain !global;
+    
+    // Apply font scale
+    @if $md-theme-font-scale != 1.0 {
+      $scale-factor: $md-theme-font-scale;
+      
+      // Scale all font sizes
+      $md-sys-typescale-display-large-size: #{calc(#{$md-sys-typescale-display-large-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-display-medium-size: #{calc(#{$md-sys-typescale-display-medium-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-display-small-size: #{calc(#{$md-sys-typescale-display-small-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-headline-large-size: #{calc(#{$md-sys-typescale-headline-large-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-headline-medium-size: #{calc(#{$md-sys-typescale-headline-medium-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-headline-small-size: #{calc(#{$md-sys-typescale-headline-small-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-title-large-size: #{calc(#{$md-sys-typescale-title-large-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-title-medium-size: #{calc(#{$md-sys-typescale-title-medium-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-title-small-size: #{calc(#{$md-sys-typescale-title-small-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-body-large-size: #{calc(#{$md-sys-typescale-body-large-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-body-medium-size: #{calc(#{$md-sys-typescale-body-medium-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-body-small-size: #{calc(#{$md-sys-typescale-body-small-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-label-large-size: #{calc(#{$md-sys-typescale-label-large-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-label-medium-size: #{calc(#{$md-sys-typescale-label-medium-size} * #{$scale-factor})} !global;
+      $md-sys-typescale-label-small-size: #{calc(#{$md-sys-typescale-label-small-size} * #{$scale-factor})} !global;
+    }
+  }
+}
+
+@mixin md-theme-apply-shape-overrides {
+  @if $md-theme-enable-custom-shapes {
+    @if $md-theme-shape-scale != 1.0 {
+      $scale-factor: $md-theme-shape-scale;
+      
+      // Scale all corner radius values
+      $md-sys-shape-corner-none: #{calc(#{$md-theme-shape-corner-none} * #{$scale-factor})} !global;
+      $md-sys-shape-corner-extra-small: #{calc(#{$md-theme-shape-corner-extra-small} * #{$scale-factor})} !global;
+      $md-sys-shape-corner-small: #{calc(#{$md-theme-shape-corner-small} * #{$scale-factor})} !global;
+      $md-sys-shape-corner-medium: #{calc(#{$md-theme-shape-corner-medium} * #{$scale-factor})} !global;
+      $md-sys-shape-corner-large: #{calc(#{$md-theme-shape-corner-large} * #{$scale-factor})} !global;
+      $md-sys-shape-corner-extra-large: #{calc(#{$md-theme-shape-corner-extra-large} * #{$scale-factor})} !global;
+    }
+  }
+}
+
+@mixin md-theme-apply-spacing-overrides {
+  @if $md-theme-enable-custom-spacing {
+    @if $md-theme-spacing-scale != 1.0 {
+      $scale-factor: $md-theme-spacing-scale;
+      
+      // Scale all spacing values
+      $md-sys-spacing-0: #{calc(#{$md-sys-spacing-0} * #{$scale-factor})} !global;
+      $md-sys-spacing-1: #{calc(#{$md-sys-spacing-1} * #{$scale-factor})} !global;
+      $md-sys-spacing-2: #{calc(#{$md-sys-spacing-2} * #{$scale-factor})} !global;
+      $md-sys-spacing-3: #{calc(#{$md-sys-spacing-3} * #{$scale-factor})} !global;
+      $md-sys-spacing-4: #{calc(#{$md-sys-spacing-4} * #{$scale-factor})} !global;
+      $md-sys-spacing-5: #{calc(#{$md-sys-spacing-5} * #{$scale-factor})} !global;
+      $md-sys-spacing-6: #{calc(#{$md-sys-spacing-6} * #{$scale-factor})} !global;
+      $md-sys-spacing-7: #{calc(#{$md-sys-spacing-7} * #{$scale-factor})} !global;
+      $md-sys-spacing-8: #{calc(#{$md-sys-spacing-8} * #{$scale-factor})} !global;
+      $md-sys-spacing-9: #{calc(#{$md-sys-spacing-9} * #{$scale-factor})} !global;
+      $md-sys-spacing-10: #{calc(#{$md-sys-spacing-10} * #{$scale-factor})} !global;
+      $md-sys-spacing-11: #{calc(#{$md-sys-spacing-11} * #{$scale-factor})} !global;
+      $md-sys-spacing-12: #{calc(#{$md-sys-spacing-12} * #{$scale-factor})} !global;
+      $md-sys-spacing-14: #{calc(#{$md-sys-spacing-14} * #{$scale-factor})} !global;
+      $md-sys-spacing-16: #{calc(#{$md-sys-spacing-16} * #{$scale-factor})} !global;
+      $md-sys-spacing-20: #{calc(#{$md-sys-spacing-20} * #{$scale-factor})} !global;
+      $md-sys-spacing-24: #{calc(#{$md-sys-spacing-24} * #{$scale-factor})} !global;
+      $md-sys-spacing-28: #{calc(#{$md-sys-spacing-28} * #{$scale-factor})} !global;
+      $md-sys-spacing-32: #{calc(#{$md-sys-spacing-32} * #{$scale-factor})} !global;
+      $md-sys-spacing-36: #{calc(#{$md-sys-spacing-36} * #{$scale-factor})} !global;
+      $md-sys-spacing-40: #{calc(#{$md-sys-spacing-40} * #{$scale-factor})} !global;
+      $md-sys-spacing-44: #{calc(#{$md-sys-spacing-44} * #{$scale-factor})} !global;
+      $md-sys-spacing-48: #{calc(#{$md-sys-spacing-48} * #{$scale-factor})} !global;
+      $md-sys-spacing-56: #{calc(#{$md-sys-spacing-56} * #{$scale-factor})} !global;
+      $md-sys-spacing-64: #{calc(#{$md-sys-spacing-64} * #{$scale-factor})} !global;
+      $md-sys-spacing-72: #{calc(#{$md-sys-spacing-72} * #{$scale-factor})} !global;
+      $md-sys-spacing-80: #{calc(#{$md-sys-spacing-80} * #{$scale-factor})} !global;
+      $md-sys-spacing-96: #{calc(#{$md-sys-spacing-96} * #{$scale-factor})} !global;
+    }
+    
+    @if $md-theme-spacing-grid-unit != 8px {
+      $md-sys-spacing-grid-unit: $md-theme-spacing-grid-unit !global;
+    }
+  }
+}
+
+@mixin md-theme-apply-motion-overrides {
+  @if $md-theme-motion-enabled {
+    @if not $md-theme-motion-reduced {
+      @if $md-theme-motion-duration-scale != 1.0 {
+        $scale-factor: $md-theme-motion-duration-scale;
+        
+        // Scale all durations
+        $md-sys-motion-duration-short-1: #{calc(#{$md-sys-motion-duration-short-1} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-short-2: #{calc(#{$md-sys-motion-duration-short-2} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-short-3: #{calc(#{$md-sys-motion-duration-short-3} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-short-4: #{calc(#{$md-sys-motion-duration-short-4} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-medium-1: #{calc(#{$md-sys-motion-duration-medium-1} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-medium-2: #{calc(#{$md-sys-motion-duration-medium-2} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-medium-3: #{calc(#{$md-sys-motion-duration-medium-3} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-medium-4: #{calc(#{$md-sys-motion-duration-medium-4} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-long-1: #{calc(#{$md-sys-motion-duration-long-1} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-long-2: #{calc(#{$md-sys-motion-duration-long-2} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-long-3: #{calc(#{$md-sys-motion-duration-long-3} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-long-4: #{calc(#{$md-sys-motion-duration-long-4} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-extra-long-1: #{calc(#{$md-sys-motion-duration-extra-long-1} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-extra-long-2: #{calc(#{$md-sys-motion-duration-extra-long-2} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-extra-long-3: #{calc(#{$md-sys-motion-duration-extra-long-3} * #{$scale-factor})} !global;
+        $md-sys-motion-duration-extra-long-4: #{calc(#{$md-sys-motion-duration-extra-long-4} * #{$scale-factor})} !global;
+      }
+    } @else {
+      // Reduced motion: set all durations to 0
+      $md-sys-motion-duration-short-1: 0ms !global;
+      $md-sys-motion-duration-short-2: 0ms !global;
+      $md-sys-motion-duration-short-3: 0ms !global;
+      $md-sys-motion-duration-short-4: 0ms !global;
+      $md-sys-motion-duration-medium-1: 0ms !global;
+      $md-sys-motion-duration-medium-2: 0ms !global;
+      $md-sys-motion-duration-medium-3: 0ms !global;
+      $md-sys-motion-duration-medium-4: 0ms !global;
+      $md-sys-motion-duration-long-1: 0ms !global;
+      $md-sys-motion-duration-long-2: 0ms !global;
+      $md-sys-motion-duration-long-3: 0ms !global;
+      $md-sys-motion-duration-long-4: 0ms !global;
+      $md-sys-motion-duration-extra-long-1: 0ms !global;
+      $md-sys-motion-duration-extra-long-2: 0ms !global;
+      $md-sys-motion-duration-extra-long-3: 0ms !global;
+      $md-sys-motion-duration-extra-long-4: 0ms !global;
+    }
+  }
+}
+
+@mixin md-theme-apply-elevation-overrides {
+  @if $md-theme-elevation-scale != 1.0 {
+    $scale-factor: $md-theme-elevation-scale;
+    
+    // Scale all elevation levels
+    $md-sys-elevation-level0: #{calc(#{$md-sys-elevation-level0} * #{$scale-factor})} !global;
+    $md-sys-elevation-level1: #{calc(#{$md-sys-elevation-level1} * #{$scale-factor})} !global;
+    $md-sys-elevation-level2: #{calc(#{$md-sys-elevation-level2} * #{$scale-factor})} !global;
+    $md-sys-elevation-level3: #{calc(#{$md-sys-elevation-level3} * #{$scale-factor})} !global;
+    $md-sys-elevation-level4: #{calc(#{$md-sys-elevation-level4} * #{$scale-factor})} !global;
+    $md-sys-elevation-level5: #{calc(#{$md-sys-elevation-level5} * #{$scale-factor})} !global;
+  }
+}
+
+// Main theme application mixin
+@mixin md-theme-apply-overrides {
+  @include md-theme-apply-color-overrides;
+  @include md-theme-apply-typography-overrides;
+  @include md-theme-apply-shape-overrides;
+  @include md-theme-apply-spacing-overrides;
+  @include md-theme-apply-motion-overrides;
+  @include md-theme-apply-elevation-overrides;
+}
+
+// =============================================================================
+// THEME VARIANTS
+// =============================================================================
+
+@mixin md-theme-dark {
+  // Dark theme color overrides
+  $md-sys-color-primary: $md-sys-color-primary-dark !global;
+  $md-sys-color-on-primary: $md-sys-color-on-primary-dark !global;
+  $md-sys-color-primary-container: $md-sys-color-primary-container-dark !global;
+  $md-sys-color-on-primary-container: $md-sys-color-on-primary-container-dark !global;
+  
+  $md-sys-color-secondary: $md-sys-color-secondary-dark !global;
+  $md-sys-color-on-secondary: $md-sys-color-on-secondary-dark !global;
+  $md-sys-color-secondary-container: $md-sys-color-secondary-container-dark !global;
+  $md-sys-color-on-secondary-container: $md-sys-color-on-secondary-container-dark !global;
+  
+  $md-sys-color-tertiary: $md-sys-color-tertiary-dark !global;
+  $md-sys-color-on-tertiary: $md-sys-color-on-tertiary-dark !global;
+  $md-sys-color-tertiary-container: $md-sys-color-tertiary-container-dark !global;
+  $md-sys-color-on-tertiary-container: $md-sys-color-on-tertiary-container-dark !global;
+  
+  $md-sys-color-error: $md-sys-color-error-dark !global;
+  $md-sys-color-on-error: $md-sys-color-on-error-dark !global;
+  $md-sys-color-error-container: $md-sys-color-error-container-dark !global;
+  $md-sys-color-on-error-container: $md-sys-color-on-error-container-dark !global;
+  
+  $md-sys-color-surface: $md-sys-color-surface-dark !global;
+  $md-sys-color-on-surface: $md-sys-color-on-surface-dark !global;
+  $md-sys-color-surface-variant: $md-sys-color-surface-variant-dark !global;
+  $md-sys-color-on-surface-variant: $md-sys-color-on-surface-variant-dark !global;
+  $md-sys-color-surface-container: $md-sys-color-surface-container-dark !global;
+  $md-sys-color-surface-container-high: $md-sys-color-surface-container-high-dark !global;
+  $md-sys-color-surface-container-highest: $md-sys-color-surface-container-highest-dark !global;
+  
+  $md-sys-color-outline: $md-sys-color-outline-dark !global;
+  $md-sys-color-outline-variant: $md-sys-color-outline-variant-dark !global;
+  
+  $md-sys-color-background: $md-sys-color-background-dark !global;
+  $md-sys-color-on-background: $md-sys-color-on-background-dark !global;
+}
+
+@mixin md-theme-high-contrast {
+  // High contrast theme overrides
+  $md-sys-color-primary: darken($md-sys-color-primary, 20%) !global;
+  $md-sys-color-secondary: darken($md-sys-color-secondary, 20%) !global;
+  $md-sys-color-tertiary: darken($md-sys-color-tertiary, 20%) !global;
+  $md-sys-color-error: darken($md-sys-color-error, 20%) !global;
+  
+  $md-sys-color-outline: darken($md-sys-color-outline, 20%) !global;
+  $md-sys-color-outline-variant: darken($md-sys-color-outline-variant, 20%) !global;
+}
+
+@mixin md-theme-reduced-motion {
+  // Reduced motion theme overrides
+  $md-theme-motion-reduced: true !global;
+  @include md-theme-apply-motion-overrides;
+}
